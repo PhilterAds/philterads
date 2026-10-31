@@ -246,3 +246,95 @@
     if (z) { pick(z, false); z.scrollIntoView({ block: "center" }); }
   }
 })();
+
+/* supporter pickers: the #support card and the dialog the banner buttons open share one picker.
+   One-time passes the picked amount to Stripe (prefilled_amount, still editable there);
+   monthly goes straight to the chosen tier's Payment Link. */
+(function () {
+  var pay = (window.PHILTER || {}).stripe || {};
+  var ja = document.documentElement.lang === "ja";
+  var link = function (base, params) {
+    if (ja) params.push("locale=ja");
+    return params.length ? base + (base.indexOf("?") === -1 ? "?" : "&") + params.join("&") : base;
+  };
+
+  function wire(form) {
+    var labels = form.closest("[data-go-once]");
+    var go = form.querySelector(".sip-go");
+    var goTxt = go.querySelector(".sip-go-txt");
+    var other = form.querySelector(".sip-other input");
+    var otherBox = form.querySelector(".sip-other");
+    var label = function (key, n) { return labels.getAttribute("data-go-" + key).replace("{n}", n); };
+    var mode = function () { return form.querySelector('input[name="sip-mode"]:checked').value; };
+
+    function update() {
+      var m = mode();
+      form.querySelectorAll(".sip-pane").forEach(function (p) { p.hidden = p.getAttribute("data-pane") !== m; });
+      var href = "", text;
+      if (m === "once") {
+        var chip = form.querySelector('input[name="sip-amt"]:checked');
+        var n = other.value ? parseInt(other.value, 10) : chip ? parseInt(chip.value, 10) : 0;
+        otherBox.classList.toggle("is-on", !!other.value);
+        if (pay.t5 && n >= 1 && n <= 10000) { href = link(pay.t5, ["prefilled_amount=" + n * 100]); text = label("once", n); }
+        else text = label("none");
+      } else {
+        var t = form.querySelector('input[name="sip-tier"]:checked');
+        if (pay[t.value]) href = link(pay[t.value], []);
+        text = label("month", t.getAttribute("data-amt"));
+      }
+      goTxt.textContent = text;
+      if (href) { go.setAttribute("href", href); go.removeAttribute("aria-disabled"); }
+      else { go.removeAttribute("href"); go.setAttribute("aria-disabled", "true"); }
+    }
+    function focusPick() {
+      var pick = mode() === "once"
+        ? (other.value ? other : form.querySelector('input[name="sip-amt"]:checked'))
+        : form.querySelector('input[name="sip-tier"]:checked');
+      if (pick) pick.focus();
+    }
+    function setMode(m) {
+      form.querySelector('input[name="sip-mode"][value="' + m + '"]').checked = true;
+      update();
+    }
+
+    form.addEventListener("change", function (e) {
+      if (e.target.name === "sip-amt") other.value = "";
+      update();
+      if (e.target.name === "sip-mode") focusPick();
+    });
+    other.addEventListener("input", function () {
+      var clean = other.value.replace(/\D/g, "").replace(/^0+/, "");
+      if (clean !== other.value) other.value = clean;
+      if (clean) form.querySelectorAll('input[name="sip-amt"]').forEach(function (r) { r.checked = false; });
+      update();
+    });
+    /* Enter in the amount box = continue; only the dialog's close button submits for real */
+    form.addEventListener("submit", function (e) {
+      if (e.submitter && e.submitter.classList.contains("sip-x")) return;
+      e.preventDefault();
+      if (go.hasAttribute("href")) go.click();
+    });
+    go.addEventListener("click", function (e) {
+      if (!go.hasAttribute("href")) { e.preventDefault(); other.focus(); }
+    });
+    update();
+    return { setMode: setMode, focusPick: focusPick };
+  }
+
+  document.querySelectorAll(".sip-card").forEach(wire);
+
+  var dlg = document.getElementById("sip-dlg");
+  var openers = document.querySelectorAll("[data-sip]");
+  if (!dlg || !openers.length) return;
+  var picker = wire(dlg.querySelector(".sip-form"));
+  openers.forEach(function (b) {
+    b.addEventListener("click", function () {
+      if (typeof dlg.showModal !== "function") { location.hash = "#support"; return; }
+      picker.setMode(b.getAttribute("data-sip"));
+      dlg.showModal();
+      picker.focusPick();
+    });
+  });
+  /* click on the dimmed backdrop closes */
+  dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+})();
