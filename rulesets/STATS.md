@@ -1,11 +1,11 @@
 # Ruleset build stats
 
-Built 2026-10-31T07:35:02.057Z
+Built 2026-10-31T08:33:01.252Z
 
 | list | source version | filters read | DNR rules written | $popup hosts (global/scoped) | skipped by DNR converter | dropped: main_frame policy | dropped: safety domains | dropped: regex overflow | cosmetic generic/specific/exceptions | cosmetic skipped (extended) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| easylist | Version: 202610310726 | 76284 | 3899 | 2718/19 | 5192 | 0 | 9 | 0 | 13634/8881/243 | 504 |
-| easyprivacy | Version: 202610310726 | 56442 | 9181 | 0/0 | 50 | 0 | 30 | 0 | 2/0/0 | 22 |
+| easylist | Version: 202610310822 | 76295 | 3899 | 2718/19 | 5192 | 0 | 9 | 0 | 13634/8881/243 | 504 |
+| easyprivacy | Version: 202610310831 | 56442 | 9181 | 0/0 | 50 | 0 | 30 | 0 | 2/0/0 | 22 |
 | malware | Updated: 2026-10-31T00:09:35Z | 1892 | 1310 | 0/0 | 0 | 0 | 0 | 0 | 0/0/0 | 0 |
 | cookies | Last modified: 2026-10-30 19:50 UTC | 25360 | 1788 | 0/0 | 1425 | 0 | 0 | 0 | 15272/6249/239 | 71 |
 | annoyances | Version: 202610302025 | 54120 | 3194 | 0/0 | 3668 | 0 | 7 | 0 | 27306/15469/340 | 3197 |
