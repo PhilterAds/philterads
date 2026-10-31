@@ -254,7 +254,8 @@ html.js .tier.reveal.in { transition: opacity .48s cubic-bezier(.2,.8,.2,1), tra
 @media (min-width: 880px) { .cards3 { grid-template-columns: repeat(3, 1fr); } }
 .promise-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
 .promise-card svg { width: 28px; height: 28px; fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-.promise-card h3 { margin: 14px 0 8px; }
+.promise-card h4 { margin: 14px 0 8px; font-size: 1.25rem; line-height: 1.3; font-weight: 700; }
+html[lang="ja"] .promise-card h4 { line-height: 1.5; }
 .promise-card p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted); }
 html[lang="ja"] .promise-card p { line-height: 1.8; }
 
@@ -742,3 +743,31 @@ html[lang="ja"] .sip-tiers-full .sip-tier-box > .sip-perk { line-height: 1.6; }
   .support-grid > .give { position: sticky; top: calc(88px + env(safe-area-inset-top, 0px)); }
 }
 @media (max-width: 480px) { .sip-card { padding: 20px 18px; box-shadow: none; } .sip-tiers-full .sip-tier-box { grid-template-columns: 4.5rem minmax(0, 1fr); } }
+
+/* ---- Mission section: statement, then the three promises ---- */
+.mission-sub { max-width: 62ch; font-size: 1.125rem; line-height: 1.6; }
+html[lang="ja"] .mission-sub { font-size: 1.0625rem; line-height: 1.8; word-break: auto-phrase; }
+.promise-h { margin: 0 0 20px; font: 800 1.5rem/1.25 "Nunito", var(--font-body); }
+html[lang="ja"] .promise-h { line-height: 1.5; }
+@media (max-width: 480px) { .mission-sub { font-size: 1rem; } }
+
+/* Mission head: Sip (the logo) on guard beside the statement; above it on phones */
+.mission-head { display: grid; grid-template-columns: minmax(0, 1fr); }
+.mission-sip { position: relative; justify-self: start; width: 104px; height: 104px; margin-bottom: 12px; border-radius: 50%; background: radial-gradient(circle at 50% 55%, var(--accent-soft) 0 62%, transparent 63%); }
+.mission-sip img { position: absolute; inset: 6%; width: 88%; height: 88%; animation: mission-bob 3.2s ease-in-out infinite; }
+.mission-shield { position: absolute; right: -2px; bottom: 4px; display: grid; place-items: center; width: 38%; height: 38%; border-radius: 50%; background: var(--card); box-shadow: 0 0 0 2px var(--border), 0 4px 10px rgb(21 17 31 / 14%); }
+.mission-shield svg { width: 62%; height: 62%; fill: none; stroke: var(--accent); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+@keyframes mission-bob { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-5px) rotate(-3deg); } }
+@media (min-width: 880px) {
+  .mission-head { grid-template-columns: minmax(0, 1fr) auto; column-gap: 48px; align-items: center; }
+  .mission-head > * { grid-column: 1; }
+  .mission-head > .mission-sip { grid-column: 2; grid-row: 1 / span 3; width: 176px; height: 176px; margin: 0 24px 0 0; }
+}
+@media (prefers-reduced-motion: reduce) { .mission-sip img { animation: none; } }
+/* six nav links on phones: tighter, and JA labels a touch smaller so the row never overflows */
+@media (max-width: 479px) {
+  .site-nav a { padding: 0 2px; font-size: 13px; }
+  .site-nav a.nav-support { margin: 6px 1px; padding: 0 8px 0 7px; gap: 4px; }
+  html[lang="ja"] .site-nav a { font-size: 12px; letter-spacing: -0.02em; }
+}
+@media (max-width: 359px) { .site-nav { overflow-x: auto; scrollbar-width: none; justify-content: flex-start; } .site-nav a { flex: 0 0 auto; padding: 0 6px; } }
