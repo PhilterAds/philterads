@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ChromeとEdgeでポップアップをブロックする方法｜PhilterAds</title>
+<meta name="description" content="ChromeとEdgeに標準で入っているポップアップブロッカーをパソコンとAndroidでオンにする方法、通知スパムの止め方、それでも出てくるポップアップの理由をまとめました。">
+<link rel="canonical" href="https://philterads.com/ja/guides/block-pop-ups-chrome/">
+<link rel="alternate" hreflang="en" href="https://philterads.com/guides/block-pop-ups-chrome/">
+<link rel="alternate" hreflang="ja" href="https://philterads.com/ja/guides/block-pop-ups-chrome/">
+<link rel="alternate" hreflang="x-default" href="https://philterads.com/guides/block-pop-ups-chrome/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="PhilterAds">
+<meta property="og:url" content="https://philterads.com/ja/guides/block-pop-ups-chrome/">
+<meta property="og:title" content="ChromeとEdgeでポップアップをブロックする方法｜PhilterAds">
+<meta property="og:description" content="ChromeとEdgeに標準で入っているポップアップブロッカーをパソコンとAndroidでオンにする方法、通知スパムの止め方、それでも出てくるポップアップの理由をまとめました。">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://philterads.com/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ChromeとEdgeでポップアップをブロックする方法｜PhilterAds">
+<meta name="twitter:description" content="ChromeとEdgeに標準で入っているポップアップブロッカーをパソコンとAndroidでオンにする方法、通知スパムの止め方、それでも出てくるポップアップの理由をまとめました。">
+<meta name="twitter:image" content="https://philterads.com/assets/img/og.jpg">
+<meta name="theme-color" content="#F7F3FB">
+<meta name="theme-color" content="#15111F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/lang.js"></script>
+<script src="/assets/js/config.js" defer></script>
+<script src="/assets/js/site.js" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "ChromeとEdgeでポップアップをブロックする方法",
+ "description": "ChromeとEdgeに標準で入っているポップアップブロッカーをパソコンとAndroidでオンにする方法、通知スパムの止め方、それでも出てくるポップアップの理由をまとめました。",
+ "inLanguage": "ja",
+ "datePublished": "2026-10-31",
+ "dateModified": "2026-10-31",
+ "mainEntityOfPage": "https://philterads.com/ja/guides/block-pop-ups-chrome/",
+ "image": "https://philterads.com/assets/img/og.jpg",
+ "author": {
+  "@type": "Organization",
+  "name": "PhilterAds",
+  "url": "https://philterads.com/"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "PhilterAds",
+  "url": "https://philterads.com/",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://philterads.com/apple-touch-icon.png"
+  }
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <button class="mascot" id="mascot" type="button" aria-label="PhilterAdsのホームへ">
+      <svg viewBox="0 0 128 128" aria-hidden="true">
+        <g class="m-bob">
+          <g transform="rotate(-7 64 72)" stroke="#2A1B4E" stroke-linejoin="round" stroke-linecap="round">
+            <rect x="52" y="6" width="24" height="20" rx="5" fill="#D9985E" stroke-width="7"/>
+            <path d="M50 24 H78 V40.5 A40 40 0 1 1 50 40.5 Z" fill="#F1EBFF" stroke-width="7"/>
+            <g class="m-potion"><path d="M29.5 66 A36.5 36.5 0 1 0 98.5 66 Q81 71 64 66 Q47 61 29.5 66 Z" fill="#FF4FA3" stroke="none"/></g>
+            <rect x="44" y="20" width="40" height="12" rx="6" fill="#F1EBFF" stroke-width="7"/>
+            <path d="M36 62 A32 32 0 0 1 53 48" fill="none" stroke="#FFFFFF" stroke-opacity=".85" stroke-width="5"/>
+            <g class="m-eyes" stroke="none">
+              <circle cx="50" cy="79" r="8" fill="#FFFFFF"/><circle cx="78" cy="79" r="8" fill="#FFFFFF"/>
+              <circle cx="52" cy="78" r="4" fill="#2A1B4E"/><circle cx="80" cy="78" r="4" fill="#2A1B4E"/>
+            </g>
+            <path class="m-sleep" d="M43 80 Q50 85 57 80 M71 80 Q78 85 85 80" fill="none" stroke-width="5"/>
+            <path d="M52 93 Q64 104 78 91" fill="none" stroke-width="5"/>
+          </g>
+        </g>
+        <path class="m-spark" d="M106 12 Q108 28 124 30 Q108 32 106 48 Q104 32 88 30 Q104 28 106 12 Z" fill="#FFD23F" stroke="#2A1B4E" stroke-width="5" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <a class="wordmark" href="/ja/">PhilterAds</a>
+    <nav class="site-nav" aria-label="サイト">
+      <a href="/ja/#features">できること</a>
+      <a href="/ja/#roadmap">ロードマップ</a>
+      <a class="nav-support" href="/ja/#support"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.9c0 5.6-7.5 10-7.5 10z"/></svg>応援する</a>
+      <a href="/ja/#faq">よくある質問</a>
+    </nav>
+    <a class="gh-link" data-href="github" data-needs="repo" hidden href="https://github.com/PhilterAds/philterads">GitHub</a>
+    <button class="theme-btn" id="theme-btn" type="button" aria-label="ダークテーマに切り替え" data-label-light="ダークテーマに切り替え" data-label-dark="ライトテーマに切り替え"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <nav class="lang" aria-label="言語">
+      <a href="/guides/block-pop-ups-chrome/" data-lang="en" lang="en" hreflang="en">EN</a>
+      <a href="/ja/guides/block-pop-ups-chrome/" data-lang="ja" lang="ja" hreflang="ja" aria-current="page">日本語</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="legal guide">
+<article class="wrap legal-body">
+<h1>ChromeとEdgeでポップアップをブロックする方法</h1>
+<p class="legal-lead">ChromeとEdgeには、はじめからポップアップブロッカーが入っています。オンになっているかの確認方法、通知スパムの止め方、そして標準機能では防げないポップアップについて説明します。最終更新：2026年10月31日。</p>
+
+<h2>1. 標準のブロッカーをオンにする（パソコン）</h2>
+<ol>
+  <li><b>Chrome：</b><code>chrome://settings/content/popups</code> を開き（または 設定 → プライバシーとセキュリティ → サイトの設定 → ポップアップとリダイレクト）、ポップアップとリダイレクトを許可しない設定を選びます。</li>
+  <li><b>Edge：</b><code>edge://settings/content/popups</code> を開き（または 設定 → Cookie とサイトのアクセス許可 → ポップアップとリダイレクト）、<b>ブロック</b> をオンにします。</li>
+  <li>銀行や予約サイトなど、ポップアップが必要な信頼できるサイトは、ブロッカーを切るのではなく許可の一覧に追加しましょう。</li>
+</ol>
+
+<h2>2. Android版Chrome</h2>
+<ol>
+  <li>⋮ メニュー → <b>設定</b> → <b>サイトの設定</b> → <b>ポップアップとリダイレクト</b> を開きます。</li>
+  <li>スイッチがオフ（ブロックする状態）になっていることを確認します。</li>
+</ol>
+<p>PhilterAdsのようなパソコン向けの拡張機能はAndroid版Chromeでは動かないため、こちらでは標準の設定が頼りです。</p>
+
+<h2>3. 通知スパムを止める</h2>
+<p>「ポップアップ」の多くは、うっかり許可してしまったサイトの通知です。サイトを閉じていても表示されることがあります。</p>
+<ol>
+  <li><code>chrome://settings/content/notifications</code>（Edgeは <code>edge://settings/content/notifications</code>）を開きます。</li>
+  <li>通知を許可しているサイトの一覧から、心当たりのないサイトを削除します。</li>
+  <li>今後たずねられたくない場合は、サイトに通知の送信を許可しない設定を選びます。</li>
+</ol>
+
+<h2>4. それでもポップアップが出る理由</h2>
+<ul>
+  <li><b>クリックで開くタブ。</b> 標準のブロッカーは、ページが勝手に開くウィンドウを止めます。多くの広告スクリプトは、ページのどこかをクリックした瞬間にタブを開くため、ブラウザは「ユーザーの操作」とみなして通してしまいます。</li>
+  <li><b>ページ内のオーバーレイ。</b> メルマガ登録の枠やCookieバナー、「通知を許可しますか？」のような表示はページの中に描かれたもので、ブラウザのポップアップではありません。</li>
+  <li><b>広告からのリダイレクト。</b> タブごと別のサイトへ飛ばす広告はリダイレクトで、この設定では一部しか防げません。</li>
+</ul>
+
+<h2>5. 拡張機能でできること</h2>
+<p>コンテンツブロッカーは、どのサイトが広告ネットワークかを知っているため、こうしたケースにも対応できます。たとえばPhilterAdsは、EasyListのポップアップルールに当てはまる広告や詐欺のタブをすぐに閉じます。自分で開いたタブや、同じサイトの新しいタブはそのままです。FanboyのCookie / Annoyanceリストで、Cookieバナーやオーバーレイの多くも隠します。無料・オープンソースで、お金をもらって広告を通すことはありません。</p>
+<p><a class="btn btn-primary" href="/ja/#install">PhilterAdsをChrome・Edgeに入れる</a></p>
+
+<h2>6. 「ウイルスが見つかりました」という偽の警告が閉じないとき</h2>
+<ul>
+  <li>表示された電話番号に電話したり、すすめられたものをダウンロードしたりしないでください。本物のブラウザやウイルス対策ソフトが電話を求めることはありません。</li>
+  <li><b>Shift + Esc</b> でブラウザのタスクマネージャーを開き、そのタブを選んで <b>プロセスを終了</b> します。</li>
+  <li>そのあと手順3の通知一覧を確認してください。詐欺の警告は、通知の許可を通じて戻ってくることがよくあります。</li>
+</ul>
+<p>あわせて読む：<a href="/ja/guides/acceptable-ads/">「許容される広告」のない広告ブロッカー</a></p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <span class="wordmark">PhilterAds</span>
+      <p class="foot-tagline">ひと口で、広告が消える。</p>
+    </div>
+    <nav aria-label="フッター">
+      <div class="foot-col">
+        <h3>プロダクト</h3>
+        <ul>
+          <li><a href="/ja/#features">できること</a></li>
+          <li><a href="/ja/#roadmap">ロードマップ</a></li>
+          <li><a href="/ja/#support">応援する</a></li>
+          <li><a href="/ja/#faq">よくある質問</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>ガイド</h3>
+        <ul>
+          <li><a href="/ja/guides/block-pop-ups-chrome/">ポップアップ対策</a></li>
+          <li><a href="/ja/guides/acceptable-ads/">「許容される広告」とは</a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col-project">
+        <h3>プロジェクト</h3>
+        <ul>
+          <li data-needs="repo" hidden><a data-href="github" href="https://github.com/PhilterAds/philterads">GitHub</a></li>
+          <li data-needs="repo" hidden><a href="https://github.com/PhilterAds/philterads/blob/main/CONTRIBUTING.md">コントリビュート</a></li>
+          <li data-needs="repo" hidden><a href="https://github.com/PhilterAds/philterads/issues/new">壊れたサイトを報告</a></li>
+          <li><a href="/ja/privacy/">プライバシー</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="wrap">
+    <nav class="lang foot-lang" aria-label="言語">
+      <a href="/guides/block-pop-ups-chrome/" data-lang="en" lang="en" hreflang="en">EN</a>
+      <a href="/ja/guides/block-pop-ups-chrome/" data-lang="ja" lang="ja" hreflang="ja" aria-current="page">日本語</a>
+    </nav>
+    <p class="foot-legal">フィルターリスト：EasyList の作者のみなさん（EasyList, EasyPrivacy）、Fanboy（Cookie / Annoyance リスト、CC BY 3.0）、abuse.ch の URLhaus プロジェクト。ありがとうございます。<br>
+    AiAlchemist が魔法で作りました。<br>
+    © 2026 PhilterAds · GPLv3</p>
+  </div>
+</footer>
+</body>
+</html>
