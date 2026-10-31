@@ -185,6 +185,9 @@
       <svg class="spark spark-b" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 Q17.6 13.4 28 16 Q17.6 18.6 16 30 Q14.4 18.6 4 16 Q14.4 13.4 16 2 Z"/></svg>
     </figure>
   </div>
+  <div class="wrap">
+    <p class="nudge hero-nudge" data-needs="pay" hidden><span>PhilterAdsは無料で、サポーターの応援で動いています。毎月<span class="nobr">$3 USD</span>から、または一回だけ好きな金額で。</span><a class="btn btn-primary" href="#support"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.9c0 5.6-7.5 10-7.5 10z"/></svg>シップちゃんを応援</a></p>
+  </div>
 </section>
 
 <section id="promise" aria-labelledby="promise-h2">
@@ -213,73 +216,63 @@
   </div>
 </section>
 
-<section id="features" aria-labelledby="features-h2">
+<section id="features" class="features" aria-labelledby="features-h2">
   <div class="wrap">
-    <div class="sec-head look-head reveal">
-      <div>
-        <p class="eyebrow">できること</p>
-        <h2 id="features-h2">シップちゃんの一日</h2>
+    <div class="sec-head reveal">
+      <p class="eyebrow">できること</p>
+      <h2 id="features-h2">シップちゃんの一日</h2>
+    </div>
+    <div class="show reveal">
+      <div class="show-tabs" role="tablist" aria-label="機能">
+        <button type="button" role="tab" class="show-tab" id="show-t1" aria-controls="show-p" aria-selected="true" tabindex="0" data-show="1">
+          <span class="show-n" aria-hidden="true">01</span>
+          <span class="show-txt"><span class="show-title">ひと口で、広告が消える。</span><span class="show-desc"><span>ポップアップを開けば、このページで消した広告・トラッカー・ザップ・ポップアップの数がひと目でわかります。サイトごとの一時停止もスイッチひとつ。</span></span></span>
+        </button>
+        <button type="button" role="tab" class="show-tab" id="show-t2" aria-controls="show-p" aria-selected="false" tabindex="-1" data-show="2">
+          <span class="show-n" aria-hidden="true">02</span>
+          <span class="show-txt"><span class="show-title">フィルターを選ぶ。</span><span class="show-desc"><span>6つのフィルターリストそれぞれに、強さと壊れる可能性のあるものを表示。オン・オフはタップひとつです。</span></span></span>
+        </button>
+        <button type="button" role="tab" class="show-tab" id="show-t3" aria-controls="show-p" aria-selected="false" tabindex="-1" data-show="3" data-anchor="zap">
+          <span class="show-n" aria-hidden="true">03</span>
+          <span class="show-txt"><span class="show-title">すり抜けた広告はザップ。</span><span class="show-desc"><span><b>見逃した広告をザップ</b>を押して広告をクリックすれば、そのサイトではずっと非表示に。ザップした広告は一覧になり、元に戻すのもタップひとつ。</span></span></span>
+        </button>
+        <button type="button" role="tab" class="show-tab" id="show-t4" aria-controls="show-p" aria-selected="false" tabindex="-1" data-show="4">
+          <span class="show-n" aria-hidden="true">04</span>
+          <span class="show-txt"><span class="show-title">ブロックした内容を確認。</span><span class="show-desc"><span>今日と累計のブロック数を表示。数字はあなたの端末の中だけに残ります。</span></span></span>
+        </button>
+        <button type="button" role="tab" class="show-tab" id="show-t5" aria-controls="show-p" aria-selected="false" tabindex="-1" data-show="5">
+          <span class="show-n" aria-hidden="true">05</span>
+          <span class="show-txt"><span class="show-title">目にやさしい。</span><span class="show-desc"><span>ライトとダークのテーマ、英語と日本語に対応。設定から好きなほうを選べます。</span></span></span>
+        </button>
       </div>
-      <div class="look-nav">
-        <button type="button" class="look-btn" data-look="-1" aria-label="前のスクリーンショット"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 6-6 6 6 6"/></svg></button>
-        <button type="button" class="look-btn" data-look="1" aria-label="次のスクリーンショット"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 6 6 6-6 6"/></svg></button>
+      <div class="show-dots" aria-hidden="true"><i class="is-on"></i><i></i><i></i><i></i><i></i></div>
+      <div class="show-stage" role="tabpanel" id="show-p" aria-labelledby="show-t1">
+        <div class="show-frame">
+          <img class="show-img is-on" data-show="1" src="/assets/img/shots/slide-1-1280.webp" srcset="/assets/img/shots/slide-1-800.webp 800w, /assets/img/shots/slide-1-1280.webp 1280w" sizes="(min-width:1168px) 640px, (min-width:880px) 56vw, 92vw" width="1280" height="800" decoding="async" alt="ひと口で、広告が消える。ホーム画面では、このページでブロックした数がわかります。">
+          <img class="show-img" data-show="2" aria-hidden="true" src="/assets/img/shots/slide-2-1280.webp" srcset="/assets/img/shots/slide-2-800.webp 800w, /assets/img/shots/slide-2-1280.webp 1280w" sizes="(min-width:1168px) 640px, (min-width:880px) 56vw, 92vw" width="1280" height="800" loading="lazy" decoding="async" alt="フィルターを選ぶ。リストごとに強さと、壊れる可能性のあるものを表示します。">
+          <img class="show-img" data-show="3" aria-hidden="true" src="/assets/img/shots/slide-3-1280.webp" srcset="/assets/img/shots/slide-3-800.webp 800w, /assets/img/shots/slide-3-1280.webp 1280w" sizes="(min-width:1168px) 640px, (min-width:880px) 56vw, 92vw" width="1280" height="800" loading="lazy" decoding="async" alt="すり抜けた広告はザップ。ザップした広告は一覧になり、いつでも元に戻せます。">
+          <img class="show-img" data-show="4" aria-hidden="true" src="/assets/img/shots/slide-4-1280.webp" srcset="/assets/img/shots/slide-4-800.webp 800w, /assets/img/shots/slide-4-1280.webp 1280w" sizes="(min-width:1168px) 640px, (min-width:880px) 56vw, 92vw" width="1280" height="800" loading="lazy" decoding="async" alt="ブロックした内容を確認。今日と累計の統計は、あなたの端末の中だけに残ります。">
+          <img class="show-img" data-show="5" aria-hidden="true" src="/assets/img/shots/slide-5-1280.webp" srcset="/assets/img/shots/slide-5-800.webp 800w, /assets/img/shots/slide-5-1280.webp 1280w" sizes="(min-width:1168px) 640px, (min-width:880px) 56vw, 92vw" width="1280" height="800" loading="lazy" decoding="async" alt="目にやさしい。ダークテーマに対応、英語と日本語で使えます。">
+        </div>
       </div>
     </div>
-  </div>
-  <ul class="look-strip feat-strip" role="list" tabindex="0" aria-label="PhilterAdsのスクリーンショット">
-      <li class="look-slide"><img src="/assets/img/shots/slide-1-1280.webp" srcset="/assets/img/shots/slide-1-800.webp 800w, /assets/img/shots/slide-1-1280.webp 1280w" sizes="(min-width:900px) 720px, 84vw" width="1280" height="800" loading="lazy" decoding="async" alt="ひと口で、広告が消える。ホーム画面では、このページでブロックした数がわかります。"></li>
-      <li class="look-slide"><img src="/assets/img/shots/slide-2-1280.webp" srcset="/assets/img/shots/slide-2-800.webp 800w, /assets/img/shots/slide-2-1280.webp 1280w" sizes="(min-width:900px) 720px, 84vw" width="1280" height="800" loading="lazy" decoding="async" alt="フィルターを選ぶ。リストごとに強さと、壊れる可能性のあるものを表示します。"></li>
-      <li class="look-slide"><img src="/assets/img/shots/slide-3-1280.webp" srcset="/assets/img/shots/slide-3-800.webp 800w, /assets/img/shots/slide-3-1280.webp 1280w" sizes="(min-width:900px) 720px, 84vw" width="1280" height="800" loading="lazy" decoding="async" alt="すり抜けた広告はザップ。ザップした広告は一覧になり、いつでも元に戻せます。"></li>
-      <li class="look-slide"><img src="/assets/img/shots/slide-4-1280.webp" srcset="/assets/img/shots/slide-4-800.webp 800w, /assets/img/shots/slide-4-1280.webp 1280w" sizes="(min-width:900px) 720px, 84vw" width="1280" height="800" loading="lazy" decoding="async" alt="ブロックした内容を確認。今日と累計の統計は、あなたの端末の中だけに残ります。"></li>
-      <li class="look-slide"><img src="/assets/img/shots/slide-5-1280.webp" srcset="/assets/img/shots/slide-5-800.webp 800w, /assets/img/shots/slide-5-1280.webp 1280w" sizes="(min-width:900px) 720px, 84vw" width="1280" height="800" loading="lazy" decoding="async" alt="目にやさしい。ダークテーマに対応、英語と日本語で使えます。"></li>
-  </ul>
-  <div class="wrap">
-    <div class="scenes">
-      <article class="scene reveal">
-        <figure class="panel-tilt panel-scene scene-media">
-          <div class="panel"><img src="/assets/img/youtube-1024.webp" srcset="/assets/img/youtube-1024.webp 1024w, /assets/img/youtube-768.webp 768w, /assets/img/youtube-512.webp 512w" sizes="(min-width:1168px) 520px, (min-width:880px) 46vw, calc(100vw - 40px)" width="1024" height="1024" loading="lazy" decoding="async" alt="ポップコーンを抱えてビーズクッションでくつろぐシップちゃん。大きなテレビの横で、目を回した広告バナーを画面からひょいっとつまみ取っている。"></div>
-        </figure>
-        <div class="scene-text">
-          <h3><span class="nobr">YouTube広告</span>は、始まる前にサヨナラ</h3>
-          <p>プレイヤーが読み込む前に広告データを取り除きます。もし残っても、シップちゃんがミュートして最後までスキップ。カウントダウンも待ち時間もありません。</p>
-        </div>
+    <h3 class="tricks-h reveal">シップちゃんの得意技、まだまだ</h3>
+    <div class="tricks">
+      <article class="trick reveal">
+        <div class="trick-art"><img src="/assets/img/youtube-1024.webp" srcset="/assets/img/youtube-1024.webp 1024w, /assets/img/youtube-768.webp 768w, /assets/img/youtube-512.webp 512w" sizes="(min-width:1168px) 250px, (min-width:880px) 21vw, (min-width:560px) 42vw, 112px" width="1024" height="1024" loading="lazy" decoding="async" alt="ポップコーンを抱えてビーズクッションでくつろぐシップちゃん。大きなテレビの横で、目を回した広告バナーを画面からひょいっとつまみ取っている。"></div>
+        <div class="trick-text"><h3><span class="nobr">YouTube広告</span>は、始まる前にサヨナラ。</h3><p>プレイヤーが読み込む前に広告データを取り除きます。もし残っても、シップちゃんがミュートして最後までスキップ。カウントダウンも待ち時間もありません。</p></div>
       </article>
-      <article class="scene reveal">
-        <!-- placeholder art: restore anime-v2 alt on re-export -->
-        <figure class="panel-tilt panel-scene scene-media">
-          <div class="panel"><img src="/assets/img/tracker-1024.webp" srcset="/assets/img/tracker-1024.webp 1024w, /assets/img/tracker-768.webp 768w, /assets/img/tracker-512.webp 512w" sizes="(min-width:1168px) 520px, (min-width:880px) 46vw, calc(100vw - 40px)" width="1024" height="1024" loading="lazy" decoding="async" alt="サングラスをかけてキメ顔のシップちゃん。隣には目を丸くしたピンクのトラッカーの泡が浮かんでいる。"></div>
-        </figure>
-        <div class="scene-text">
-          <h3>トラッカーは現行犯。<span class="nobr">マルウェアサイト</span>は門前払い。</h3>
-          <p>EasyPrivacyやURLhausマルウェアリストを含む6つのフィルターリストを、毎週更新。こそこそトラッカーは泡に閉じ込め、既知のマルウェアドメインは最初から読み込みません。開いた瞬間のポップアップ広告タブも、すぐに閉じます。</p>
-        </div>
+      <article class="trick reveal">
+        <div class="trick-art"><img src="/assets/img/tracker-1024.webp" srcset="/assets/img/tracker-1024.webp 1024w, /assets/img/tracker-768.webp 768w, /assets/img/tracker-512.webp 512w" sizes="(min-width:1168px) 250px, (min-width:880px) 21vw, (min-width:560px) 42vw, 112px" width="1024" height="1024" loading="lazy" decoding="async" alt="サングラスをかけてキメ顔のシップちゃん。隣には目を丸くしたピンクのトラッカーの泡が浮かんでいる。"></div>
+        <div class="trick-text"><h3>トラッカーは現行犯。<span class="nobr">マルウェアサイト</span>は門前払い。</h3><p>EasyPrivacyやURLhausマルウェアリストを含む6つのフィルターリストを、毎週更新。こそこそトラッカーは泡に閉じ込め、既知のマルウェアドメインは最初から読み込みません。開いた瞬間のポップアップ広告タブも、すぐに閉じます。</p></div>
       </article>
-      <article class="scene reveal">
-        <figure class="panel-tilt panel-scene scene-media">
-          <div class="panel"><img src="/assets/img/cookies-1024.webp" srcset="/assets/img/cookies-1024.webp 1024w, /assets/img/cookies-768.webp 768w, /assets/img/cookies-512.webp 512w" sizes="(min-width:1168px) 520px, (min-width:880px) 46vw, calc(100vw - 40px)" width="1024" height="1024" loading="lazy" decoding="async" alt="チョコチップクッキーをおいしそうにかじるシップちゃん。隣では、しかめっ面のクッキー同意バナーがぼろぼろ崩れていく。"></div>
-        </figure>
-        <div class="scene-text">
-          <h3>クッキーバナーより、本物のクッキー。</h3>
-          <p>「クッキーバナー」リストをオンにすると、同意バナーがぼろぼろと崩れます。初期設定ではオフ。必要なものを隠すくらいなら、バナーが見えるほうがマシだから。切り替えはワンタップです。</p>
-        </div>
+      <article class="trick reveal">
+        <div class="trick-art"><img src="/assets/img/cookies-1024.webp" srcset="/assets/img/cookies-1024.webp 1024w, /assets/img/cookies-768.webp 768w, /assets/img/cookies-512.webp 512w" sizes="(min-width:1168px) 250px, (min-width:880px) 21vw, (min-width:560px) 42vw, 112px" width="1024" height="1024" loading="lazy" decoding="async" alt="チョコチップクッキーをおいしそうにかじるシップちゃん。隣では、しかめっ面のクッキー同意バナーがぼろぼろ崩れていく。"></div>
+        <div class="trick-text"><h3>クッキーバナーより、本物のクッキー。</h3><p>「クッキーバナー」リストをオンにすると、同意バナーがぼろぼろと崩れます。初期設定ではオフ。必要なものを隠すくらいなら、バナーが見えるほうがマシだから。切り替えはワンタップです。</p></div>
       </article>
-      <article class="scene reveal" id="zap">
-        <figure class="panel-tilt panel-scene scene-media">
-          <div class="panel"><img src="/assets/img/zap-1024.webp" srcset="/assets/img/zap-1024.webp 1024w, /assets/img/zap-768.webp 768w, /assets/img/zap-512.webp 512w" sizes="(min-width:1168px) 520px, (min-width:880px) 46vw, calc(100vw - 40px)" width="1024" height="1024" loading="lazy" decoding="async" alt="ウインクしたシップちゃんが稲妻の杖で、しかめっ面のオレンジの広告バナーをちょん。広告はピンクのきらきらになって消えていく。"></div>
-        </figure>
-        <div class="scene-text">
-          <h3>見逃した広告は、<span class="nobr">ザップ！</span></h3>
-          <p>リストがすり抜けた広告を見つけたら、<b>「見逃した広告をザップ」</b>を押して、その広告をクリック。ポン！と消えて、次にそのサイトへ来ても消えたまま。<b>「元に戻す」</b>をワンタップすれば、ぜんぶ元どおりです。</p>
-        </div>
-      </article>
-      <article class="scene reveal">
-        <figure class="panel-tilt panel-scene scene-media">
-          <div class="panel"><img src="/assets/img/sleeping-1024.webp" srcset="/assets/img/sleeping-1024.webp 1024w, /assets/img/sleeping-768.webp 768w, /assets/img/sleeping-512.webp 512w" sizes="(min-width:1168px) 520px, (min-width:880px) 46vw, calc(100vw - 40px)" width="1024" height="1024" loading="lazy" decoding="async" alt="自分をぎゅっと抱きしめて、ぐっすり眠るシップちゃん。ピンクの夢の吹き出しと三日月、まわりには小さな金の星。"></div>
-        </figure>
-        <div class="scene-text">
-          <h3>サイトの調子が変？<span class="nobr">シップちゃん</span>をお昼寝させよう。</h3>
-          <p>トグルひとつで、そのサイトだけPhilterAdsを一時停止。マスタースイッチなら、どこでもシップちゃんはおねんね。どちらも同じ場所で元に戻せます。</p>
-        </div>
+      <article class="trick reveal">
+        <div class="trick-art"><img src="/assets/img/sleeping-1024.webp" srcset="/assets/img/sleeping-1024.webp 1024w, /assets/img/sleeping-768.webp 768w, /assets/img/sleeping-512.webp 512w" sizes="(min-width:1168px) 250px, (min-width:880px) 21vw, (min-width:560px) 42vw, 112px" width="1024" height="1024" loading="lazy" decoding="async" alt="自分をぎゅっと抱きしめて、ぐっすり眠るシップちゃん。ピンクの夢の吹き出しと三日月、まわりには小さな金の星。"></div>
+        <div class="trick-text"><h3>サイトの調子が変？<span class="nobr">シップちゃん</span>をお昼寝させよう。</h3><p>トグルひとつで、そのサイトだけPhilterAdsを一時停止。マスタースイッチなら、どこでもシップちゃんはおねんね。どちらも同じ場所で元に戻せます。</p></div>
       </article>
     </div>
     <p class="nudge reveal" data-needs="pay" hidden><span>PhilterAdsは無料で、サポーターの応援で動いています。毎月<span class="nobr">$3 USD</span>から、または一回だけ好きな金額で。</span><a class="btn btn-primary" href="#support"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.9c0 5.6-7.5 10-7.5 10z"/></svg>シップちゃんを応援</a></p>

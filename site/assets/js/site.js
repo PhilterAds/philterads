@@ -181,3 +181,68 @@
     });
   });
 })();
+
+/* features showcase: tabs swap the store slide */
+(function () {
+  "use strict";
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".show-tab"));
+  if (!tabs.length) return;
+  var panel = document.getElementById("show-p");
+  var imgs = document.querySelectorAll(".show-img");
+  var narrow = window.matchMedia("(max-width: 879px)");
+  var dots = Array.prototype.slice.call(document.querySelectorAll(".show-dots i"));
+  var row = tabs[0].parentNode, syncing = false, timer;
+  function pick(tab, focus, fromScroll) {
+    var n = tab.getAttribute("data-show");
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute("aria-selected", on ? "true" : "false");
+      t.tabIndex = on ? 0 : -1;
+    });
+    imgs.forEach(function (im) {
+      var on = im.getAttribute("data-show") === n;
+      im.classList.toggle("is-on", on);
+      im.setAttribute("aria-hidden", on ? "false" : "true");
+    });
+    dots.forEach(function (d, k) { d.classList.toggle("is-on", String(k + 1) === n); });
+    if (panel) panel.setAttribute("aria-labelledby", tab.id);
+    if (focus) tab.focus({ preventScroll: true });
+    if (narrow.matches && !fromScroll) {
+      syncing = true;
+      row.scrollTo({ left: tab.offsetLeft - tabs[0].offsetLeft, behavior: "smooth" });
+      setTimeout(function () { syncing = false; }, 600);
+    }
+  }
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener("click", function () { pick(tab, false); });
+    tab.addEventListener("keydown", function (e) {
+      var k = e.key, j = -1;
+      if (k === "ArrowDown" || k === "ArrowRight") j = (i + 1) % tabs.length;
+      else if (k === "ArrowUp" || k === "ArrowLeft") j = (i - 1 + tabs.length) % tabs.length;
+      else if (k === "Home") j = 0;
+      else if (k === "End") j = tabs.length - 1;
+      if (j < 0) return;
+      e.preventDefault();
+      pick(tabs[j], true);
+    });
+  });
+  /* phones: swiping the tab row also swaps the slide */
+  row.addEventListener("scroll", function () {
+    if (!narrow.matches || syncing) return;
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      var best = tabs[0], dist = Infinity;
+      tabs.forEach(function (t) {
+        var d = Math.abs(t.offsetLeft - tabs[0].offsetLeft - row.scrollLeft);
+        if (d < dist) { dist = d; best = t; }
+      });
+      if (row.scrollLeft >= row.scrollWidth - row.clientWidth - 4) best = tabs[tabs.length - 1];
+      if (best.getAttribute("aria-selected") !== "true") pick(best, false, true);
+    }, 120);
+  }, { passive: true });
+  /* old #zap links land on the Zap tab */
+  if (location.hash === "#zap") {
+    var z = document.querySelector('.show-tab[data-anchor="zap"]');
+    if (z) { pick(z, false); z.scrollIntoView({ block: "center" }); }
+  }
+})();
