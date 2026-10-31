@@ -1,0 +1,101 @@
+# Cuts a GitHub Release for every new extension version.
+#
+# The version lives in manifest.json. Whenever main carries a version that has
+# no tag yet, this job tests it, builds the store package (npm run build:store),
+# tags the commit vX.Y.Z and publishes a Release with the zip attached and the
+# commits since the previous tag as notes. The zip is the exact file to upload to
+# the Chrome Web Store and Edge Add-ons. Existing tags are never moved.
+#
+# Triggers: a push to main that touches manifest.json; the weekly refresh-lists
+# run finishing (its push uses GITHUB_TOKEN, which cannot trigger workflows by
+# itself); or by hand (Actions tab -> release -> Run workflow).
+
+name: release
+
+on:
+  push:
+    branches: [main]
+    paths: [manifest.json]
+  workflow_run:
+    workflows: [refresh-lists]
+    types: [completed]
+  workflow_dispatch:
+
+permissions: {} # nothing by default; the job below asks for exactly what it needs
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: >-
+      github.repository == 'PhilterAds/philterads' &&
+      (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write # create the tag and the release
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1' # smoke never runs in CI; skip its browsers
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # push: the pushed commit. Otherwise: the tip of main (after a list
+          # refresh that is the bot's new commit, not the run's starting commit).
+          ref: ${{ github.event_name == 'push' && github.sha || 'main' }}
+          fetch-depth: 0 # full history and tags, for the notes and the tag check
+
+      - name: Read the manifest version
+        id: version
+        run: |
+          version=$(node -p "require('./manifest.json').version")
+          tag="v${version}"
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
+          echo "tag=${tag}" >> "$GITHUB_OUTPUT"
+          if git rev-parse -q --verify "refs/tags/${tag}" >/dev/null; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "${tag} already exists; nothing to release."
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "New version: ${tag}"
+          fi
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        if: steps.version.outputs.exists == 'false'
+        with:
+          node-version: 22
+
+      - name: Test and build the store package
+        if: steps.version.outputs.exists == 'false'
+        run: |
+          npm ci
+          npm test
+          npm run build:store
+          test -f "dist/philterads-${{ steps.version.outputs.version }}.zip"
+
+      - name: Tag and publish the release
+        if: steps.version.outputs.exists == 'false'
+        env:
+          TAG: ${{ steps.version.outputs.tag }}
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          prev=$(git tag --list 'v*' --sort=-v:refname | head -n 1)
+          {
+            echo "PhilterAds ${VERSION}"
+            echo
+            echo "Store package: \`philterads-${VERSION}.zip\` (Chrome Web Store / Edge Add-ons; no updater)."
+            echo "Developer install: clone the repo at \`${TAG}\` and load it unpacked."
+            echo
+            echo "## Changes"
+            if [ -n "$prev" ]; then
+              git log --no-merges --format='- %s (%h)' "${prev}..HEAD"
+            else
+              git log --no-merges --format='- %s (%h)' -n 20
+            fi
+          } > notes.md
+          gh release create "$TAG" "dist/philterads-${VERSION}.zip" \
+            --target "$(git rev-parse HEAD)" \
+            --title "PhilterAds ${VERSION}" \
+            --notes-file notes.md

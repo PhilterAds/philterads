@@ -29,6 +29,12 @@ Open an issue with:
 - Plain HTML, CSS and JavaScript only: no frameworks, no remote code, and no new runtime dependencies.
 - Keep pull requests small and focused, and say why in the description.
 
+## Versions and releases
+
+- The version lives in `manifest.json` only, as `MAJOR.MINOR.PATCH`. Don't bump it in a pull request; maintainers do that when releasing.
+- The weekly list refresh bumps PATCH automatically. Feature releases bump MINOR.
+- Each new version on `main` is tagged `vX.Y.Z` and gets a [GitHub Release](https://github.com/PhilterAds/philterads/releases) with the store package attached (`.github/workflows/release.yml`). Tags are protected and never moved.
+
 ## Filter lists
 
 The rules come from the upstream lists credited in the [README](README.md). Fix a list rule upstream where you can. Hand rules belong in `rulesets/core.json` (blocking) or `rulesets/safety.json` (allow rules that protect sites).
