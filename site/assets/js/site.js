@@ -101,6 +101,17 @@
     sip.addEventListener("mouseenter", hop, { once: true });
   }
 
+  /* logo (Sip + wordmark) = home: back to the hero on the main page, or to the main page from elsewhere */
+  var goHome = function (e) {
+    var hero = document.getElementById("top");
+    if (!hero) { location.assign(document.documentElement.lang === "ja" ? "/ja/" : "/"); return; }
+    if (e) e.preventDefault();
+    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    if (location.hash) history.replaceState(null, "", location.pathname + location.search);
+  };
+  if (sip) sip.addEventListener("click", goHome);
+  document.querySelectorAll(".site-head .wordmark").forEach(function (w) { w.addEventListener("click", goHome); });
+
   /* language toggle: remember the choice, carry the hash across */
   document.querySelectorAll("a[data-lang]").forEach(function (a) {
     a.addEventListener("click", function (e) {

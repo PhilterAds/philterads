@@ -120,10 +120,10 @@ html[lang="ja"] .lead, html[lang="ja"] .scene-text p { word-break: auto-phrase; 
   :root:not([data-theme="light"]) .theme-btn .i-moon { display: none; }
 }
 .theme-btn { margin-left: auto; }
-@media (min-width: 720px) { .gh-link:not([hidden]) + .theme-btn { margin-left: 0; } }
+@media (min-width: 880px) { .gh-link:not([hidden]) + .theme-btn { margin-left: 0; } }
 
-/* phones and small tablets: nav moves to its own row under the brand row */
-@media (max-width: 719px) {
+/* phones and tablets: nav moves to its own row under the brand row */
+@media (max-width: 879px) {
   html { scroll-padding-top: 124px; }
   .site-head { height: auto; }
   .head-row { height: auto; flex-wrap: wrap; gap: 0 8px; padding-top: 10px; }
@@ -172,7 +172,7 @@ html[lang="ja"] .lead, html[lang="ja"] .scene-text p { word-break: auto-phrase; 
 
 /* ---- buttons ---- */
 .btn {
-  display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 22px;
+  display: inline-flex; align-items: center; justify-content: center; height: auto; min-height: 48px; padding: 10px 22px; line-height: 1.2; text-align: center;
   border: 0; border-radius: 999px; font: 600 1rem/1 var(--font-body); text-decoration: none; cursor: pointer;
   transition: transform 120ms ease, box-shadow 120ms ease;
 }
@@ -325,7 +325,7 @@ html[lang="ja"] .tier .thanks { line-height: 1.8; }
 .sponsor-soon { margin: 16px 0 0; font-size: 15px; font-weight: 700; color: var(--link); }
 
 .goal {
-  display: flex; align-items: center; gap: 12px; margin-top: 24px; padding: 16px 20px;
+  display: flex; align-items: center; gap: 12px; margin-top: 32px; padding: 16px 20px;
   background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
   font-size: 15px; line-height: 1.6;
 }
@@ -363,13 +363,14 @@ html[lang="ja"] .faq-wrap details p { line-height: 1.8; }
 
 /* ---- final CTA band ---- */
 .get { background: var(--band); text-align: center; }
+#promise, #install { background: var(--band); }
 .sip-cta { width: 96px; height: 96px; margin: 0 auto 8px; overflow: visible; display: block; }
 .sip-cta .m-bob { animation: m-bob 3s ease-in-out infinite; transform-origin: 50% 100% !important; }
 .sip-cta g, .sip-cta path { transform-box: fill-box; transform-origin: 50% 50%; }
 .get h2 { max-width: none; }
 .get .sub { margin: 12px auto 24px; font-size: 1.0625rem; color: var(--muted); }
-.get .cta > [data-cta-state] { justify-content: center; }
-.get .cta .pill, .get .cta .note { justify-self: center; }
+.get .cta > [data-cta-state] { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.get .cta .pill, .get .cta .note { flex-basis: 100%; justify-content: center; text-align: center; }
 
 /* ---- footer ---- */
 .site-foot { border-top: 1px solid var(--border); padding: 48px 0 40px; }
@@ -386,7 +387,7 @@ html[lang="ja"] .foot-col h3 { font-family: var(--font-ja); }
 .foot-col li { margin: 0; }
 .foot-col a { display: inline-flex; align-items: center; min-height: 44px; font-size: 15px; color: var(--muted); text-decoration: none; }
 .foot-col a:hover { color: var(--link); text-decoration: underline; }
-@media (max-width: 719px) { .foot-col + .foot-col { margin-top: 24px; } }
+@media (max-width: 719px) { .foot-grid > nav { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; } }
 .foot-lang { margin-top: 32px; width: fit-content; }
 .foot-legal { margin: 32px 0 0; font-size: 13px; line-height: 1.7; color: var(--muted); max-width: 74ch; }
 
@@ -547,7 +548,7 @@ html[lang="ja"] .step p { line-height: 1.8; }
 }
 .copy-btn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .install-foot { display: grid; gap: 20px; align-items: start; margin-top: 28px; }
-@media (min-width: 880px) { .install-foot { grid-template-columns: max-content 1fr; gap: 32px; } }
+@media (min-width: 880px) { .install-foot { grid-template-columns: 1fr; } .install-notes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; } }
 .install-notes p { margin: 0 0 10px; font-size: 15px; line-height: 1.6; color: var(--muted); }
 .install-notes b { color: var(--text); }
 @media (max-width: 480px) { .install-foot .btn { width: 100%; } }
@@ -555,7 +556,7 @@ html[lang="ja"] .step p { line-height: 1.8; }
 @media (min-width: 880px) { .steps { grid-template-columns: repeat(6, 1fr); } .step { grid-column: span 2; } .step:nth-child(4) { grid-column: 2 / span 2; } }
 .step code, .copy-btn { white-space: nowrap; }
 /* design pass */
-.copy-chip { display: flex; margin: 6px 0 4px; vertical-align: baseline; }
+.copy-chip { display: flex; flex-wrap: wrap; gap: 6px 4px; margin: 6px 0 4px; vertical-align: baseline; }
 .look-slide { width: min(78vw, 720px); }
 .step code, .install-notes code { font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace; font-size: 0.9em; padding: 2px 7px; }
 .copy-btn { height: 32px; padding: 0 10px; font-size: 13px; }
@@ -613,7 +614,7 @@ html[lang="ja"] .show-desc { line-height: 1.8; }
   .show-tab[aria-selected="true"] { border-color: var(--accent); }
   .show-tab[aria-selected="true"]::before { display: none; }
 }
-.tricks-h { margin: 72px 0 24px; font: 800 1.5rem/1.25 "Nunito", var(--font-body); }
+.tricks-h { margin: 64px 0 24px; font: 800 1.5rem/1.25 "Nunito", var(--font-body); }
 .tricks { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
 .trick {
   display: flex; flex-direction: column; overflow: hidden;
@@ -627,7 +628,7 @@ html[lang="ja"] .show-desc { line-height: 1.8; }
 .trick-text p { margin: 0; font-size: 15px; line-height: 1.6; color: var(--muted); }
 html[lang="ja"] .trick-text p { line-height: 1.8; }
 @media (max-width: 559px) {
-  .tricks-h { margin-top: 56px; }
+  .tricks-h { margin-top: 48px; }
   .tricks { grid-template-columns: 1fr; gap: 14px; }
   .trick { flex-direction: row; align-items: flex-start; }
   .trick-art { flex: none; width: 112px; padding: 14px 0 14px 14px; }
@@ -771,3 +772,15 @@ html[lang="ja"] .promise-h { line-height: 1.5; }
   html[lang="ja"] .site-nav a { font-size: 12px; letter-spacing: -0.02em; }
 }
 @media (max-width: 359px) { .site-nav { overflow-x: auto; scrollbar-width: none; justify-content: flex-start; } .site-nav a { flex: 0 0 auto; padding: 0 6px; } }
+
+/* layout pass: steps never force sideways scroll, download button lives in step 1, compact promise cards on phones/tablets */
+.step, .step > div { min-width: 0; }
+.step .btn { margin-top: 12px; align-self: flex-start; }
+@media (max-width: 359px) { .step code { white-space: normal; overflow-wrap: anywhere; } }
+@media (max-width: 879px) {
+  .promise-card { display: grid; grid-template-columns: 28px 1fr; column-gap: 12px; align-items: center; }
+  .promise-card h4 { margin: 0; }
+  .promise-card p { grid-column: 1 / -1; margin: 8px 0 0; }
+}
+.btn { max-width: 100%; }
+@media (max-width: 879px) { .show-stage::before { inset: 8% 0 -6% 4%; } }

@@ -101,7 +101,7 @@
 
 <header class="site-head">
   <div class="wrap head-row">
-    <button class="mascot" id="mascot" type="button" aria-label="PhilterAdsのポーション、シップちゃん。つんつん！">
+    <button class="mascot" id="mascot" type="button" aria-label="PhilterAds：トップへ戻る">
       <svg viewBox="0 0 128 128" aria-hidden="true">
         <g class="m-bob">
           <g transform="rotate(-7 64 72)" stroke="#2A1B4E" stroke-linejoin="round" stroke-linecap="round">
@@ -121,7 +121,7 @@
         <path class="m-spark" d="M106 12 Q108 28 124 30 Q108 32 106 48 Q104 32 88 30 Q104 28 106 12 Z" fill="#FFD23F" stroke="#2A1B4E" stroke-width="5" stroke-linejoin="round"/>
       </svg>
     </button>
-    <span class="wordmark">PhilterAds</span>
+    <a class="wordmark" href="#top">PhilterAds</a>
     <nav class="site-nav" aria-label="サイト">
       <a href="#promise">ミッション</a>
       <a href="#features">できること</a>
@@ -149,7 +149,7 @@
       <p class="lead">PhilterAdsは広告・ポップアップ・トラッカー・マルウェアサイトをブロックし、YouTube広告は再生前に消します。ログインや決済は壊しません。お金をもらって広告を通すことは、絶対にしません。あなたのデータも集めません。</p>
       <div class="cta" data-cta>
         <div data-cta-state="soon">
-          <a class="btn btn-primary" data-href="download" data-dl href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>Chrome・Edge版をダウンロード</a>
+          <a class="btn btn-primary" data-href="download" data-dl href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg><span>Chrome・Edge版を<span class="nobr">ダウンロード</span></span></a>
           <a class="btn btn-ghost" href="#install">インストール方法</a>
           <p class="note">無料・オープンソース。インストールは約1分。ストア版は現在審査中です。</p>
         </div>
@@ -291,14 +291,13 @@
       <p class="sec-sub">Chromeウェブストア版とEdgeアドオン版は現在審査中です。公開されるまでは、同じビルドをGitHubのリリースから直接インストールできます。</p>
     </div>
     <ol class="steps">
-      <li class="step reveal"><span class="step-n" aria-hidden="true">1</span><div><h3>ダウンロード</h3><p>最新リリースの<a data-no-jump href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip" data-href="download" data-dl>philterads.zip</a>をダウンロードします。</p></div></li>
+      <li class="step reveal"><span class="step-n" aria-hidden="true">1</span><div><h3>ダウンロード</h3><p>最新リリースの<a data-no-jump href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip" data-href="download" data-dl>philterads.zip</a>をダウンロードします。</p><a class="btn btn-primary" data-href="download" data-dl data-no-jump href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg><span>Chrome・Edge版を<span class="nobr">ダウンロード</span></span></a></div></li>
       <li class="step reveal"><span class="step-n" aria-hidden="true">2</span><div><h3>展開する</h3><p>残しておくフォルダー（例：<code>ドキュメント\PhilterAds</code>）に展開します。ブラウザーはこのフォルダーからPhilterAdsを動かすので、削除しないでください。</p></div></li>
       <li class="step reveal"><span class="step-n" aria-hidden="true">3</span><div><h3>拡張機能ページを開く</h3><p>アドレスバーにこれを貼り付けます：<span class="copy-chip"><code>chrome://extensions</code><button type="button" class="copy-btn" data-copy="chrome://extensions" data-copied="コピーしました"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>コピー</span></button></span>Edgeでは <code>edge://extensions</code> です。BraveやVivaldiも同じ手順です。</p></div></li>
       <li class="step reveal"><span class="step-n" aria-hidden="true">4</span><div><h3>デベロッパーモードをオン</h3><p>Chromeでは右上、Edgeでは左のサイドバーにあるスイッチです。</p></div></li>
       <li class="step reveal"><span class="step-n" aria-hidden="true">5</span><div><h3>「パッケージ化されていない拡張機能を読み込む」</h3><p>ボタンを押し、<code>manifest.json</code> が入っているフォルダーを選びます。最後にパズルのアイコンからシップちゃんをピン留めしましょう。</p></div></li>
     </ol>
     <div class="install-foot reveal">
-      <a class="btn btn-primary" data-href="download" data-dl data-no-jump href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>Chrome・Edge版をダウンロード</a>
       <div class="install-notes">
         <p><b>アップデート：</b> 新しいzipをダウンロードして同じフォルダーに上書き展開し、PhilterAdsのカードの再読み込みボタンを押します。設定やザップした広告はそのまま残ります。ストア版が公開されたら、アップデートは自動になります。</p>
         <p><b>.exeインストーラーがない理由：</b> ChromeとEdgeが受け付ける拡張機能は、ストアからのものか、デベロッパーモードで読み込んだものだけです。ブラウザーの裏で拡張機能を押し込むインストーラーはアドウェアの手口なので、私たちは配布しません。</p>
@@ -507,7 +506,7 @@
       <p class="sub">無料。オープンソース。あなたの味方。</p>
       <div class="cta" data-cta>
         <div data-cta-state="soon">
-          <a class="btn btn-primary" data-href="download" data-dl href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>Chrome・Edge版をダウンロード</a>
+          <a class="btn btn-primary" data-href="download" data-dl href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg><span>Chrome・Edge版を<span class="nobr">ダウンロード</span></span></a>
           <a class="btn btn-ghost" href="#install">インストール方法</a>
           <a class="btn btn-ghost" href="#support" data-needs="pay" hidden>シップちゃんを応援</a>
           <p class="note">無料・オープンソース。インストールは約1分。ストア版は現在審査中です。</p>
@@ -543,6 +542,7 @@
       <div class="foot-col">
         <h3>プロダクト</h3>
         <ul>
+          <li><a href="#promise">ミッション</a></li>
           <li><a href="#features">できること</a></li>
           <li><a href="#install">インストール</a></li>
           <li><a href="#roadmap">ロードマップ</a></li>

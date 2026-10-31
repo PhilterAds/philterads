@@ -101,7 +101,7 @@
 
 <header class="site-head">
   <div class="wrap head-row">
-    <button class="mascot" id="mascot" type="button" aria-label="Sip, the PhilterAds potion. Boop!">
+    <button class="mascot" id="mascot" type="button" aria-label="PhilterAds: back to top">
       <svg viewBox="0 0 128 128" aria-hidden="true">
         <g class="m-bob">
           <g transform="rotate(-7 64 72)" stroke="#2A1B4E" stroke-linejoin="round" stroke-linecap="round">
@@ -121,7 +121,7 @@
         <path class="m-spark" d="M106 12 Q108 28 124 30 Q108 32 106 48 Q104 32 88 30 Q104 28 106 12 Z" fill="#FFD23F" stroke="#2A1B4E" stroke-width="5" stroke-linejoin="round"/>
       </svg>
     </button>
-    <span class="wordmark">PhilterAds</span>
+    <a class="wordmark" href="#top">PhilterAds</a>
     <nav class="site-nav" aria-label="Site">
       <a href="#promise">Mission</a>
       <a href="#features">Features</a>
@@ -291,14 +291,13 @@
       <p class="sec-sub">The Chrome Web Store and Edge Add-ons listings are in review. Until they go live, install the same build straight from our GitHub releases.</p>
     </div>
     <ol class="steps">
-      <li class="step reveal"><span class="step-n" aria-hidden="true">1</span><div><h3>Download</h3><p>Get <a data-no-jump href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip" data-href="download" data-dl>philterads.zip</a>, the latest release.</p></div></li>
+      <li class="step reveal"><span class="step-n" aria-hidden="true">1</span><div><h3>Download</h3><p>Get <a data-no-jump href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip" data-href="download" data-dl>philterads.zip</a>, the latest release.</p><a class="btn btn-primary" data-href="download" data-dl data-no-jump href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>Download for Chrome &amp; Edge</a></div></li>
       <li class="step reveal"><span class="step-n" aria-hidden="true">2</span><div><h3>Unzip it</h3><p>Extract it into a folder you'll keep, such as <code>Documents\PhilterAds</code>. The browser runs PhilterAds from that folder, so don't delete it.</p></div></li>
       <li class="step reveal"><span class="step-n" aria-hidden="true">3</span><div><h3>Open extensions</h3><p>Paste this into the address bar: <span class="copy-chip"><code>chrome://extensions</code><button type="button" class="copy-btn" data-copy="chrome://extensions" data-copied="Copied"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>Copy</span></button></span>In Edge, use <code>edge://extensions</code>. Brave and Vivaldi work the same way.</p></div></li>
       <li class="step reveal"><span class="step-n" aria-hidden="true">4</span><div><h3>Turn on Developer mode</h3><p>It's a switch at the top right in Chrome, and in the left sidebar in Edge.</p></div></li>
       <li class="step reveal"><span class="step-n" aria-hidden="true">5</span><div><h3>Load unpacked</h3><p>Click <b>Load unpacked</b> and pick the folder that has <code>manifest.json</code> in it. Then pin Sip from the puzzle-piece menu.</p></div></li>
     </ol>
     <div class="install-foot reveal">
-      <a class="btn btn-primary" data-href="download" data-dl data-no-jump href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>Download for Chrome &amp; Edge</a>
       <div class="install-notes">
         <p><b>Updating.</b> Download the new zip, unzip it over the same folder, then press the reload arrow on the PhilterAds card. Your settings and zapped ads stay. Once the store listings are live, updates happen on their own.</p>
         <p><b>Why there's no .exe installer.</b> Chrome and Edge only accept extensions from their stores or through Developer mode. Installers that push an extension in behind the browser's back are how adware works, so we won't ship one.</p>
@@ -543,6 +542,7 @@
       <div class="foot-col">
         <h3>Product</h3>
         <ul>
+          <li><a href="#promise">Mission</a></li>
           <li><a href="#features">Features</a></li>
           <li><a href="#install">Install</a></li>
           <li><a href="#roadmap">Roadmap</a></li>
