@@ -374,6 +374,8 @@ async function unstoreZapped(host, sel) {
 
 const UPDATER_HOST = 'com.aialchemist.philterads';
 const UPDATE_ALARM = 'update-check';
+// the Chrome Web Store build (tools/build-store.mjs) drops nativeMessaging: the store updates it
+const STORE = !chrome.runtime.getManifest().permissions?.includes('nativeMessaging');
 
 function sendNative(message) {
   return new Promise((resolve) => {
@@ -391,6 +393,7 @@ function sendNative(message) {
 }
 
 async function checkForUpdates() {
+  if (STORE) return;
   const r = await sendNative({ cmd: 'status' });
   const prev = (await chrome.storage.local.get({ update: {} })).update;
   // on failure keep whatever was last known (a network hiccup must not
@@ -406,5 +409,6 @@ async function checkForUpdates() {
 }
 
 function ensureUpdateAlarm() {
+  if (STORE) { chrome.alarms.clear(UPDATE_ALARM); return; }
   chrome.alarms.create(UPDATE_ALARM, { periodInMinutes: 6 * 60 }); // every 6 hours
 }

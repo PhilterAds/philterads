@@ -516,6 +516,9 @@ async function main() {
   // 6-hourly check; here it also powers the explicit buttons. status is
   // read-only (git fetch); update is pull --ff-only + reload.
   const UPDATER_HOST = 'com.aialchemist.philterads';
+  // the Chrome Web Store build has no nativeMessaging: the store updates it, so no Updates card
+  const STORE = !chrome.runtime.getManifest().permissions?.includes('nativeMessaging');
+  $('updates-card').hidden = STORE;
 
   function sendNative(message) {
     return new Promise((resolve) => {
