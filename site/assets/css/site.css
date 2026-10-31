@@ -558,3 +558,10 @@ html[lang="ja"] .step p { line-height: 1.8; }
 .look-slide { width: min(78vw, 720px); }
 .step code, .install-notes code { font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace; font-size: 0.9em; padding: 2px 7px; }
 .copy-btn { height: 32px; padding: 0 10px; font-size: 13px; }
+/* hero v2: popup stands to the right of the art, clear of Sip the flask */
+.hero-panel .panel-hero { width: 68%; }
+.hero-pop { right: 0; left: auto; top: 50%; bottom: auto; width: 35%; max-width: 220px; transform: translateY(-38%) rotate(-4deg); }
+.hero-panel { margin-bottom: 0; }
+@media (max-width: 879px) { .hero-pop { right: 0; width: 34%; } }
+.spark-a { right: calc(32% - 12px); }
+.feat-strip { margin-bottom: 48px; }
