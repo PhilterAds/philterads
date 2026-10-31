@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PhilterAds — Free Ad Blocker and Pop-up Blocker for Chrome</title>
+<meta name="description" content="Free, open-source ad blocker and pop-up blocker for Chrome and Edge. Blocks ads, pop-ups, trackers and malware, skips YouTube ads, and never breaks logins.">
+<link rel="canonical" href="https://philterads.com/">
+<link rel="alternate" hreflang="en" href="https://philterads.com/">
+<link rel="alternate" hreflang="ja" href="https://philterads.com/ja/">
+<link rel="alternate" hreflang="x-default" href="https://philterads.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PhilterAds">
+<meta property="og:title" content="PhilterAds — Free Ad Blocker and Pop-up Blocker for Chrome">
+<meta property="og:description" content="Free, open-source ad blocker and pop-up blocker for Chrome and Edge. Blocks ads, pop-ups, trackers and malware, skips YouTube ads, and never breaks logins.">
+<meta property="og:url" content="https://philterads.com/">
+<meta property="og:image" content="https://philterads.com/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sip, a pink round-flask potion, flashes a peace sign while a magical pink whirlpool dissolves angry little ad banners into bubbles and sakura petals.">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PhilterAds — Free Ad Blocker and Pop-up Blocker for Chrome">
+<meta name="twitter:description" content="Free, open-source ad blocker and pop-up blocker for Chrome and Edge. Blocks ads, pop-ups, trackers and malware, skips YouTube ads, and never breaks logins.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#F7F3FB">
+<meta name="theme-color" content="#15111F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" as="font" href="/assets/fonts/nunito-800-latin.woff2" type="font/woff2" crossorigin>
+<link rel="preload" as="image" imagesrcset="/assets/img/hero-1280.webp 1280w, /assets/img/hero-960.webp 960w, /assets/img/hero-640.webp 640w" imagesizes="(min-width:1168px) 520px, (min-width:880px) 46vw, calc(100vw - 40px)" fetchpriority="high">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/lang.js"></script>
+<script src="/assets/js/config.js" defer></script>
+<script src="/assets/js/site.js" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://philterads.com/#website",
+   "url": "https://philterads.com/",
+   "name": "PhilterAds",
+   "inLanguage": [
+    "en",
+    "ja"
+   ],
+   "publisher": {
+    "@id": "https://philterads.com/#org"
+   }
+  },
+  {
+   "@type": "Organization",
+   "@id": "https://philterads.com/#org",
+   "name": "PhilterAds",
+   "url": "https://philterads.com/",
+   "logo": "https://philterads.com/apple-touch-icon.png"
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://philterads.com/#app",
+   "name": "PhilterAds",
+   "alternateName": "PhilterAds Ad Blocker",
+   "url": "https://philterads.com/",
+   "description": "Free, open-source ad blocker and pop-up blocker for Chrome and Edge. Blocks ads, pop-ups, trackers and malware sites, removes YouTube ads before they play, and never breaks logins.",
+   "applicationCategory": "BrowserApplication",
+   "applicationSubCategory": "Ad blocker",
+   "operatingSystem": "Google Chrome, Microsoft Edge",
+   "inLanguage": "en",
+   "isAccessibleForFree": true,
+   "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+   "image": "https://philterads.com/assets/img/og.jpg",
+   "featureList": [
+    "Ad blocker",
+    "Pop-up blocker",
+    "YouTube ad blocker",
+    "Tracker blocker",
+    "Malware and scam site blocker",
+    "Cookie banner remover (optional)",
+    "Pause on any site",
+    "No data collection"
+   ],
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "publisher": {
+    "@id": "https://philterads.com/#org"
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <button class="mascot" id="mascot" type="button" aria-label="Sip, the PhilterAds potion. Boop!">
+      <svg viewBox="0 0 128 128" aria-hidden="true">
+        <g class="m-bob">
+          <g transform="rotate(-7 64 72)" stroke="#2A1B4E" stroke-linejoin="round" stroke-linecap="round">
+            <rect x="52" y="6" width="24" height="20" rx="5" fill="#D9985E" stroke-width="7"/>
+            <path d="M50 24 H78 V40.5 A40 40 0 1 1 50 40.5 Z" fill="#F1EBFF" stroke-width="7"/>
+            <g class="m-potion"><path d="M29.5 66 A36.5 36.5 0 1 0 98.5 66 Q81 71 64 66 Q47 61 29.5 66 Z" fill="#FF4FA3" stroke="none"/></g>
+            <rect x="44" y="20" width="40" height="12" rx="6" fill="#F1EBFF" stroke-width="7"/>
+            <path d="M36 62 A32 32 0 0 1 53 48" fill="none" stroke="#FFFFFF" stroke-opacity=".85" stroke-width="5"/>
+            <g class="m-eyes" stroke="none">
+              <circle cx="50" cy="79" r="8" fill="#FFFFFF"/><circle cx="78" cy="79" r="8" fill="#FFFFFF"/>
+              <circle cx="52" cy="78" r="4" fill="#2A1B4E"/><circle cx="80" cy="78" r="4" fill="#2A1B4E"/>
+            </g>
+            <path class="m-sleep" d="M43 80 Q50 85 57 80 M71 80 Q78 85 85 80" fill="none" stroke-width="5"/>
+            <path d="M52 93 Q64 104 78 91" fill="none" stroke-width="5"/>
+          </g>
+        </g>
+        <path class="m-spark" d="M106 12 Q108 28 124 30 Q108 32 106 48 Q104 32 88 30 Q104 28 106 12 Z" fill="#FFD23F" stroke="#2A1B4E" stroke-width="5" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <span class="wordmark">PhilterAds</span>
+    <nav class="site-nav" aria-label="Site">
+      <a href="#features">Features</a>
+      <a href="#roadmap">Roadmap</a>
+      <a class="nav-support" href="#support"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.9c0 5.6-7.5 10-7.5 10z"/></svg>Support</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="gh-link" data-href="github" data-needs="repo" hidden href="https://github.com/PhilterAds/philterads">GitHub</a>
+    <button class="theme-btn" id="theme-btn" type="button" aria-label="Switch to dark theme" data-label-light="Switch to dark theme" data-label-dark="Switch to light theme"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <nav class="lang" aria-label="Language">
+      <a href="/" data-lang="en" lang="en" hreflang="en" aria-current="page">EN</a>
+      <a href="/ja/" data-lang="ja" lang="ja" hreflang="ja">日本語</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section id="top" class="hero-section" aria-labelledby="hero-h1">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">Free ad blocker and pop-up blocker for Chrome</p>
+      <h1 id="hero-h1">One sip. Ads vanish.</h1>
+      <p class="lead">PhilterAds blocks ads, pop-ups, trackers and malware sites, removes YouTube ads before they play, and never breaks your logins. We never let ads through for money. Nothing about you is collected.</p>
+      <div class="cta" data-cta>
+        <div data-cta-state="soon">
+          <span class="pill" role="status"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg>Coming soon to the Chrome Web Store</span>
+          <a class="btn btn-primary" data-href="github" href="https://github.com/PhilterAds/philterads" data-needs="repo" hidden>Get early access on GitHub</a>
+          <a class="btn btn-primary" href="#features" data-unless="repo">See what Sip does</a>
+          <a class="btn btn-ghost" href="#support" data-needs="pay" hidden>Support Sip</a>
+          <p class="note" data-needs="repo" hidden>Watch the repo on GitHub to hear the moment it lands.</p>
+          <p class="note" data-unless="repo">Chrome and Edge first. Firefox follows.</p>
+        </div>
+        <div data-cta-state="live" hidden>
+          <a class="btn btn-primary" data-href="install">Add to Chrome — it's free</a>
+          <a class="btn btn-ghost" data-href="github" href="https://github.com/PhilterAds/philterads" data-needs="repo" hidden>View on GitHub</a>
+          <p class="note">Free. Open source. No account.</p>
+        </div>
+      </div>
+      <div class="stores" data-stores hidden>
+        <ul class="store-badges" aria-label="Get PhilterAds">
+          <li data-store="chrome" hidden><a><img src="/assets/img/badges/chrome-web-store.png" width="159" height="48" alt="Available in the Chrome Web Store"></a></li>
+          <li data-store="edge" hidden><a><img src="/assets/img/badges/edge-en.png" width="181" height="48" alt="Get it from Microsoft Edge"></a></li>
+          <li data-store="firefox" hidden><a><img src="/assets/img/badges/firefox-get-the-addon.svg" width="138" height="48" alt="Get the add-on for Firefox"></a></li>
+          <li data-store="opera" hidden><a class="btn btn-ghost">Get it for Opera</a></li>
+        </ul>
+        <p class="stores-also" data-also hidden>Also works in Brave, Vivaldi and Arc.</p>
+      </div>
+      <ul class="chips">
+        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.5 12 13 4.5"/></svg>Free forever</li>
+        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.5 12 13 4.5"/></svg>Open source (GPLv3)</li>
+        <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.5 12 13 4.5"/></svg>No account needed</li>
+      </ul>
+    </div>
+    <figure class="panel-tilt hero-panel">
+      <div class="panel panel-hero">
+        <img src="/assets/img/hero-1280.webp" srcset="/assets/img/hero-1280.webp 1280w, /assets/img/hero-960.webp 960w, /assets/img/hero-640.webp 640w" sizes="(min-width:1168px) 520px, (min-width:880px) 46vw, calc(100vw - 40px)" width="1280" height="720" fetchpriority="high" decoding="async" alt="Sip, a pink round-flask potion, flashes a peace sign while a magical pink whirlpool dissolves angry little ad banners into bubbles and sakura petals.">
+      </div>
+      <svg class="spark spark-a" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 Q17.6 13.4 28 16 Q17.6 18.6 16 30 Q14.4 18.6 4 16 Q14.4 13.4 16 2 Z"/></svg>
+      <svg class="spark spark-b" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 Q17.6 13.4 28 16 Q17.6 18.6 16 30 Q14.4 18.6 4 16 Q14.4 13.4 16 2 Z"/></svg>
+    </figure>
+  </div>
+</section>
+
+<section id="promise" aria-labelledby="promise-h2">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">The rules</p>
+      <h2 id="promise-h2">Three promises, in order</h2>
+    </div>
+    <div class="cards3">
+      <article class="promise-card reveal">
+        <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M14 3 23 6.3v6.7c0 5.9-3.9 10.2-9 12.3-5.1-2.1-9-6.4-9-12.3V6.3Z"/><path d="m9.8 13.6 3 3 5.6-6"/></svg>
+        <h3>Never breaks your web</h3>
+        <p>Logins, payments and captchas are protected by an allow-list that outranks every blocking rule, and our tests prove it on every build.</p>
+      </article>
+      <article class="promise-card reveal">
+        <svg viewBox="0 0 28 28" aria-hidden="true"><circle cx="14" cy="14" r="10"/><path d="M6.3 21.7 21.7 6.3"/><path d="M14 10.5v7"/></svg>
+        <h3>No paid exceptions. Ever.</h3>
+        <p>Some ad blockers let "acceptable" ads through when advertisers pay. We never will.</p>
+      </article>
+      <article class="promise-card reveal">
+        <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M4.5 14C7.4 9 20.6 9 23.5 14 20.6 19 7.4 19 4.5 14Z"/><circle cx="14" cy="14" r="2.8"/><path d="M5.5 22.5 22.5 5.5"/></svg>
+        <h3>Collects nothing</h3>
+        <p>No telemetry, no account, no remote code. The only network requests are the page's own.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="features" aria-labelledby="features-h2">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Features</p>
+      <h2 id="features-h2">What Sip does all day</h2>
+    </div>
+    <div class="scenes">
+      <article class="scene reveal">
+        <figure class="panel-tilt panel-scene scene-media">
+          <div class="panel"><img src="/assets/img/youtube-1024.webp" srcset="/assets/img/youtube-1024.webp 1024w, /assets/img/youtube-768.webp 768w, /assets/img/youtube-512.webp 512w" sizes="(min-width:1168px) 520px, (min-width:880px) 46vw, calc(100vw - 40px)" width="1024" height="1024" loading="lazy" decoding="async" alt="Sip lounges on a pink bean bag with popcorn beside a big TV, plucking a dizzy ad banner off the screen."></div>
+        </figure>
+        <div class="scene-text">
+          <h3>YouTube, with the ads gone before they start</h3>
+          <p>The player's ad data is removed before the player reads it. If anything slips through, Sip mutes it, skips to the end and clicks Skip for you. No countdown, no waiting.</p>
+        </div>
+      </article>
+      <article class="scene reveal">
+        <!-- placeholder art: restore anime-v2 alt on re-export -->
+        <figure class="panel-tilt panel-scene scene-media">
+          <div class="panel"><img src="/assets/img/tracker-1024.webp" srcset="/assets/img/tracker-1024.webp 1024w, /assets/img/tracker-768.webp 768w, /assets/img/tracker-512.webp 512w" sizes="(min-width:1168px) 520px, (min-width:880px) 46vw, calc(100vw - 40px)" width="1024" height="1024" loading="lazy" decoding="async" alt="Sip in dark sunglasses, looking cool, with a wide-eyed pink tracker bubble floating beside it."></div>
+        </figure>
+        <div class="scene-text">
+          <h3>Trackers caught. Malware sites locked out.</h3>
+          <p>Six filter lists, including EasyPrivacy and the URLhaus malware list, refreshed every week. Sneaky trackers get bubbled, known malware domains never load at all, and pop-up ad tabs are closed the moment they open.</p>
+        </div>
+      </article>
+      <article class="scene reveal">
+        <figure class="panel-tilt panel-scene scene-media">
+          <div class="panel"><img src="/assets/img/cookies-1024.webp" srcset="/assets/img/cookies-1024.webp 1024w, /assets/img/cookies-768.webp 768w, /assets/img/cookies-512.webp 512w" sizes="(min-width:1168px) 520px, (min-width:880px) 46vw, calc(100vw - 40px)" width="1024" height="1024" loading="lazy" decoding="async" alt="Sip happily bites a chocolate-chip cookie while a grumpy cookie-consent banner crumbles to pieces beside it."></div>
+        </figure>
+        <div class="scene-text">
+          <h3>Cookie banners? Sip prefers the real ones.</h3>
+          <p>Turn on the Cookie banners list and the consent walls crumble. It's off by default, because hiding the wrong thing is worse than seeing a banner, and it's one tap to change.</p>
+        </div>
+      </article>
+      <article class="scene reveal" id="zap">
+        <figure class="panel-tilt panel-scene scene-media">
+          <div class="panel"><img src="/assets/img/zap-1024.webp" srcset="/assets/img/zap-1024.webp 1024w, /assets/img/zap-768.webp 768w, /assets/img/zap-512.webp 512w" sizes="(min-width:1168px) 520px, (min-width:880px) 46vw, calc(100vw - 40px)" width="1024" height="1024" loading="lazy" decoding="async" alt="Sip winks and taps a grumpy orange ad banner with a lightning-tipped wand, and the ad bursts into pink sparkles."></div>
+        </figure>
+        <div class="scene-text">
+          <h3>Missed one? Zap it.</h3>
+          <p>Spot an ad the lists missed? Tap <b>Zap a missed ad</b>, click it, and POOF, it is gone. It stays gone every time you come back to that site, and one tap on <b>Undo</b> brings it all back.</p>
+        </div>
+      </article>
+      <article class="scene reveal">
+        <figure class="panel-tilt panel-scene scene-media">
+          <div class="panel"><img src="/assets/img/sleeping-1024.webp" srcset="/assets/img/sleeping-1024.webp 1024w, /assets/img/sleeping-768.webp 768w, /assets/img/sleeping-512.webp 512w" sizes="(min-width:1168px) 520px, (min-width:880px) 46vw, calc(100vw - 40px)" width="1024" height="1024" loading="lazy" decoding="async" alt="Sip fast asleep, hugging itself, with a pink dream bubble, a crescent moon and tiny gold stars floating around."></div>
+        </figure>
+        <div class="scene-text">
+          <h3>Site acting up? Let Sip nap.</h3>
+          <p>One toggle pauses PhilterAds on just that site, and the master switch sends Sip to sleep everywhere. Both are reversible from the same spot.</p>
+        </div>
+      </article>
+    </div>
+    <p class="nudge reveal" data-needs="pay" hidden><span>PhilterAds is free and runs on supporters: from <span class="nobr">$3 USD</span> a month, or any amount once.</span><a class="btn btn-primary" href="#support"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.9c0 5.6-7.5 10-7.5 10z"/></svg>Support Sip</a></p>
+  </div>
+</section>
+
+<section id="roadmap" class="roadmap" aria-labelledby="roadmap-h2">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Roadmap</p>
+      <h2 id="roadmap-h2">What Sip is brewing next</h2>
+    </div>
+    <div class="cards3">
+      <article class="road-card road-now reveal">
+        <p class="road-stage">Out now</p>
+        <h3>v1.6</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Blocks ads, trackers, malware sites and pop-up ad tabs</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Skips YouTube ads</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><strong>Zap</strong> any ad the lists miss, and undo it any time</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Stats for today and all time, with a list of everything you zapped</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Light and dark themes, English and 日本語</span></li>
+        </ul>
+      </article>
+      <article class="road-card road-next reveal">
+        <p class="road-stage">Up next</p>
+        <h3>AI control and the stores</h3>
+        <ul>
+          <li><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span><strong>AI control over MCP.</strong> Connect Claude, Cursor or any MCP app and just ask: “This site is broken. Fix it.” or “What got blocked here?” Runs on your computer; nothing leaves it.</span></li>
+          <li><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>Early access to AI control for <a href="#support">$15+ supporters</a></span></li>
+          <li><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>Chrome Web Store and Microsoft Edge listings: one-click install, automatic updates</span></li>
+          <li><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>The code goes public on GitHub (GPLv3)</span></li>
+          <li><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>A friendly welcome page on first install</span></li>
+        </ul>
+      </article>
+      <article class="road-card road-later reveal">
+        <p class="road-stage">Later</p>
+        <h3>Smarter, everywhere</h3>
+        <ul>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/></svg><span><strong>Live AI Filter.</strong> A small AI model on your device spots brand-new ads and sponsored blocks the lists haven’t caught yet, as the page loads.</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/></svg><span><strong>Defender.</strong> Real-time warnings for phishing pages, fake download buttons, scam pop-ups and fake “virus found” alerts. On-device too: nothing you browse is sent anywhere.</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/></svg><span>Firefox for desktop and Android, then Opera, then Safari</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/></svg><span>More languages after English and Japanese</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/></svg><span>Supporters vote on what we build next</span></li>
+        </ul>
+      </article>
+    </div>
+    <p class="road-note">Want something on this list? Tell us at <a href="mailto:contact@philterads.com">contact@philterads.com</a>.</p>
+  </div>
+</section>
+
+<section id="support" class="support" aria-labelledby="support-h2">
+  <div class="wrap">
+    <div class="support-top">
+      <!-- placeholder art: restore anime-v2 alt on re-export -->
+      <figure class="panel-tilt panel-support reveal">
+        <div class="panel"><img src="/assets/img/sip-happy-512.webp" srcset="/assets/img/sip-happy-768.webp 768w, /assets/img/sip-happy-512.webp 512w" sizes="(min-width:880px) 220px, 96px" width="1024" height="1024" loading="lazy" decoding="async" alt="Sip, the pink potion, hopping with joy and hugging a big pink heart, surrounded by sparkles, hearts and gold coins."></div>
+      </figure>
+      <div class="support-intro reveal">
+        <p class="eyebrow">Become a supporter</p>
+        <h2 id="support-h2">Buy Sip a refill</h2>
+        <p>Hi, I'm Sip. I block ads for free, never let anyone pay to get through, and collect nothing about you. People like you keep me brewing.</p>
+      </div>
+    </div>
+    <div class="tiers reveal" id="tiers">
+      <h3>Pick your sip</h3>
+      <p class="tiers-sub">Monthly, in US dollars (USD). Cancel any time.</p>
+      <div class="tier-grid">
+        <a class="tier" data-tier="t1">
+          <h4>A Sip</h4>
+          <p class="price"><span class="amt">$3</span> <span class="cur">USD</span> <span class="per">/ month</span></p>
+          <p class="thanks">Our heartfelt thanks, and Sip keeps brewing</p>
+          <span class="tier-btn" data-needs="pay" hidden>Support monthly</span><span class="tier-cta tier-soon" data-unless="pay">Opens soon</span>
+        </a>
+        <a class="tier tier-hot" data-tier="t2">
+          <span class="tier-badge">Most popular</span>
+          <h4>Refill</h4>
+          <p class="price"><span class="amt">$7</span> <span class="cur">USD</span> <span class="per">/ month</span></p>
+          <p class="thanks">Your name on the README thank-you wall</p>
+          <span class="tier-btn" data-needs="pay" hidden>Support monthly</span><span class="tier-cta tier-soon" data-unless="pay">Opens soon</span>
+        </a>
+        <a class="tier" data-tier="t3">
+          <h4>Potion Brewer</h4>
+          <p class="price"><span class="amt">$15</span> <span class="cur">USD</span> <span class="per">/ month</span></p>
+          <p class="thanks">Early builds, including AI control, plus a vote on what we build next</p>
+          <span class="tier-btn" data-needs="pay" hidden>Support monthly</span><span class="tier-cta tier-soon" data-unless="pay">Opens soon</span>
+        </a>
+        <a class="tier" data-tier="t4">
+          <h4>Alchemist</h4>
+          <p class="price"><span class="amt">$50</span> <span class="cur">USD</span> <span class="per">/ month</span></p>
+          <p class="thanks">Your name or logo on philterads.com and in the README</p>
+          <span class="tier-btn" data-needs="pay" hidden>Support monthly</span><span class="tier-cta tier-soon" data-unless="pay">Opens soon</span>
+        </a>
+      </div>
+      <p class="once-label"><span>Or give once</span></p>
+      <a class="tier tier-once" data-tier="t5">
+        <div class="once-text">
+          <h4>One-time sip</h4>
+          <p class="price"><span class="amt">Your choice of amount</span></p>
+          <p class="price-sub">One payment, no subscription. We suggest <span class="nobr">$5 USD</span>; at checkout you can change it to any amount from $1.</p>
+          <p class="thanks">Our thanks, and a happy hop from Sip</p>
+        </div>
+        <span class="tier-btn" data-needs="pay" hidden>Support once</span><span class="tier-cta tier-soon" data-unless="pay">Opens soon</span>
+      </a>
+      <p class="pay-note" data-needs="pay" hidden><svg class="lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg>Secure checkout by Stripe: card, Apple Pay or Google Pay. We never see your card details. Monthly support can be changed or cancelled any time. <a data-pay="portal" href="#">Manage monthly support</a>.</p>
+      <p class="sponsor-soon" data-unless="pay">Support opens soon.</p>
+      <p class="pay-note" data-needs="sponsors" hidden>Prefer GitHub? <a data-href="sponsors" href="https://github.com/sponsors/PhilterAds">Sponsor us on GitHub Sponsors</a>.</p>
+    </div>
+    <p class="goal reveal">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.9c0 5.6-7.5 10-7.5 10z"/></svg>
+      Goal: 30 monthly supporters. Enough to cover the bills and fund one dedicated week a month of blocker maintenance.
+    </p>
+    <p class="goal-live" data-goal-live id="goal-live" hidden></p>
+    <div class="goal-meter" data-goal-bar role="progressbar" aria-valuemin="0" aria-valuemax="30" aria-valuenow="0" aria-labelledby="goal-live" hidden>
+      <svg viewBox="0 0 100 8" preserveAspectRatio="none" aria-hidden="true"><rect data-goal-fill x="0" y="0" width="0" height="8"/></svg>
+    </div>
+    <div class="where reveal">
+      <h3>What your support pays for</h3>
+      <div class="where-grid">
+        <div class="where-item">
+          <h4><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19.5 5.8v5.4c0 4.8-3.2 8.3-7.5 10-4.3-1.7-7.5-5.2-7.5-10V5.8Z"/></svg>Keeping you safe</h4>
+          <p>Weekly malware and scam blocking, and fast fixes when ad networks change their tricks.</p>
+        </div>
+        <div class="where-item">
+          <h4><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 19.5C5.6 15.4 3.5 12.3 3.5 9.6a4 4 0 0 1 7-2.6 4 4 0 0 1 7 2.6c0 2.7-2.1 5.8-7 9.9Z"/><path d="m13.5 13 5.3 5.3a1.9 1.9 0 1 1-2.6 2.6L11 15.6"/></svg>Never breaking your web</h4>
+          <p>Testing on real sites, so logins, payments and video players keep working.</p>
+        </div>
+        <div class="where-item">
+          <h4><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 11 8-6.5L20 11"/><path d="M6.5 9.5V20h11V9.5"/><path d="M10.5 20v-5h3v5"/></svg>Staying independent</h4>
+          <p>The boring bills: domains, the Chrome Web Store, code signing, security reviews.</p>
+        </div>
+        <div class="where-item">
+          <h4><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg>New superpowers</h4>
+          <p>AI control ("fix this broken site"), then more browsers and more languages (日本語 first).</p>
+        </div>
+      </div>
+      <p class="where-note">We'll post where the money went, in plain words, so you can see it working.</p>
+    </div>
+    <p class="thanks-line">Whether you give $1 once or support every month, Sip notices, and so do we. Drink up. Ads vanish.<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.9c0 5.6-7.5 10-7.5 10z"/></svg></p>
+  </div>
+</section>
+
+<section id="faq" aria-labelledby="faq-h2">
+  <div class="wrap faq-wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2 id="faq-h2">Questions people ask Sip</h2>
+    </div>
+    <details id="faq-free">
+      <summary>Is it really free?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <p>Yes, and it stays free. No premium tier changes what gets blocked. If you want to help, sponsoring is optional and buys you a thank-you, not a feature.</p>
+    </details>
+    <details id="faq-privacy">
+      <summary>Is it safe? What do you collect?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <p>Nothing. PhilterAds has no account, no analytics and no remote code; the only network requests are the page's own. This website is the same: no cookies, no analytics. The only things it stores in your browser are your language and theme choices. <a href="/privacy/">Full privacy page</a>.</p>
+    </details>
+    <details id="faq-youtube">
+      <summary>Will YouTube punish me for blocking ads?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <p>Banning accounts for using an ad blocker is not something YouTube is known to do. What YouTube does do, sometimes, is show a notice that ad blockers are against its terms, or slow playback for people it detects. PhilterAds is built to avoid triggering those. If you ever see one, pause PhilterAds on youtube.com, reload, and tell us on GitHub. Using an ad blocker is your choice; what YouTube allows is up to YouTube.</p>
+    </details>
+    <details id="faq-popups">
+      <summary>Does it block pop-ups?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <p>Yes. PhilterAds is a pop-up blocker as well as an ad blocker. When a page tries to open an ad or scam pop-up in a new tab, Sip closes it straight away, using the pop-up rules from EasyList. Tabs you open yourself, and new tabs on the same site (like a login or payment window), are never touched.</p>
+    </details>
+    <details id="faq-break">
+      <summary>Does it break sites?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <p>It's built not to. The project's first rule is "never break a site": a protected allow-list covers sign-in, payment and captcha services, and every build is tested against it. If something still looks wrong, pause PhilterAds on that site from the popup and reload. If that fixes it, report the site and we'll fix the rule.</p>
+    </details>
+    <details id="faq-oss">
+      <summary>Why open source?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <p>Because "we never let ads through for money" only means something if you can check. The code is GPLv3 and opens on GitHub at launch, the filter lists are credited, and pull requests that add tracking get closed.</p>
+    </details>
+    <details id="faq-browsers">
+      <summary>Which browsers?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <p>Chrome and Edge first, built on Manifest V3. Brave, Vivaldi and Arc install it from the Chrome Web Store too. Firefox (desktop and Android) comes next, then Opera, with Safari later.</p>
+    </details>
+    <details id="faq-hood">
+      <summary>What's under the hood?<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <p>Chrome's declarativeNetRequest, with rules built from EasyList, EasyPrivacy and the URLhaus malware list, plus Fanboy's cookie and annoyance lists you can turn on. Lists are refreshed every week.</p>
+    </details>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is it really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and it stays free. No premium tier changes what gets blocked. If you want to help, sponsoring is optional and buys you a thank-you, not a feature." } },
+        { "@type": "Question", "name": "Is it safe? What do you collect?", "acceptedAnswer": { "@type": "Answer", "text": "Nothing. PhilterAds has no account, no analytics and no remote code; the only network requests are the page's own. This website is the same: no cookies, no analytics. The only things it stores in your browser are your language and theme choices." } },
+        { "@type": "Question", "name": "Will YouTube punish me for blocking ads?", "acceptedAnswer": { "@type": "Answer", "text": "Banning accounts for using an ad blocker is not something YouTube is known to do. What YouTube does do, sometimes, is show a notice that ad blockers are against its terms, or slow playback for people it detects. PhilterAds is built to avoid triggering those. If you ever see one, pause PhilterAds on youtube.com, reload, and tell us on GitHub. Using an ad blocker is your choice; what YouTube allows is up to YouTube." } },
+        {"@type": "Question", "name": "Does it block pop-ups?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. PhilterAds is a pop-up blocker as well as an ad blocker. When a page tries to open an ad or scam pop-up in a new tab, Sip closes it straight away, using the pop-up rules from EasyList. Tabs you open yourself, and new tabs on the same site (like a login or payment window), are never touched."}},
+        { "@type": "Question", "name": "Does it break sites?", "acceptedAnswer": { "@type": "Answer", "text": "It's built not to. The project's first rule is \"never break a site\": a protected allow-list covers sign-in, payment and captcha services, and every build is tested against it. If something still looks wrong, pause PhilterAds on that site from the popup and reload. If that fixes it, report the site and we'll fix the rule." } },
+        { "@type": "Question", "name": "Why open source?", "acceptedAnswer": { "@type": "Answer", "text": "Because \"we never let ads through for money\" only means something if you can check. The code is GPLv3 and opens on GitHub at launch, the filter lists are credited, and pull requests that add tracking get closed." } },
+        { "@type": "Question", "name": "Which browsers?", "acceptedAnswer": { "@type": "Answer", "text": "Chrome and Edge first, built on Manifest V3. Brave, Vivaldi and Arc install it from the Chrome Web Store too. Firefox (desktop and Android) comes next, then Opera, with Safari later." } },
+        { "@type": "Question", "name": "What's under the hood?", "acceptedAnswer": { "@type": "Answer", "text": "Chrome's declarativeNetRequest, with rules built from EasyList, EasyPrivacy and the URLhaus malware list, plus Fanboy's cookie and annoyance lists you can turn on. Lists are refreshed every week." } }
+      ]
+    }
+    </script>
+  </div>
+</section>
+
+<section id="get" class="get" aria-labelledby="get-h2">
+  <div class="wrap">
+    <div class="reveal">
+      <svg class="sip-cta" viewBox="0 0 128 128" aria-hidden="true">
+        <g class="m-bob">
+          <g transform="rotate(-7 64 72)" stroke="#2A1B4E" stroke-linejoin="round" stroke-linecap="round">
+            <rect x="52" y="6" width="24" height="20" rx="5" fill="#D9985E" stroke-width="7"/>
+            <path d="M50 24 H78 V40.5 A40 40 0 1 1 50 40.5 Z" fill="#F1EBFF" stroke-width="7"/>
+            <g class="m-potion"><path d="M29.5 66 A36.5 36.5 0 1 0 98.5 66 Q81 71 64 66 Q47 61 29.5 66 Z" fill="#FF4FA3" stroke="none"/></g>
+            <rect x="44" y="20" width="40" height="12" rx="6" fill="#F1EBFF" stroke-width="7"/>
+            <path d="M36 62 A32 32 0 0 1 53 48" fill="none" stroke="#FFFFFF" stroke-opacity=".85" stroke-width="5"/>
+            <g fill="#FFFFFF" fill-opacity=".55" stroke="none">
+              <circle cx="40" cy="100" r="4"/><circle cx="88" cy="102" r="3"/><circle cx="70" cy="110" r="2.5"/>
+            </g>
+            <g stroke="none">
+              <circle cx="50" cy="79" r="8" fill="#FFFFFF"/><circle cx="78" cy="79" r="8" fill="#FFFFFF"/>
+              <circle cx="52" cy="78" r="4" fill="#2A1B4E"/><circle cx="80" cy="78" r="4" fill="#2A1B4E"/>
+            </g>
+            <path d="M52 93 Q64 104 78 91" fill="none" stroke-width="5"/>
+          </g>
+        </g>
+        <path class="m-spark" d="M106 12 Q108 28 124 30 Q108 32 106 48 Q104 32 88 30 Q104 28 106 12 Z" fill="#FFD23F" stroke="#2A1B4E" stroke-width="5" stroke-linejoin="round"/>
+      </svg>
+      <h2 id="get-h2">Ready for a sip?</h2>
+      <p class="sub">Free. Open source. On your side.</p>
+      <div class="cta" data-cta>
+        <div data-cta-state="soon">
+          <span class="pill" role="status"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg>Coming soon to the Chrome Web Store</span>
+          <a class="btn btn-primary" data-href="github" href="https://github.com/PhilterAds/philterads" data-needs="repo" hidden>Get early access on GitHub</a>
+          <a class="btn btn-primary" href="#features" data-unless="repo">See what Sip does</a>
+          <a class="btn btn-ghost" href="#support" data-needs="pay" hidden>Support Sip</a>
+          <p class="note" data-needs="repo" hidden>Watch the repo on GitHub to hear the moment it lands.</p>
+          <p class="note" data-unless="repo">Chrome and Edge first. Firefox follows.</p>
+        </div>
+        <div data-cta-state="live" hidden>
+          <a class="btn btn-primary" data-href="install">Add to Chrome — it's free</a>
+          <a class="btn btn-ghost" data-href="github" href="https://github.com/PhilterAds/philterads" data-needs="repo" hidden>View on GitHub</a>
+          <p class="note">Free. Open source. No account.</p>
+        </div>
+      </div>
+      <div class="stores" data-stores hidden>
+        <ul class="store-badges" aria-label="Get PhilterAds">
+          <li data-store="chrome" hidden><a><img src="/assets/img/badges/chrome-web-store.png" width="159" height="48" alt="Available in the Chrome Web Store"></a></li>
+          <li data-store="edge" hidden><a><img src="/assets/img/badges/edge-en.png" width="181" height="48" alt="Get it from Microsoft Edge"></a></li>
+          <li data-store="firefox" hidden><a><img src="/assets/img/badges/firefox-get-the-addon.svg" width="138" height="48" alt="Get the add-on for Firefox"></a></li>
+          <li data-store="opera" hidden><a class="btn btn-ghost">Get it for Opera</a></li>
+        </ul>
+        <p class="stores-also" data-also hidden>Also works in Brave, Vivaldi and Arc.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <span class="wordmark">PhilterAds</span>
+      <p class="foot-tagline">One sip. Ads vanish.</p>
+    </div>
+    <nav aria-label="Footer">
+      <div class="foot-col">
+        <h3>Product</h3>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+          <li><a href="#support">Support</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col-project">
+        <h3>Project</h3>
+        <ul>
+          <li data-needs="repo" hidden><a data-href="github" href="https://github.com/PhilterAds/philterads">GitHub</a></li>
+          <li data-needs="repo" hidden><a href="https://github.com/PhilterAds/philterads/blob/main/CONTRIBUTING.md">Contributing</a></li>
+          <li data-needs="repo" hidden><a href="https://github.com/PhilterAds/philterads/issues/new">Report a broken site</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="wrap">
+    <nav class="lang foot-lang" aria-label="Language">
+      <a href="/" data-lang="en" lang="en" hreflang="en" aria-current="page">EN</a>
+      <a href="/ja/" data-lang="ja" lang="ja" hreflang="ja">日本語</a>
+    </nav>
+    <p class="foot-legal">Filter lists by the EasyList authors (EasyList, EasyPrivacy), Fanboy (Cookie and Annoyance lists, CC BY 3.0) and the URLhaus project by abuse.ch. Thank you.<br>
+    Made with magic by AiAlchemist.<br>
+    © 2026 PhilterAds · GPLv3</p>
+  </div>
+</footer>
+</body>
+</html>

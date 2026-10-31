@@ -1,0 +1,40 @@
+# Weekly filter-list refresh: rebuilds rulesets/ + cosmetic/ from the
+# upstream lists, proves them with the test suite and the shrink guard, then
+# commits and pushes them (bumping the manifest patch version) so the
+# extension's "Check for updates" button has something to pull.
+#
+# Also runnable by hand: Actions tab -> refresh-lists -> Run workflow.
+
+name: refresh-lists
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # every Monday 06:00 UTC
+  workflow_dispatch:
+
+permissions: {} # nothing by default; the job below asks for exactly what it needs
+
+concurrency:
+  group: refresh-lists
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.repository == 'PhilterAds/philterads' # forks never run the scheduled push
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write # push the refreshed lists to main
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1' # smoke never runs in CI; skip its browsers
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm run build:rules
+      - run: npm test
+      - run: node tools/check-shrink.mjs # tests or guard fail -> nothing below runs, nothing is committed
+      - name: Commit and push refreshed lists
+        run: node tools/commit-lists.mjs

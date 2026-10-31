@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシー · PhilterAds</title>
+<meta name="description" content="PhilterAdsが集めるもの（何もありません）、このサイトが保存するもの、応援の支払いについて。">
+<link rel="canonical" href="https://philterads.com/ja/privacy/">
+<link rel="alternate" hreflang="en" href="https://philterads.com/privacy/">
+<link rel="alternate" hreflang="ja" href="https://philterads.com/ja/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://philterads.com/privacy/">
+<meta name="theme-color" content="#F7F3FB">
+<meta name="theme-color" content="#15111F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/lang.js"></script>
+<script src="/assets/js/config.js" defer></script>
+<script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="/ja/#main">本文へスキップ</a>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <button class="mascot" id="mascot" type="button" aria-label="PhilterAdsのポーション、シップちゃん。つんつん！">
+      <svg viewBox="0 0 128 128" aria-hidden="true">
+        <g class="m-bob">
+          <g transform="rotate(-7 64 72)" stroke="#2A1B4E" stroke-linejoin="round" stroke-linecap="round">
+            <rect x="52" y="6" width="24" height="20" rx="5" fill="#D9985E" stroke-width="7"/>
+            <path d="M50 24 H78 V40.5 A40 40 0 1 1 50 40.5 Z" fill="#F1EBFF" stroke-width="7"/>
+            <g class="m-potion"><path d="M29.5 66 A36.5 36.5 0 1 0 98.5 66 Q81 71 64 66 Q47 61 29.5 66 Z" fill="#FF4FA3" stroke="none"/></g>
+            <rect x="44" y="20" width="40" height="12" rx="6" fill="#F1EBFF" stroke-width="7"/>
+            <path d="M36 62 A32 32 0 0 1 53 48" fill="none" stroke="#FFFFFF" stroke-opacity=".85" stroke-width="5"/>
+            <g class="m-eyes" stroke="none">
+              <circle cx="50" cy="79" r="8" fill="#FFFFFF"/><circle cx="78" cy="79" r="8" fill="#FFFFFF"/>
+              <circle cx="52" cy="78" r="4" fill="#2A1B4E"/><circle cx="80" cy="78" r="4" fill="#2A1B4E"/>
+            </g>
+            <path class="m-sleep" d="M43 80 Q50 85 57 80 M71 80 Q78 85 85 80" fill="none" stroke-width="5"/>
+            <path d="M52 93 Q64 104 78 91" fill="none" stroke-width="5"/>
+          </g>
+        </g>
+        <path class="m-spark" d="M106 12 Q108 28 124 30 Q108 32 106 48 Q104 32 88 30 Q104 28 106 12 Z" fill="#FFD23F" stroke="#2A1B4E" stroke-width="5" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <a class="wordmark" href="/ja/">PhilterAds</a>
+    <nav class="site-nav" aria-label="サイト">
+      <a href="/ja/#features">できること</a>
+      <a href="/ja/#roadmap">ロードマップ</a>
+      <a class="nav-support" href="/ja/#support"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.9c0 5.6-7.5 10-7.5 10z"/></svg>応援する</a>
+      <a href="/ja/#faq">よくある質問</a>
+    </nav>
+    <a class="gh-link" data-href="github" data-needs="repo" hidden href="https://github.com/PhilterAds/philterads">GitHub</a>
+    <button class="theme-btn" id="theme-btn" type="button" aria-label="ダークテーマに切り替え" data-label-light="ダークテーマに切り替え" data-label-dark="ライトテーマに切り替え"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <nav class="lang" aria-label="言語">
+      <a href="/privacy/" data-lang="en" lang="en" hreflang="en">EN</a>
+      <a href="/ja/privacy/" data-lang="ja" lang="ja" hreflang="ja" aria-current="page">日本語</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="legal">
+<article class="wrap legal-body">
+<h1>プライバシー</h1>
+  <p class="legal-lead">ひとことで言うと、拡張機能も、このサイトも、何も集めません。応援の支払いはStripeが扱います。最終更新：2026年10月30日。</p>
+
+  <h2>拡張機能</h2>
+  <ul>
+    <li><strong>アカウントなし、分析なし、追跡なし。</strong>閲覧履歴も設定も統計も、どこにも送りません。</li>
+    <li><strong>すべてブラウザの中に。</strong>設定、カウンター（今日と累計のブロック数）、ザップした広告、テーマ、言語は、あなたのパソコンのChrome拡張機能ストレージに保存されます。アンインストールすると消えます。</li>
+    <li><strong>リモートコードなし。</strong>フィルターリストは拡張機能に同梱。ブロックはChrome内蔵のルールエンジンで行います。</li>
+    <li><strong>アップデーター（GitHub版のみ）。</strong>GitHubからインストールして任意のアップデーターを設定した場合、新しいバージョンがあるかGitHubに確認してダウンロードします（<code>git pull</code> と同じ）。GitHubにはその通信が見えます。ストア版はストア経由で更新されます。</li>
+    <li><strong>AIコントロール（近日公開）。</strong>あなたのパソコン上で動き、つないだAIアプリとだけやりとりします。私たちのサーバーは通りません。そもそもサーバーがありません。</li>
+  </ul>
+
+  <h2>このサイト</h2>
+  <ul>
+    <li><strong>Cookieなし、分析なし、トラッカーなし、広告なし。</strong></li>
+    <li><strong>ブラウザに残すのは2つだけ。</strong>言語やテーマを選ぶと、次のページも同じ表示になるようブラウザのローカルストレージに記憶します。端末の外には出ません。</li>
+    <li><strong>ホスティング。</strong>このサイトはCloudflareで動いています。一般的なホスティングと同じく、ページの配信と攻撃対策のためにIPアドレスが処理されます。あなたを特定するためには使いません。</li>
+  </ul>
+
+  <h2>応援について</h2>
+  <ul>
+    <li><strong>支払いはStripe経由。</strong>カード情報は私たちには見えず、保存もしません。領収書とお礼のために、お名前・メール・国・金額がStripeから共有されます。詳しくは<a href="https://stripe.com/jp/privacy" rel="noopener">Stripeのプライバシーポリシー</a>をご覧ください。</li>
+    <li><strong>GitHub Sponsors</strong>で応援する場合は、<a href="https://docs.github.com/ja/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHubのプライバシーステートメント</a>に沿って同じように扱われます。</li>
+    <li><strong>いつでも解約OK。</strong>月額の方は、Stripeの領収書メールのリンク、またはトップページの「<a href="/ja/#support">毎月の応援を管理する</a>」から変更・解約できます。</li>
+    <li><strong>返金。</strong>気が変わったら、請求から14日以内にご連絡ください。返金します。</li>
+    <li>応援してくれた方の情報を、売ったり貸したり他者と共有したりはしません。</li>
+  </ul>
+
+  <h2>お問い合わせ</h2>
+  <p><a href="mailto:contact@philterads.com">contact@philterads.com</a> まで。すべてのメッセージを人間が読んでいます。</p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <span class="wordmark">PhilterAds</span>
+      <p class="foot-tagline">ひと口で、広告が消える。</p>
+    </div>
+    <nav aria-label="フッター">
+      <div class="foot-col">
+        <h3>プロダクト</h3>
+        <ul>
+          <li><a href="/ja/#features">できること</a></li>
+          <li><a href="/ja/#roadmap">ロードマップ</a></li>
+          <li><a href="/ja/#support">応援する</a></li>
+          <li><a href="/ja/#faq">よくある質問</a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col-project">
+        <h3>プロジェクト</h3>
+        <ul>
+          <li data-needs="repo" hidden><a data-href="github" href="https://github.com/PhilterAds/philterads">GitHub</a></li>
+          <li data-needs="repo" hidden><a href="https://github.com/PhilterAds/philterads/blob/main/CONTRIBUTING.md">コントリビュート</a></li>
+          <li data-needs="repo" hidden><a href="https://github.com/PhilterAds/philterads/issues/new">壊れたサイトを報告</a></li>
+          <li><a href="/ja/privacy/">プライバシー</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="wrap">
+    <nav class="lang foot-lang" aria-label="言語">
+      <a href="/privacy/" data-lang="en" lang="en" hreflang="en">EN</a>
+      <a href="/ja/privacy/" data-lang="ja" lang="ja" hreflang="ja" aria-current="page">日本語</a>
+    </nav>
+    <p class="foot-legal">フィルターリスト：EasyList の作者のみなさん（EasyList, EasyPrivacy）、Fanboy（Cookie / Annoyance リスト、CC BY 3.0）、abuse.ch の URLhaus プロジェクト。ありがとうございます。<br>
+    AiAlchemist が魔法で作りました。<br>
+    © 2026 PhilterAds · GPLv3</p>
+  </div>
+</footer>
+</body>
+</html>

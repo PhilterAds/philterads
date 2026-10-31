@@ -1,0 +1,110 @@
+{
+  "manifest_version": 3,
+  "name": "PhilterAds",
+  "version": "1.6.0",
+  "description": "One sip. Ads vanish. Blocks ads, trackers and malware, YouTube ads especially, without breaking sites.",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "scripting",
+    "storage",
+    "nativeMessaging",
+    "alarms"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "core",
+        "enabled": true,
+        "path": "rulesets/core.json"
+      },
+      {
+        "id": "safety",
+        "enabled": true,
+        "path": "rulesets/safety.json"
+      },
+      {
+        "id": "easylist",
+        "enabled": true,
+        "path": "rulesets/easylist.json"
+      },
+      {
+        "id": "easyprivacy",
+        "enabled": true,
+        "path": "rulesets/easyprivacy.json"
+      },
+      {
+        "id": "malware",
+        "enabled": true,
+        "path": "rulesets/malware.json"
+      },
+      {
+        "id": "cookies",
+        "enabled": false,
+        "path": "rulesets/cookies.json"
+      },
+      {
+        "id": "annoyances",
+        "enabled": false,
+        "path": "rulesets/annoyances.json"
+      }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "cosmetic.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "zap-apply.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PhilterAds",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png",
+      "48": "icons/48.png",
+      "128": "icons/128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "stubs/gpt.js",
+        "cosmetic/*.json"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

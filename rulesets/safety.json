@@ -1,0 +1,35 @@
+[
+ {
+  "id": 1,
+  "priority": 4,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "requestDomains": [
+    "accounts.google.com",
+    "docs.google.com",
+    "mail.google.com",
+    "drive.google.com",
+    "www.gstatic.com",
+    "apis.google.com",
+    "challenges.cloudflare.com",
+    "www.recaptcha.net",
+    "hcaptcha.com",
+    "js.stripe.com",
+    "checkout.stripe.com",
+    "www.paypal.com"
+   ]
+  }
+ },
+ {
+  "id": 2,
+  "priority": 4,
+  "action": {
+   "type": "allow"
+  },
+  "condition": {
+   "urlFilter": "||www.google.com/recaptcha"
+  }
+ }
+]

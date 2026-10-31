@@ -1,0 +1,19 @@
+# Keeps the pinned workflow actions and the dev-only npm tools current.
+# The extension itself has no dependencies.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    groups:
+      dev-tools: # one weekly PR for the dev tools; security fixes still come on their own
+        patterns: ["*"]

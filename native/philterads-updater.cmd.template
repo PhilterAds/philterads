@@ -1,0 +1,7 @@
+@echo off
+REM Template only. install.mjs writes the real philterads-updater.cmd next to
+REM this file, with the absolute path to the node.exe it runs under baked in
+REM (Chrome's environment may not have node on PATH). The generated file is
+REM gitignored because it is machine-specific.
+REM
+REM "C:\path\to\node.exe" "C:\path\to\philterads\native\philterads-updater.mjs" %*
