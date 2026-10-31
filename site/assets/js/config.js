@@ -2,7 +2,7 @@ window.PHILTER = {
   installUrl: "",                                   // "" = "coming soon" state everywhere
   githubUrl: "https://github.com/PhilterAds/philterads",
   sponsorsUrl: "https://github.com/sponsors/PhilterAds",
-  repoOpen: false,                                  // true once the repo is public: shows every GitHub link
+  repoOpen: true,                                   // true once the repo is public: shows every GitHub link
   sponsorsOpen: false,                              // true once GitHub Sponsors is approved: adds the "Prefer GitHub?" line
   stores: { chrome: "", edge: "", firefox: "", opera: "" }, // each badge shows only once its listing URL is set
   // Stripe Payment Links (buy.stripe.com/...): tiers go live only once all five are set
