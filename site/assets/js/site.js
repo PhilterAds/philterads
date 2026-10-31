@@ -23,7 +23,7 @@
   /* repo / sponsors links stay hidden (and their "soon" stand-ins shown) until opened in config */
   var pay = cfg.stripe || {};
   var payOpen = ["t1", "t2", "t3", "t4", "t5"].every(function (k) { return /^https:\/\/(buy|donate)\.stripe\.com\//.test(pay[k] || ""); });
-  var open = { repo: !!cfg.repoOpen, sponsors: !!cfg.sponsorsOpen, pay: payOpen };
+  var open = { repo: !!cfg.repoOpen, sponsors: !!cfg.sponsorsOpen, pay: payOpen, install: !!install };
   document.querySelectorAll("[data-needs]").forEach(function (el) {
     if (open[el.getAttribute("data-needs")]) el.hidden = false;
   });

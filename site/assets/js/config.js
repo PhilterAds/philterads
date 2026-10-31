@@ -1,4 +1,7 @@
 window.PHILTER = {
+  // Launch day: put the Chrome Web Store listing URL in installUrl AND stores.chrome. That swaps every
+  // "Coming soon" pill for "Add to Chrome", shows the store badge, and moves the store item on the
+  // roadmap to "Out now". Also add "downloadUrl" to the SoftwareApplication JSON-LD in both index pages.
   installUrl: "",                                   // "" = "coming soon" state everywhere
   githubUrl: "https://github.com/PhilterAds/philterads",
   sponsorsUrl: "https://github.com/sponsors/PhilterAds",

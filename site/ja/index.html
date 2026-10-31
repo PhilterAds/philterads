@@ -285,6 +285,8 @@
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>リストが見逃した広告を<strong>ザップ</strong>。いつでも元に戻せる</span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>今日と累計の統計、ザップした広告の一覧</span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>ライト／ダークテーマ、英語と日本語</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>コードは<a href="https://github.com/PhilterAds/philterads">GitHub</a>で公開中（GPLv3）</span></li>
+          <li data-needs="install" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Chromeウェブストアで公開中。ワンクリックでインストール、自動アップデート</span></li>
         </ul>
       </article>
       <article class="road-card road-next reveal">
@@ -293,8 +295,8 @@
         <ul>
           <li><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span><strong>MCPでAIコントロール。</strong>Claude、Cursor、どのMCPアプリでもつないで話しかけるだけ。「このサイトが壊れてる、直して」「ここで何をブロックした？」。あなたのパソコン上で動き、外には何も出ません。</span></li>
           <li><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span><a href="#support">月15ドル以上の応援者</a>はAIコントロールを先行体験</span></li>
-          <li><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>Chromeウェブストア・Microsoft Edgeで公開。ワンクリックでインストール、自動アップデート</span></li>
-          <li><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>コードをGitHubで公開（GPLv3）</span></li>
+          <li data-unless="install"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>Chromeウェブストア・Microsoft Edgeで公開。ワンクリックでインストール、自動アップデート</span></li>
+          <li data-needs="install" hidden><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>Microsoft Edgeアドオンで公開</span></li>
           <li><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>はじめてインストールしたときのウェルカムページ</span></li>
         </ul>
       </article>
@@ -433,7 +435,7 @@
     </details>
     <details id="faq-oss">
       <summary>なぜオープンソース？<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
-      <p>「お金をもらって広告を通さない」という約束は、確かめられてこそ意味があるから。コードはGPLv3で、ローンチ時にGitHubで公開します。フィルターリストの出典も明記。追跡を追加するプルリクエストはクローズします。</p>
+      <p>「お金をもらって広告を通さない」という約束は、確かめられてこそ意味があるから。コードはGPLv3で、GitHubで公開しています。フィルターリストの出典も明記。追跡を追加するプルリクエストはクローズします。</p>
     </details>
     <details id="faq-browsers">
       <summary>対応ブラウザは？<svg class="chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
@@ -453,7 +455,7 @@
         { "@type": "Question", "name": "YouTubeに怒られない？", "acceptedAnswer": { "@type": "Answer", "text": "広告ブロッカーを使っただけでアカウントが停止された、という事例は知られていません。ただしYouTubeは時々「広告ブロッカーは利用規約違反です」という表示を出したり、検出した人の再生を遅くしたりすることがあります。PhilterAdsはそれを引き起こさないよう作られています。もし表示が出たら、youtube.comでPhilterAdsを一時停止して再読み込みし、GitHubで教えてください。広告ブロッカーを使うかはあなたの自由。何を許すかはYouTube次第です。" } },
         {"@type": "Question", "name": "ポップアップもブロックできる？", "acceptedAnswer": {"@type": "Answer", "text": "はい。PhilterAdsは広告ブロッカーであり、ポップアップブロッカーでもあります。ページが広告や詐欺のポップアップを新しいタブで開こうとすると、EasyListのポップアップルールに沿ってシップちゃんがすぐに閉じます。自分で開いたタブや、同じサイトの新しいタブ（ログインや決済の画面など）には触れません。"}},
         { "@type": "Question", "name": "サイトが壊れない？", "acceptedAnswer": { "@type": "Answer", "text": "壊さないように作っています。プロジェクトの第一のルールは「サイトを壊さない」。ログイン・決済・CAPTCHAのサービスは保護された許可リストでカバーし、毎回のビルドでテストしています。それでも表示がおかしいときは、ポップアップからそのサイトを一時停止して再読み込みしてください。それで直るなら、サイト名を報告してもらえればルールを直します。" } },
-        { "@type": "Question", "name": "なぜオープンソース？", "acceptedAnswer": { "@type": "Answer", "text": "「お金をもらって広告を通さない」という約束は、確かめられてこそ意味があるから。コードはGPLv3で、ローンチ時にGitHubで公開します。フィルターリストの出典も明記。追跡を追加するプルリクエストはクローズします。" } },
+        { "@type": "Question", "name": "なぜオープンソース？", "acceptedAnswer": { "@type": "Answer", "text": "「お金をもらって広告を通さない」という約束は、確かめられてこそ意味があるから。コードはGPLv3で、GitHubで公開しています。フィルターリストの出典も明記。追跡を追加するプルリクエストはクローズします。" } },
         { "@type": "Question", "name": "対応ブラウザは？", "acceptedAnswer": { "@type": "Answer", "text": "まずはChromeとEdge（Manifest V3）。Brave・Vivaldi・ArcもChromeウェブストアから入れられます。次にFirefox（パソコンとAndroid）、続いてOpera、Safariはその後を予定しています。" } },
         { "@type": "Question", "name": "中身は？", "acceptedAnswer": { "@type": "Answer", "text": "Chromeの declarativeNetRequest に、EasyList・EasyPrivacy・URLhausマルウェアリストから作ったルールを載せています。Fanboyのクッキー／迷惑要素リストはお好みでオン。リストは毎週更新です。" } }
       ]
