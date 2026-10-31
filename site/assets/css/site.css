@@ -564,7 +564,7 @@ html[lang="ja"] .step p { line-height: 1.8; }
 .hero-panel .panel-hero { width: 68%; }
 .hero-pop { right: 0; left: auto; top: 50%; bottom: auto; width: 35%; max-width: 220px; transform: translateY(-38%) rotate(-4deg); }
 .hero-panel { margin-bottom: 0; }
-@media (max-width: 879px) { .hero-pop { right: 0; width: 34%; } }
+@media (max-width: 879px) { .hero-pop { right: 8px; width: 34%; } }
 .spark-a { right: calc(32% - 12px); }
 .feat-strip { margin-bottom: 48px; }
 
@@ -784,3 +784,46 @@ html[lang="ja"] .promise-h { line-height: 1.5; }
 }
 .btn { max-width: 100%; }
 @media (max-width: 879px) { .show-stage::before { inset: 8% 0 -6% 4%; } }
+
+/* JA header: Japanese breaks between any two characters, so nav and language
+   labels must never wrap; JA keeps the two-row header until the row fits. */
+.site-nav a, .head-row .lang a { white-space: nowrap; }
+.site-nav a, .head-row .lang { flex-shrink: 0; }
+@media (min-width: 880px) and (max-width: 1179px) {
+  html[lang="ja"] { scroll-padding-top: 124px; }
+  html[lang="ja"] .site-head { height: auto; }
+  html[lang="ja"] .head-row { height: auto; flex-wrap: wrap; gap: 0 12px; padding-top: 10px; }
+  html[lang="ja"] .site-nav { order: 10; flex-basis: 100%; margin: 6px 0 0; gap: 8px; justify-content: center; border-top: 1px solid var(--border); }
+  html[lang="ja"] .site-nav a { padding: 0 12px; min-height: 48px; }
+  html[lang="ja"] .site-nav a.nav-support { min-height: 36px; margin: 6px 0; }
+}
+@media (min-width: 1180px) { html[lang="ja"] .site-nav { gap: 18px; } }
+@media (min-width: 880px) and (max-width: 999px) { .gh-link { display: none; } .head-row .gh-link + .theme-btn { margin-left: auto; } }
+.site-nav .nav-short { display: none; }
+@media (max-width: 419px) { .site-nav .nav-long { display: none; } .site-nav .nav-short { display: inline; } }
+@media (min-width: 480px) and (max-width: 599px) {
+  html[lang="ja"] .site-nav a.nav-install { display: none; }
+  html[lang="ja"] .site-nav a { padding: 0 4px; font-size: 13px; }
+}
+/* hero CTA: wrap the two buttons instead of forcing a wider column (JA at 480-540) */
+@media (min-width: 480px) { .cta > [data-cta-state] { display: flex; flex-wrap: wrap; } .cta .note { flex-basis: 100%; } }
+/* guides: numbered steps and inline code in the article layout */
+.legal-body ol { margin: 0; padding-left: 1.4em; }
+.legal-body ol li::marker { color: var(--accent); font-weight: 700; }
+.legal-body p { line-height: 1.7; }
+.legal-body code { font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, Consolas, monospace; font-size: 0.88em; padding: 1px 6px; border-radius: 6px; background: var(--tab-track); overflow-wrap: anywhere; }
+.guide .btn { margin: 8px 0 4px; }
+html[lang="ja"] .legal-body p, html[lang="ja"] .legal-body li { line-height: 1.85; }
+/* footer has four items now (brand, Product, Guides, Project) */
+@media (min-width: 720px) { .foot-grid { grid-template-columns: 1.2fr 1fr 1fr 1fr; } }
+@media (max-width: 719px) { .foot-grid > nav { row-gap: 24px; } }
+.legal-body a.btn { color: var(--on-accent); text-decoration: none; }
+.legal-body h1 { text-wrap: balance; }
+html[lang="ja"] .foot-col a { word-break: auto-phrase; }
+/* design QA 2026-10-31 */
+html[lang="ja"] body { line-break: strict; }
+@media (max-width: 719px) { .foot-grid > nav .foot-col:nth-child(2) { order: 3; } }
+@media (min-width: 480px) and (max-width: 639px) { html[lang="ja"] .cta .btn { flex: 1 1 100%; max-width: 420px; } }
+html[lang="ja"] .cta .note { word-break: auto-phrase; }
+:root[data-theme="dark"] .legal-body code { background: var(--accent-soft); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .legal-body code { background: var(--accent-soft); } }

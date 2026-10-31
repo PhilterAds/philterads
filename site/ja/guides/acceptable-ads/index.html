@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>「許容される広告」のない広告ブロッカー｜PhilterAds</title>
+<meta name="description" content="Acceptable Ads（許容される広告）とは何か、どの広告ブロッカーが最初からオンにしているか、オフにする方法、PhilterAdsに有料の許可リストがない理由を説明します。">
+<link rel="canonical" href="https://philterads.com/ja/guides/acceptable-ads/">
+<link rel="alternate" hreflang="en" href="https://philterads.com/guides/acceptable-ads/">
+<link rel="alternate" hreflang="ja" href="https://philterads.com/ja/guides/acceptable-ads/">
+<link rel="alternate" hreflang="x-default" href="https://philterads.com/guides/acceptable-ads/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="PhilterAds">
+<meta property="og:url" content="https://philterads.com/ja/guides/acceptable-ads/">
+<meta property="og:title" content="「許容される広告」のない広告ブロッカー｜PhilterAds">
+<meta property="og:description" content="Acceptable Ads（許容される広告）とは何か、どの広告ブロッカーが最初からオンにしているか、オフにする方法、PhilterAdsに有料の許可リストがない理由を説明します。">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://philterads.com/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="「許容される広告」のない広告ブロッカー｜PhilterAds">
+<meta name="twitter:description" content="Acceptable Ads（許容される広告）とは何か、どの広告ブロッカーが最初からオンにしているか、オフにする方法、PhilterAdsに有料の許可リストがない理由を説明します。">
+<meta name="twitter:image" content="https://philterads.com/assets/img/og.jpg">
+<meta name="theme-color" content="#F7F3FB">
+<meta name="theme-color" content="#15111F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script src="/assets/js/lang.js"></script>
+<script src="/assets/js/config.js" defer></script>
+<script src="/assets/js/site.js" defer></script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "「許容される広告」のない広告ブロッカー",
+ "description": "Acceptable Ads（許容される広告）とは何か、どの広告ブロッカーが最初からオンにしているか、オフにする方法、PhilterAdsに有料の許可リストがない理由を説明します。",
+ "inLanguage": "ja",
+ "datePublished": "2026-10-31",
+ "dateModified": "2026-10-31",
+ "mainEntityOfPage": "https://philterads.com/ja/guides/acceptable-ads/",
+ "image": "https://philterads.com/assets/img/og.jpg",
+ "author": {
+  "@type": "Organization",
+  "name": "PhilterAds",
+  "url": "https://philterads.com/"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "PhilterAds",
+  "url": "https://philterads.com/",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://philterads.com/apple-touch-icon.png"
+  }
+ }
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へスキップ</a>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <button class="mascot" id="mascot" type="button" aria-label="PhilterAdsのホームへ">
+      <svg viewBox="0 0 128 128" aria-hidden="true">
+        <g class="m-bob">
+          <g transform="rotate(-7 64 72)" stroke="#2A1B4E" stroke-linejoin="round" stroke-linecap="round">
+            <rect x="52" y="6" width="24" height="20" rx="5" fill="#D9985E" stroke-width="7"/>
+            <path d="M50 24 H78 V40.5 A40 40 0 1 1 50 40.5 Z" fill="#F1EBFF" stroke-width="7"/>
+            <g class="m-potion"><path d="M29.5 66 A36.5 36.5 0 1 0 98.5 66 Q81 71 64 66 Q47 61 29.5 66 Z" fill="#FF4FA3" stroke="none"/></g>
+            <rect x="44" y="20" width="40" height="12" rx="6" fill="#F1EBFF" stroke-width="7"/>
+            <path d="M36 62 A32 32 0 0 1 53 48" fill="none" stroke="#FFFFFF" stroke-opacity=".85" stroke-width="5"/>
+            <g class="m-eyes" stroke="none">
+              <circle cx="50" cy="79" r="8" fill="#FFFFFF"/><circle cx="78" cy="79" r="8" fill="#FFFFFF"/>
+              <circle cx="52" cy="78" r="4" fill="#2A1B4E"/><circle cx="80" cy="78" r="4" fill="#2A1B4E"/>
+            </g>
+            <path class="m-sleep" d="M43 80 Q50 85 57 80 M71 80 Q78 85 85 80" fill="none" stroke-width="5"/>
+            <path d="M52 93 Q64 104 78 91" fill="none" stroke-width="5"/>
+          </g>
+        </g>
+        <path class="m-spark" d="M106 12 Q108 28 124 30 Q108 32 106 48 Q104 32 88 30 Q104 28 106 12 Z" fill="#FFD23F" stroke="#2A1B4E" stroke-width="5" stroke-linejoin="round"/>
+      </svg>
+    </button>
+    <a class="wordmark" href="/ja/">PhilterAds</a>
+    <nav class="site-nav" aria-label="サイト">
+      <a href="/ja/#features">できること</a>
+      <a href="/ja/#roadmap">ロードマップ</a>
+      <a class="nav-support" href="/ja/#support"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.9c0 5.6-7.5 10-7.5 10z"/></svg>応援する</a>
+      <a href="/ja/#faq">よくある質問</a>
+    </nav>
+    <a class="gh-link" data-href="github" data-needs="repo" hidden href="https://github.com/PhilterAds/philterads">GitHub</a>
+    <button class="theme-btn" id="theme-btn" type="button" aria-label="ダークテーマに切り替え" data-label-light="ダークテーマに切り替え" data-label-dark="ライトテーマに切り替え"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+    <nav class="lang" aria-label="言語">
+      <a href="/guides/acceptable-ads/" data-lang="en" lang="en" hreflang="en">EN</a>
+      <a href="/ja/guides/acceptable-ads/" data-lang="ja" lang="ja" hreflang="ja" aria-current="page">日本語</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="legal guide">
+<article class="wrap legal-body">
+<h1>「許容される広告」のない広告ブロッカー</h1>
+<p class="legal-lead">有名な広告ブロッカーの中には、初期設定で一部の広告を表示するものがあります。その理由と、オフにする方法、PhilterAdsの考え方をまとめました。最終更新：2026年10月31日。</p>
+
+<h2>Acceptable Ads（許容される広告）とは</h2>
+<p>Acceptable Adsは、Adblock Plusを手がけるeyeo社が運営する許可リストの仕組みです。大きさ・配置・表示方法の基準を満たした広告は、ブロックされずに表示されます。基準はAcceptable Ads委員会が決めています。eyeo社によると、大きな企業は参加に料金を支払い、小さな企業は無料で参加できます。</p>
+
+<h2>どの広告ブロッカーが使っているか</h2>
+<ul>
+  <li><b>Adblock Plus</b> と <b>AdBlock</b> は、初期設定でAcceptable Adsがオンになっています。オフにもできます。</li>
+  <li><b>uBlock Origin</b> はこの仕組みに参加していません。</li>
+  <li><b>PhilterAds</b> も参加しておらず、これからも参加しません。</li>
+</ul>
+<p>製品の仕様は変わることがあるため、最新の動作はそれぞれの拡張機能の設定で確認してください。</p>
+
+<h2>オフにする方法</h2>
+<p>Adblock PlusやAdBlockの設定を開き、Acceptable Adsの項目をオフにします。場所はバージョンによって異なります。オフにすると、それらの広告もほかの広告と同じようにブロックされます。</p>
+
+<h2>PhilterAdsのちがい</h2>
+<ul>
+  <li><b>お金で通す例外はありません。</b> どの広告主も、お金を払ってPhilterAdsに広告を通させることはできません。運営は、使っている人からの任意の応援で成り立っています。</li>
+  <li><b>唯一の許可リストは、広告主ではなくあなたを守るためのものです。</b> ログイン・決済・CAPTCHAのサービスが壊れないよう、すべてのブロックルールより優先される許可リストがあります。広告ドメインは含まれず、ビルドのたびにテストしています。</li>
+  <li><b>自分で確かめられます。</b> コードはGPLv3のオープンソースで、何を許可しているかのリストも公開しています。</li>
+</ul>
+<p><a class="btn btn-primary" href="/ja/#install">PhilterAdsをChrome・Edgeに入れる</a></p>
+<p>あわせて読む：<a href="/ja/guides/block-pop-ups-chrome/">ChromeとEdgeでポップアップをブロックする方法</a></p>
+</article>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <span class="wordmark">PhilterAds</span>
+      <p class="foot-tagline">ひと口で、広告が消える。</p>
+    </div>
+    <nav aria-label="フッター">
+      <div class="foot-col">
+        <h3>プロダクト</h3>
+        <ul>
+          <li><a href="/ja/#features">できること</a></li>
+          <li><a href="/ja/#roadmap">ロードマップ</a></li>
+          <li><a href="/ja/#support">応援する</a></li>
+          <li><a href="/ja/#faq">よくある質問</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h3>ガイド</h3>
+        <ul>
+          <li><a href="/ja/guides/block-pop-ups-chrome/">ポップアップ対策</a></li>
+          <li><a href="/ja/guides/acceptable-ads/">「許容される広告」とは</a></li>
+        </ul>
+      </div>
+      <div class="foot-col foot-col-project">
+        <h3>プロジェクト</h3>
+        <ul>
+          <li data-needs="repo" hidden><a data-href="github" href="https://github.com/PhilterAds/philterads">GitHub</a></li>
+          <li data-needs="repo" hidden><a href="https://github.com/PhilterAds/philterads/blob/main/CONTRIBUTING.md">コントリビュート</a></li>
+          <li data-needs="repo" hidden><a href="https://github.com/PhilterAds/philterads/issues/new">壊れたサイトを報告</a></li>
+          <li><a href="/ja/privacy/">プライバシー</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="wrap">
+    <nav class="lang foot-lang" aria-label="言語">
+      <a href="/guides/acceptable-ads/" data-lang="en" lang="en" hreflang="en">EN</a>
+      <a href="/ja/guides/acceptable-ads/" data-lang="ja" lang="ja" hreflang="ja" aria-current="page">日本語</a>
+    </nav>
+    <p class="foot-legal">フィルターリスト：EasyList の作者のみなさん（EasyList, EasyPrivacy）、Fanboy（Cookie / Annoyance リスト、CC BY 3.0）、abuse.ch の URLhaus プロジェクト。ありがとうございます。<br>
+    AiAlchemist が魔法で作りました。<br>
+    © 2026 PhilterAds · GPLv3</p>
+  </div>
+</footer>
+</body>
+</html>
