@@ -17,7 +17,7 @@
   /* hrefs from config (static ones in the HTML already work without JS) */
   document.querySelectorAll("[data-href]").forEach(function (a) {
     var kind = a.getAttribute("data-href");
-    var url = kind === "install" ? install : kind === "sponsors" ? cfg.sponsorsUrl : cfg.githubUrl;
+    var url = kind === "install" ? install : kind === "sponsors" ? cfg.sponsorsUrl : kind === "download" && cfg.downloadUrl ? cfg.downloadUrl : cfg.githubUrl;
     if (url) a.setAttribute("href", url);
   });
   /* repo / sponsors links stay hidden (and their "soon" stand-ins shown) until opened in config */
@@ -139,4 +139,45 @@
     if (darkMq && darkMq.addEventListener) darkMq.addEventListener("change", sync);
     sync();
   }
+})();
+
+/* download buttons, screenshot strip, copy chips */
+(function () {
+  "use strict";
+  var cfg = window.PHILTER || {};
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll('[data-href="download"]').forEach(function (a) {
+    if (cfg.downloadUrl) a.setAttribute("href", cfg.downloadUrl);
+  });
+  /* a download keeps the page; jump to the steps so the next move is obvious */
+  var steps = document.getElementById("install");
+  document.querySelectorAll("[data-dl]:not([data-no-jump])").forEach(function (a) {
+    a.addEventListener("click", function () {
+      if (!steps) return;
+      setTimeout(function () { steps.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" }); }, 350);
+    });
+  });
+  var strip = document.querySelector(".look-strip");
+  if (strip) {
+    document.querySelectorAll("[data-look]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var slide = strip.querySelector(".look-slide");
+        var step = slide ? slide.getBoundingClientRect().width + 20 : strip.clientWidth * 0.8;
+        strip.scrollBy({ left: step * Number(b.getAttribute("data-look")), behavior: reduce ? "auto" : "smooth" });
+      });
+    });
+  }
+  document.querySelectorAll("[data-copy]").forEach(function (b) {
+    var label = b.querySelector("span");
+    var original = label ? label.textContent : "";
+    b.addEventListener("click", function () {
+      var text = b.getAttribute("data-copy");
+      var done = function () {
+        if (!label) return;
+        label.textContent = b.getAttribute("data-copied") || original;
+        setTimeout(function () { label.textContent = original; }, 1600);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, function () {});
+    });
+  });
 })();

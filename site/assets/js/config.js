@@ -3,6 +3,7 @@ window.PHILTER = {
   // "Coming soon" pill for "Add to Chrome", shows the store badge, and moves the store item on the
   // roadmap to "Out now". Also add "downloadUrl" to the SoftwareApplication JSON-LD in both index pages.
   installUrl: "",                                   // "" = "coming soon" state everywhere
+  downloadUrl: "https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip", // latest GitHub release zip (load unpacked)
   githubUrl: "https://github.com/PhilterAds/philterads",
   sponsorsUrl: "https://github.com/sponsors/PhilterAds",
   repoOpen: true,                                   // true once the repo is public: shows every GitHub link

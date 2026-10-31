@@ -124,6 +124,7 @@
     <span class="wordmark">PhilterAds</span>
     <nav class="site-nav" aria-label="サイト">
       <a href="#features">できること</a>
+      <a class="nav-install" href="#install">インストール</a>
       <a href="#roadmap">ロードマップ</a>
       <a class="nav-support" href="#support"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.9c0 5.6-7.5 10-7.5 10z"/></svg>応援する</a>
       <a href="#faq">よくある質問</a>
@@ -147,12 +148,9 @@
       <p class="lead">PhilterAdsは広告・ポップアップ・トラッカー・マルウェアサイトをブロックし、YouTube広告は再生前に消します。ログインや決済は壊しません。お金をもらって広告を通すことは、絶対にしません。あなたのデータも集めません。</p>
       <div class="cta" data-cta>
         <div data-cta-state="soon">
-          <span class="pill" role="status"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg>Chrome ウェブストアに近日登場</span>
-          <a class="btn btn-primary" data-href="github" href="https://github.com/PhilterAds/philterads" data-needs="repo" hidden>GitHubで先行アクセス</a>
-          <a class="btn btn-primary" href="#features" data-unless="repo">シップちゃんのできること</a>
-          <a class="btn btn-ghost" href="#support" data-needs="pay" hidden>シップちゃんを応援</a>
-          <p class="note" data-needs="repo" hidden>GitHubでリポジトリをWatchすると、公開した瞬間にお知らせが届きます。</p>
-          <p class="note" data-unless="repo">まずはChromeとEdgeから。Firefoxも続きます。</p>
+          <a class="btn btn-primary" data-href="download" data-dl href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>Chrome・Edge版をダウンロード</a>
+          <a class="btn btn-ghost" href="#install">インストール方法</a>
+          <p class="note">無料・オープンソース。インストールは約1分。ストア版は現在審査中です。</p>
         </div>
         <div data-cta-state="live" hidden>
           <a class="btn btn-primary" data-href="install">Chromeに追加（無料）</a>
@@ -179,10 +177,36 @@
       <div class="panel panel-hero">
         <img src="/assets/img/hero-1280.webp" srcset="/assets/img/hero-1280.webp 1280w, /assets/img/hero-960.webp 960w, /assets/img/hero-640.webp 640w" sizes="(min-width:1168px) 520px, (min-width:880px) 46vw, calc(100vw - 40px)" width="1280" height="720" fetchpriority="high" decoding="async" alt="ピンクの丸底フラスコの妖精シップちゃんがピースサイン。魔法のピンクの渦が、怒った広告バナーたちを泡と桜の花びらに変えていく。">
       </div>
+      <div class="hero-pop">
+        <img class="pop-light" src="/assets/img/shots/pop-home.webp" width="340" height="392" decoding="async" alt="PhilterAdsのポップアップ画面。このページで128件の広告を消去。広告・トラッカー・ザップ・ポップアップの件数、このサイトでの一時停止スイッチ、「見逃した広告をザップ」ボタン。">
+        <img class="pop-dark" src="/assets/img/shots/pop-home-dark.webp" width="340" height="392" loading="lazy" decoding="async" alt="PhilterAdsのポップアップ画面。このページで128件の広告を消去。広告・トラッカー・ザップ・ポップアップの件数、このサイトでの一時停止スイッチ、「見逃した広告をザップ」ボタン。">
+      </div>
       <svg class="spark spark-a" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 Q17.6 13.4 28 16 Q17.6 18.6 16 30 Q14.4 18.6 4 16 Q14.4 13.4 16 2 Z"/></svg>
       <svg class="spark spark-b" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 Q17.6 13.4 28 16 Q17.6 18.6 16 30 Q14.4 18.6 4 16 Q14.4 13.4 16 2 Z"/></svg>
     </figure>
   </div>
+</section>
+
+<section id="look" class="look" aria-labelledby="look-h2">
+  <div class="wrap">
+    <div class="sec-head look-head reveal">
+      <div>
+        <p class="eyebrow">画面を見る</p>
+        <h2 id="look-h2">小さなポップアップに、ぜんぶ入っています</h2>
+      </div>
+      <div class="look-nav">
+        <button type="button" class="look-btn" data-look="-1" aria-label="前のスクリーンショット"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14.5 6-6 6 6 6"/></svg></button>
+        <button type="button" class="look-btn" data-look="1" aria-label="次のスクリーンショット"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 6 6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <ul class="look-strip" role="list" tabindex="0" aria-label="PhilterAdsのスクリーンショット">
+      <li class="look-slide"><img src="/assets/img/shots/slide-1-1280.webp" srcset="/assets/img/shots/slide-1-800.webp 800w, /assets/img/shots/slide-1-1280.webp 1280w" sizes="(min-width:900px) 720px, 84vw" width="1280" height="800" loading="lazy" decoding="async" alt="ひと口で、広告が消える。ホーム画面では、このページでブロックした数がわかります。"></li>
+      <li class="look-slide"><img src="/assets/img/shots/slide-2-1280.webp" srcset="/assets/img/shots/slide-2-800.webp 800w, /assets/img/shots/slide-2-1280.webp 1280w" sizes="(min-width:900px) 720px, 84vw" width="1280" height="800" loading="lazy" decoding="async" alt="フィルターを選ぶ。リストごとに強さと、壊れる可能性のあるものを表示します。"></li>
+      <li class="look-slide"><img src="/assets/img/shots/slide-3-1280.webp" srcset="/assets/img/shots/slide-3-800.webp 800w, /assets/img/shots/slide-3-1280.webp 1280w" sizes="(min-width:900px) 720px, 84vw" width="1280" height="800" loading="lazy" decoding="async" alt="すり抜けた広告はザップ。ザップした広告は一覧になり、いつでも元に戻せます。"></li>
+      <li class="look-slide"><img src="/assets/img/shots/slide-4-1280.webp" srcset="/assets/img/shots/slide-4-800.webp 800w, /assets/img/shots/slide-4-1280.webp 1280w" sizes="(min-width:900px) 720px, 84vw" width="1280" height="800" loading="lazy" decoding="async" alt="ブロックした内容を確認。今日と累計の統計は、あなたの端末の中だけに残ります。"></li>
+      <li class="look-slide"><img src="/assets/img/shots/slide-5-1280.webp" srcset="/assets/img/shots/slide-5-800.webp 800w, /assets/img/shots/slide-5-1280.webp 1280w" sizes="(min-width:900px) 720px, 84vw" width="1280" height="800" loading="lazy" decoding="async" alt="目にやさしい。ダークテーマに対応、英語と日本語で使えます。"></li>
+  </ul>
 </section>
 
 <section id="promise" aria-labelledby="promise-h2">
@@ -266,6 +290,30 @@
       </article>
     </div>
     <p class="nudge reveal" data-needs="pay" hidden><span>PhilterAdsは無料で、サポーターの応援で動いています。毎月<span class="nobr">$3 USD</span>から、または一回だけ好きな金額で。</span><a class="btn btn-primary" href="#support"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.9c0 5.6-7.5 10-7.5 10z"/></svg>シップちゃんを応援</a></p>
+  </div>
+</section>
+
+<section id="install" class="install" aria-labelledby="install-h2">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">インストール</p>
+      <h2 id="install-h2">GitHubから約1分でインストール</h2>
+      <p class="sec-sub">Chromeウェブストア版とEdgeアドオン版は現在審査中です。公開されるまでは、同じビルドをGitHubのリリースから直接インストールできます。</p>
+    </div>
+    <ol class="steps">
+      <li class="step reveal"><span class="step-n" aria-hidden="true">1</span><div><h3>ダウンロード</h3><p>最新リリースの<a data-no-jump href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip" data-href="download" data-dl>philterads.zip</a>をダウンロードします。</p></div></li>
+      <li class="step reveal"><span class="step-n" aria-hidden="true">2</span><div><h3>展開する</h3><p>残しておくフォルダー（例：<code>ドキュメント\PhilterAds</code>）に展開します。ブラウザーはこのフォルダーからPhilterAdsを動かすので、削除しないでください。</p></div></li>
+      <li class="step reveal"><span class="step-n" aria-hidden="true">3</span><div><h3>拡張機能ページを開く</h3><p>アドレスバーにこれを貼り付けます：<span class="copy-chip"><code>chrome://extensions</code><button type="button" class="copy-btn" data-copy="chrome://extensions" data-copied="コピーしました"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span>コピー</span></button></span>Edgeでは <code>edge://extensions</code> です。BraveやVivaldiも同じ手順です。</p></div></li>
+      <li class="step reveal"><span class="step-n" aria-hidden="true">4</span><div><h3>デベロッパーモードをオン</h3><p>Chromeでは右上、Edgeでは左のサイドバーにあるスイッチです。</p></div></li>
+      <li class="step reveal"><span class="step-n" aria-hidden="true">5</span><div><h3>「パッケージ化されていない拡張機能を読み込む」</h3><p>ボタンを押し、<code>manifest.json</code> が入っているフォルダーを選びます。最後にパズルのアイコンからシップちゃんをピン留めしましょう。</p></div></li>
+    </ol>
+    <div class="install-foot reveal">
+      <a class="btn btn-primary" data-href="download" data-dl data-no-jump href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>Chrome・Edge版をダウンロード</a>
+      <div class="install-notes">
+        <p><b>アップデート：</b> 新しいzipをダウンロードして同じフォルダーに上書き展開し、PhilterAdsのカードの再読み込みボタンを押します。設定やザップした広告はそのまま残ります。ストア版が公開されたら、アップデートは自動になります。</p>
+        <p><b>.exeインストーラーがない理由：</b> ChromeとEdgeが受け付ける拡張機能は、ストアからのものか、デベロッパーモードで読み込んだものだけです。ブラウザーの裏で拡張機能を押し込むインストーラーはアドウェアの手口なので、私たちは配布しません。</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -491,12 +539,10 @@
       <p class="sub">無料。オープンソース。あなたの味方。</p>
       <div class="cta" data-cta>
         <div data-cta-state="soon">
-          <span class="pill" role="status"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg>Chrome ウェブストアに近日登場</span>
-          <a class="btn btn-primary" data-href="github" href="https://github.com/PhilterAds/philterads" data-needs="repo" hidden>GitHubで先行アクセス</a>
-          <a class="btn btn-primary" href="#features" data-unless="repo">シップちゃんのできること</a>
+          <a class="btn btn-primary" data-href="download" data-dl href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>Chrome・Edge版をダウンロード</a>
+          <a class="btn btn-ghost" href="#install">インストール方法</a>
           <a class="btn btn-ghost" href="#support" data-needs="pay" hidden>シップちゃんを応援</a>
-          <p class="note" data-needs="repo" hidden>GitHubでリポジトリをWatchすると、公開した瞬間にお知らせが届きます。</p>
-          <p class="note" data-unless="repo">まずはChromeとEdgeから。Firefoxも続きます。</p>
+          <p class="note">無料・オープンソース。インストールは約1分。ストア版は現在審査中です。</p>
         </div>
         <div data-cta-state="live" hidden>
           <a class="btn btn-primary" data-href="install">Chromeに追加（無料）</a>
@@ -530,6 +576,7 @@
         <h3>プロダクト</h3>
         <ul>
           <li><a href="#features">できること</a></li>
+          <li><a href="#install">インストール</a></li>
           <li><a href="#roadmap">ロードマップ</a></li>
           <li><a href="#support">応援する</a></li>
           <li><a href="#faq">よくある質問</a></li>
