@@ -95,7 +95,10 @@ jobs:
               git log --no-merges --format='- %s (%h)' -n 20
             fi
           } > notes.md
-          gh release create "$TAG" "dist/philterads-${VERSION}.zip" \
+          # Same zip under a fixed name, so README/site links can always point at
+          # releases/latest/download/philterads.zip.
+          cp "dist/philterads-${VERSION}.zip" dist/philterads.zip
+          gh release create "$TAG" "dist/philterads-${VERSION}.zip" dist/philterads.zip \
             --target "$(git rev-parse HEAD)" \
             --title "PhilterAds ${VERSION}" \
             --notes-file notes.md
