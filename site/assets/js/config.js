@@ -8,7 +8,7 @@ window.PHILTER = {
   sponsorsUrl: "https://github.com/sponsors/PhilterAds",
   repoOpen: true,                                   // true once the repo is public: shows every GitHub link
   sponsorsOpen: false,                              // true once GitHub Sponsors is approved: adds the "Prefer GitHub?" line
-  stores: { chrome: "", edge: "", firefox: "", opera: "" }, // each badge shows only once its listing URL is set
+  stores: { chrome: "", edge: "https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab", firefox: "", opera: "" }, // each badge shows only once its listing URL is set
   // Stripe Payment Links (buy.stripe.com/...): tiers go live only once all five are set
   stripe: {
     t1: "https://buy.stripe.com/00w14p9m8c40efs2hUeZ200",
