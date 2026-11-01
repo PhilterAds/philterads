@@ -147,29 +147,28 @@
 <section id="top" class="hero-section" aria-labelledby="hero-h1">
   <div class="wrap hero-grid">
     <div class="hero-text">
-      <p class="eyebrow">Chrome用 <span class="nobr">無料の広告ブロッカー</span>・<span class="nobr">ポップアップブロッカー</span></p>
+      <p class="eyebrow" data-get-eyebrow>Chrome用 <span class="nobr">無料の広告ブロッカー</span>・<span class="nobr">ポップアップブロッカー</span></p>
       <h1 id="hero-h1">ひと口で、広告が消える。</h1>
       <p class="lead">PhilterAdsは広告・ポップアップ・トラッカー・マルウェアサイトをブロックし、YouTube広告は再生前に消します。ログインや決済は壊しません。お金をもらって広告を通すことは、絶対にしません。あなたのデータも集めません。</p>
       <div class="cta" data-cta>
         <div data-cta-state="soon">
-          <a class="btn btn-primary" data-href="download" data-dl href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg><span>Chrome・Edge版を<span class="nobr">ダウンロード</span></span></a>
-          <a class="btn btn-ghost" href="#install">インストール方法</a>
-          <p class="note">無料・オープンソース。Edgeアドオンで公開中。Chromeウェブストア版は審査中です。</p>
-        </div>
-        <div data-cta-state="live" hidden>
-          <a class="btn btn-primary" data-href="install">Chromeに追加（無料）</a>
-          <a class="btn btn-ghost" data-href="github" href="https://github.com/PhilterAds/philterads" data-needs="repo" hidden>GitHubで見る</a>
-          <p class="note">無料。オープンソース。アカウント不要。</p>
+          <a class="btn btn-primary" data-href="download" data-dl data-get href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg><span data-get-label>Chrome・Edge版を<span class="nobr">ダウンロード</span></span></a>
+          <a class="btn btn-ghost" href="#install" data-get-alt>インストール方法</a>
+          <p class="note" data-get-note>無料・オープンソース。Edgeアドオンで公開中。Chromeウェブストア版は審査中です。</p>
         </div>
       </div>
-      <div class="stores" data-stores hidden>
-        <ul class="store-badges" aria-label="PhilterAdsを入手">
-          <li data-store="chrome" hidden><a><img src="/assets/img/badges/chrome-web-store.png" width="159" height="48" alt="Chrome ウェブストアで入手"></a></li>
-          <li data-store="edge" hidden><a><img src="/assets/img/badges/edge-ja.png" width="181" height="48" alt="Microsoft Edge から入手"></a></li>
-          <li data-store="firefox" hidden><a><img src="/assets/img/badges/firefox-get-the-addon.svg" width="138" height="48" alt="Firefox 用アドオンを入手"></a></li>
-          <li data-store="opera" hidden><a class="btn btn-ghost">Opera版を入手</a></li>
-        </ul>
-        <p class="stores-also" data-also hidden>Brave・Vivaldi・Arcでも使えます。</p>
+      <div class="browsers" data-browsers>
+        <div class="br-group"><p class="br-label" id="br-now-hero">対応ブラウザ</p><ul class="br-list" aria-labelledby="br-now-hero">
+          <li><a class="br" data-br="edge" href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab"><img src="/assets/img/browsers/edge.svg" width="32" height="32" alt=""><svg class="br-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8.5 7 11.5 12 5"/></svg><span class="br-name">Edge<span class="sr-only">（使えます）</span></span></a></li>
+          <li><a class="br" data-br="chrome" href="#install"><img src="/assets/img/browsers/chrome.svg" width="32" height="32" alt=""><svg class="br-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8.5 7 11.5 12 5"/></svg><span class="br-name">Chrome<span class="sr-only">（使えます）</span></span></a></li>
+          <li><a class="br" data-br="brave" href="#install"><img src="/assets/img/browsers/brave.svg" width="32" height="32" alt=""><svg class="br-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8.5 7 11.5 12 5"/></svg><span class="br-name">Brave<span class="sr-only">（使えます）</span></span></a></li>
+          <li><a class="br" data-br="vivaldi" href="#install"><img src="/assets/img/browsers/vivaldi.svg" width="32" height="32" alt=""><svg class="br-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8.5 7 11.5 12 5"/></svg><span class="br-name">Vivaldi<span class="sr-only">（使えます）</span></span></a></li>
+        </ul></div>
+        <div class="br-group br-later"><p class="br-label" id="br-soon-hero">今後対応</p><ul class="br-list" aria-labelledby="br-soon-hero">
+          <li><a class="br" data-br="firefox" href="#roadmap"><img src="/assets/img/browsers/firefox.svg" width="32" height="32" alt=""><span class="br-name">Firefox<span class="sr-only">（今後対応）</span></span></a></li>
+          <li><a class="br" data-br="opera" href="#roadmap"><img src="/assets/img/browsers/opera.svg" width="32" height="32" alt=""><span class="br-name">Opera<span class="sr-only">（今後対応）</span></span></a></li>
+          <li><a class="br" data-br="safari" href="#roadmap"><img src="/assets/img/browsers/safari.svg" width="32" height="32" alt=""><span class="br-name">Safari<span class="sr-only">（今後対応）</span></span></a></li>
+        </ul></div>
       </div>
       <ul class="chips">
         <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.5 12 13 4.5"/></svg>ずっと無料</li>
@@ -291,7 +290,14 @@
     <div class="sec-head reveal">
       <p class="eyebrow">インストール</p>
       <h2 id="install-h2">GitHubから約1分でインストール</h2>
-      <p class="sec-sub">Edgeをお使いなら<a href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab">Edgeアドオンから入手</a>できます。Chromeウェブストア版は現在審査中です。公開されるまでは、Chromeでも同じビルドをGitHubのリリースから直接インストールできます。</p>
+      <p class="sec-sub">Edgeなら、Edgeアドオンからワンクリックでインストールできます。Chromeウェブストア版は現在審査中です。公開されるまでは、Chromeでも同じビルドをGitHubのリリースから直接インストールできます。</p>
+      <div class="stores" data-stores hidden>
+        <ul class="store-badges" aria-label="PhilterAdsを入手">
+          <li data-store="chrome" hidden><a><img src="/assets/img/badges/chrome-web-store.png" width="159" height="48" alt="Available in the Chrome Web Store"></a></li>
+          <li data-store="edge" hidden><a><img src="/assets/img/badges/edge-ja.png" width="181" height="48" alt="Microsoft Edge から入手"></a></li>
+        </ul>
+        <p class="stores-also" data-also hidden>Brave・Vivaldi・Arcでも使えます。</p>
+      </div>
     </div>
     <ol class="steps">
       <li class="step reveal"><span class="step-n" aria-hidden="true">1</span><div><h3>ダウンロード</h3><p>最新リリースの<a data-no-jump href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip" data-href="download" data-dl>philterads.zip</a>をダウンロードします。</p><a class="btn btn-primary" data-href="download" data-dl data-no-jump href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg><span>Chrome・Edge版を<span class="nobr">ダウンロード</span></span></a></div></li>
@@ -326,6 +332,7 @@
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>今日と累計の統計、ザップした広告の一覧</span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>ライト／ダークテーマ、英語と日本語</span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>コードは<a href="https://github.com/PhilterAds/philterads">GitHub</a>で公開中（GPLv3）</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span><a href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab">Microsoft Edgeアドオン</a>で公開中。ワンクリックでインストール、自動アップデート</span></li>
           <li data-needs="install" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Chromeウェブストアで公開中。ワンクリックでインストール、自動アップデート</span></li>
         </ul>
       </article>
@@ -335,8 +342,7 @@
         <ul>
           <li><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span><strong>MCPでAIコントロール。</strong>Claude、Cursor、どのMCPアプリでもつないで話しかけるだけ。「このサイトが壊れてる、直して」「ここで何をブロックした？」。あなたのパソコン上で動き、外には何も出ません。</span></li>
           <li><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span><a href="#support">月15ドル以上の応援者</a>はAIコントロールを先行体験</span></li>
-          <li data-unless="install"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>Chromeウェブストア・Microsoft Edgeで公開。ワンクリックでインストール、自動アップデート</span></li>
-          <li data-needs="install" hidden><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>Microsoft Edgeアドオンで公開</span></li>
+          <li data-unless="install"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>Chromeウェブストアで公開。ワンクリックでインストール、自動アップデート</span></li>
           <li><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>はじめてインストールしたときのウェルカムページ</span></li>
         </ul>
       </article>
@@ -509,25 +515,24 @@
       <p class="sub">無料。オープンソース。あなたの味方。</p>
       <div class="cta" data-cta>
         <div data-cta-state="soon">
-          <a class="btn btn-primary" data-href="download" data-dl href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg><span>Chrome・Edge版を<span class="nobr">ダウンロード</span></span></a>
-          <a class="btn btn-ghost" href="#install">インストール方法</a>
+          <a class="btn btn-primary" data-href="download" data-dl data-get href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg><span data-get-label>Chrome・Edge版を<span class="nobr">ダウンロード</span></span></a>
+          <a class="btn btn-ghost" href="#install" data-get-alt>インストール方法</a>
           <a class="btn btn-ghost" href="#support" data-needs="pay" hidden>シップちゃんを応援</a>
-          <p class="note">無料・オープンソース。Edgeアドオンで公開中。Chromeウェブストア版は審査中です。</p>
-        </div>
-        <div data-cta-state="live" hidden>
-          <a class="btn btn-primary" data-href="install">Chromeに追加（無料）</a>
-          <a class="btn btn-ghost" data-href="github" href="https://github.com/PhilterAds/philterads" data-needs="repo" hidden>GitHubで見る</a>
-          <p class="note">無料。オープンソース。アカウント不要。</p>
+          <p class="note" data-get-note>無料・オープンソース。Edgeアドオンで公開中。Chromeウェブストア版は審査中です。</p>
         </div>
       </div>
-      <div class="stores" data-stores hidden>
-        <ul class="store-badges" aria-label="PhilterAdsを入手">
-          <li data-store="chrome" hidden><a><img src="/assets/img/badges/chrome-web-store.png" width="159" height="48" alt="Chrome ウェブストアで入手"></a></li>
-          <li data-store="edge" hidden><a><img src="/assets/img/badges/edge-ja.png" width="181" height="48" alt="Microsoft Edge から入手"></a></li>
-          <li data-store="firefox" hidden><a><img src="/assets/img/badges/firefox-get-the-addon.svg" width="138" height="48" alt="Firefox 用アドオンを入手"></a></li>
-          <li data-store="opera" hidden><a class="btn btn-ghost">Opera版を入手</a></li>
-        </ul>
-        <p class="stores-also" data-also hidden>Brave・Vivaldi・Arcでも使えます。</p>
+      <div class="browsers" data-browsers>
+        <div class="br-group"><p class="br-label" id="br-now-get">対応ブラウザ</p><ul class="br-list" aria-labelledby="br-now-get">
+          <li><a class="br" data-br="edge" href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab"><img src="/assets/img/browsers/edge.svg" width="32" height="32" alt=""><svg class="br-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8.5 7 11.5 12 5"/></svg><span class="br-name">Edge<span class="sr-only">（使えます）</span></span></a></li>
+          <li><a class="br" data-br="chrome" href="#install"><img src="/assets/img/browsers/chrome.svg" width="32" height="32" alt=""><svg class="br-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8.5 7 11.5 12 5"/></svg><span class="br-name">Chrome<span class="sr-only">（使えます）</span></span></a></li>
+          <li><a class="br" data-br="brave" href="#install"><img src="/assets/img/browsers/brave.svg" width="32" height="32" alt=""><svg class="br-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8.5 7 11.5 12 5"/></svg><span class="br-name">Brave<span class="sr-only">（使えます）</span></span></a></li>
+          <li><a class="br" data-br="vivaldi" href="#install"><img src="/assets/img/browsers/vivaldi.svg" width="32" height="32" alt=""><svg class="br-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8.5 7 11.5 12 5"/></svg><span class="br-name">Vivaldi<span class="sr-only">（使えます）</span></span></a></li>
+        </ul></div>
+        <div class="br-group br-later"><p class="br-label" id="br-soon-get">今後対応</p><ul class="br-list" aria-labelledby="br-soon-get">
+          <li><a class="br" data-br="firefox" href="#roadmap"><img src="/assets/img/browsers/firefox.svg" width="32" height="32" alt=""><span class="br-name">Firefox<span class="sr-only">（今後対応）</span></span></a></li>
+          <li><a class="br" data-br="opera" href="#roadmap"><img src="/assets/img/browsers/opera.svg" width="32" height="32" alt=""><span class="br-name">Opera<span class="sr-only">（今後対応）</span></span></a></li>
+          <li><a class="br" data-br="safari" href="#roadmap"><img src="/assets/img/browsers/safari.svg" width="32" height="32" alt=""><span class="br-name">Safari<span class="sr-only">（今後対応）</span></span></a></li>
+        </ul></div>
       </div>
     </div>
   </div>

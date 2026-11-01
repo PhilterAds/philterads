@@ -17,6 +17,7 @@
   /* site-only */
   --plum:#2A1B4E; --spark:#FFD23F; --cork:#D9985E; --glass:#F1EBFF;
   --link:#B81E6B;
+  --ok:#1E8A4C; --on-ok:#FFFFFF;
   --band:#EDE6F7;
   --panel-shadow:6px 8px 0 var(--plum);
   --radius:16px; --radius-lg:24px;
@@ -30,14 +31,14 @@
   --text:#F1ECF8; --muted:#A79EBB;
   --accent:#FF6EB4; --accent-soft:#3A1F37; --on-accent:#2A1B4E; --potion:#FF4FA3;
   --tab-track:#130F1C; --danger:#FF8A80; --shadow:none; --spark-line:#FFF1B8;
-  --link:#FF8AC4; --band:#1A1427; --panel-shadow:6px 8px 0 #0E0A16; --panel-line:#4A3A78;
+  --link:#FF8AC4; --ok:#4ADE80; --on-ok:#0E2A18; --band:#1A1427; --panel-shadow:6px 8px 0 #0E0A16; --panel-line:#4A3A78;
 }}
 :root[data-theme="dark"]{ color-scheme: dark;
   --bg:#15111F; --card:#1F1930; --border:#2E2742; --hover:#27203A;
   --text:#F1ECF8; --muted:#A79EBB;
   --accent:#FF6EB4; --accent-soft:#3A1F37; --on-accent:#2A1B4E; --potion:#FF4FA3;
   --tab-track:#130F1C; --danger:#FF8A80; --shadow:none; --spark-line:#FFF1B8;
-  --link:#FF8AC4; --band:#1A1427; --panel-shadow:6px 8px 0 #0E0A16; --panel-line:#4A3A78;
+  --link:#FF8AC4; --ok:#4ADE80; --on-ok:#0E2A18; --band:#1A1427; --panel-shadow:6px 8px 0 #0E0A16; --panel-line:#4A3A78;
 }
 
 /* JA page: every var(--font-body) consumer follows the JA stack (buttons, h3/h4, prices, wordmark) */
@@ -205,6 +206,40 @@ html[lang="ja"] .lead, html[lang="ja"] .scene-text p { word-break: auto-phrase; 
 .stores-also { margin: 10px 0 0; font-size: 0.875rem; color: var(--muted); }
 .get .store-badges { justify-content: center; }
 .get .stores-also { text-align: center; }
+
+/* ---- "Works in" browser logos: green check = installs today, faded = on the roadmap ---- */
+.browsers { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 12px 28px; margin: 22px 0 0; }
+.br-group { display: flex; flex-direction: column; gap: 8px; }
+.br-label { margin: 0; font-size: 0.75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+html[lang="ja"] .br-label { letter-spacing: .02em; text-transform: none; }
+.br-list { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.br {
+  position: relative; display: flex; flex-direction: column; align-items: center; gap: 5px;
+  min-width: 60px; padding: 8px 6px 6px; border-radius: 14px; border: 1px solid transparent;
+  color: var(--text); text-decoration: none; font-size: 0.8125rem; font-weight: 600; line-height: 1.2;
+  transition: background-color .15s, border-color .15s;
+}
+.br img { display: block; width: 32px; height: 32px; }
+.br:hover { background: var(--card); border-color: var(--border); }
+.br:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.br-mark {
+  position: absolute; top: 4px; left: calc(50% + 8px); width: 16px; height: 16px; padding: 2px; border-radius: 50%;
+  background: var(--ok); box-shadow: 0 0 0 2px var(--bg);
+  fill: none; stroke: var(--on-ok); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;
+}
+.br.is-you { background: var(--card); border-color: var(--ok); }
+.br-later .br { color: var(--muted); }
+.br-later .br img { filter: grayscale(1); opacity: .55; }
+.br-later .br:hover img { opacity: .85; }
+.br-later .br.is-you { border-color: var(--border); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .br-later .br img { filter: grayscale(1) brightness(1.7); opacity: .6; } }
+:root[data-theme="dark"] .br-later .br img { filter: grayscale(1) brightness(1.7); opacity: .6; }
+.get .browsers { justify-content: center; margin-top: 28px; }
+.get .br-group { align-items: center; }
+.get .br-mark { box-shadow: 0 0 0 2px var(--band); }
+.br.is-you .br-mark, .br:hover .br-mark { box-shadow: 0 0 0 2px var(--card); }
+@media (max-width: 480px) { .browsers { gap: 14px; } .br { min-width: 56px; } }
+@media (prefers-reduced-motion: reduce) { .br { transition: none; } }
 
 /* ---- chips ---- */
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; padding: 0; list-style: none; }
