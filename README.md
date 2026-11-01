@@ -15,6 +15,20 @@
   <a href="https://philterads.com">philterads.com</a> · <a href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab">Get it for Edge</a> · <a href="#install">Install</a> · <a href="#roadmap">Roadmap</a> · <a href="docs/TECHNICAL.md">How it works</a>
 </p>
 
+<table align="center">
+  <tr>
+    <td align="center" width="96"><a href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab"><img src="site/assets/img/browsers/edge.svg" alt="" width="40" height="40"><br><b>Edge</b></a><br><sub>✅ <a href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab">Get it</a></sub></td>
+    <td align="center" width="96"><a href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><img src="site/assets/img/browsers/chrome.svg" alt="" width="40" height="40"><br><b>Chrome</b></a><br><sub>✅ <a href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip">Download</a></sub></td>
+    <td align="center" width="96"><a href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><img src="site/assets/img/browsers/brave.svg" alt="" width="40" height="40"><br><b>Brave</b></a><br><sub>✅ <a href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip">Download</a></sub></td>
+    <td align="center" width="96"><a href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><img src="site/assets/img/browsers/vivaldi.svg" alt="" width="40" height="40"><br><b>Vivaldi</b></a><br><sub>✅ <a href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip">Download</a></sub></td>
+    <td align="center" width="96"><a href="#roadmap"><img src="site/assets/img/browsers/firefox.svg" alt="" width="40" height="40"><br><b>Firefox</b></a><br><sub>🕒 Coming</sub></td>
+    <td align="center" width="96"><a href="#roadmap"><img src="site/assets/img/browsers/opera.svg" alt="" width="40" height="40"><br><b>Opera</b></a><br><sub>🕒 Coming</sub></td>
+    <td align="center" width="96"><a href="#roadmap"><img src="site/assets/img/browsers/safari.svg" alt="" width="40" height="40"><br><b>Safari</b></a><br><sub>🕒 Coming</sub></td>
+  </tr>
+</table>
+
+<p align="center"><sub>Edge installs in one click. Chrome, Brave and Vivaldi: download the zip and follow the <a href="#from-github-works-today-about-a-minute">one-minute steps</a>; the Chrome Web Store listing is in review.</sub></p>
+
 ---
 
 ## Why PhilterAds
@@ -57,7 +71,7 @@ The Chrome listing is in review. Until it's approved, install from GitHub below.
 
 1. **Download** [`philterads.zip`](https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip) from the latest release.
 2. **Unzip it** into a folder you'll keep, for example `Documents\PhilterAds`. Don't delete the folder afterwards: the browser runs the extension from it.
-3. **Open the extensions page**: type `chrome://extensions` (Chrome) or `edge://extensions` (Edge) in the address bar.
+3. **Open the extensions page**: type `chrome://extensions` (Chrome), `edge://extensions` (Edge), `brave://extensions` (Brave) or `vivaldi:extensions` (Vivaldi) in the address bar.
 4. **Turn on Developer mode**: a switch at the top right in Chrome, or in the left sidebar in Edge.
 5. Click **Load unpacked** and pick the folder from step 2. It's the one that contains `manifest.json`.
 6. **Pin it**: click the puzzle-piece icon in the toolbar, then the pin next to PhilterAds.
