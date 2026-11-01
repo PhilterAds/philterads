@@ -25,7 +25,8 @@
     return "other";
   })();
   var ja = document.documentElement.lang === "ja";
-  var NAMES = { edge: "Edge", chrome: "Chrome", brave: "Brave", opera: "Opera", vivaldi: "Vivaldi" };
+  /* Opera is on the roadmap (its own store), so it keeps the generic button like the logo row says */
+  var NAMES = { edge: "Edge", chrome: "Chrome", brave: "Brave", vivaldi: "Vivaldi" };
   var T = ja ? {
     label: function (n) { return n + "版を<span class=\"nobr\">ダウンロード</span>"; },
     edgeNote: "無料・オープンソース。Microsoft Edgeアドオンからワンクリックでインストールできます。",

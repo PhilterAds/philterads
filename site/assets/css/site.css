@@ -216,7 +216,7 @@ html[lang="ja"] .br-label { letter-spacing: .02em; text-transform: none; }
 .br {
   position: relative; display: flex; flex-direction: column; align-items: center; gap: 5px;
   min-width: 60px; padding: 8px 6px 6px; border-radius: 14px; border: 1px solid transparent;
-  color: var(--text); text-decoration: none; font-size: 0.75rem; font-weight: 600; line-height: 1.2;
+  color: var(--text); text-decoration: none; font-size: 0.8125rem; font-weight: 600; line-height: 1.2;
   transition: background-color .15s, border-color .15s;
 }
 .br img { display: block; width: 32px; height: 32px; }
@@ -230,14 +230,14 @@ html[lang="ja"] .br-label { letter-spacing: .02em; text-transform: none; }
 .br.is-you { background: var(--card); border-color: var(--ok); }
 .br-later .br { color: var(--muted); }
 .br-later .br img { filter: grayscale(1); opacity: .55; }
-.br-later .br:hover img { filter: none; opacity: 1; }
+.br-later .br:hover img { opacity: .85; }
 .br-later .br.is-you { border-color: var(--border); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .br-later .br img { filter: grayscale(1) brightness(1.7); opacity: .6; } }
 :root[data-theme="dark"] .br-later .br img { filter: grayscale(1) brightness(1.7); opacity: .6; }
-:root .br-later .br:hover img { filter: none; opacity: 1; }
 .get .browsers { justify-content: center; margin-top: 28px; }
 .get .br-group { align-items: center; }
 .get .br-mark { box-shadow: 0 0 0 2px var(--band); }
+.br.is-you .br-mark, .br:hover .br-mark { box-shadow: 0 0 0 2px var(--card); }
 @media (max-width: 480px) { .browsers { gap: 14px; } .br { min-width: 56px; } }
 @media (prefers-reduced-motion: reduce) { .br { transition: none; } }
 
