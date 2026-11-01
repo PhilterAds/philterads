@@ -5,14 +5,85 @@
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var install = cfg.installUrl || "";
 
-  /* CTA groups: "soon" is the static default; a configured installUrl swaps to "live" */
-  if (install) {
-    document.querySelectorAll("[data-cta]").forEach(function (cta) {
-      var soon = cta.querySelector('[data-cta-state="soon"]');
-      var live = cta.querySelector('[data-cta-state="live"]');
-      if (soon && live) { soon.hidden = true; live.hidden = false; }
-    });
+  /* Browser-aware install button. The static HTML (no JS) is the generic GitHub download.
+     Edge goes to Edge Add-ons; the Chrome family goes to the Chrome Web Store once it is listed,
+     and to the GitHub zip until then. Other browsers and phones keep the generic button. */
+  var stores0 = cfg.stores || {};
+  var chromeStore = stores0.chrome || install;
+  var browser = (function () {
+    var ua = navigator.userAgent || "";
+    var uad = navigator.userAgentData;
+    var brands = uad && uad.brands ? uad.brands.map(function (b) { return b.brand; }).join(" ") : "";
+    var mobile = uad && typeof uad.mobile === "boolean" ? uad.mobile : /Android|iPhone|iPad|iPod|Mobile/i.test(ua);
+    if (mobile) return "mobile";
+    if (/Edg\//.test(ua) || /Microsoft Edge/.test(brands)) return "edge";
+    if (/OPR\//.test(ua) || /Opera/.test(brands)) return "opera";
+    if (/Vivaldi/.test(ua)) return "vivaldi";
+    if (navigator.brave || /Brave/.test(brands)) return "brave";
+    if (/Firefox\//.test(ua)) return "firefox";
+    if (/Chrome\//.test(ua)) return "chrome";
+    return "other";
+  })();
+  var ja = document.documentElement.lang === "ja";
+  var NAMES = { edge: "Edge", chrome: "Chrome", brave: "Brave", opera: "Opera", vivaldi: "Vivaldi" };
+  var T = ja ? {
+    label: function (n) { return n + "版を<span class=\"nobr\">ダウンロード</span>"; },
+    edgeNote: "無料・オープンソース。Microsoft Edgeアドオンからワンクリックでインストールできます。",
+    storeNote: "無料・オープンソース。Chromeウェブストアからワンクリックでインストールできます。",
+    zipNote: "無料・オープンソース。Chromeウェブストア版は審査中のため、今はGitHubから約1分でインストールできます。",
+    otherNote: "PhilterAdsはパソコンのChromeとEdgeで動きます。どちらかでこのページを開いてください。",
+    others: "ほかのブラウザ"
+  } : {
+    label: function (n) { return "Download for " + n; },
+    edgeNote: "Free and open source. Installs from Microsoft Edge <span class=\"nobr\">Add-ons</span> in one click.",
+    storeNote: "Free and open source. Installs from the Chrome Web Store in one click.",
+    zipNote: "Free and open source. Our Chrome Web Store listing is in review, so for now it installs from GitHub in about a minute.",
+    otherNote: "PhilterAds runs in Chrome and Edge on a computer. Open this page in one of them to install it.",
+    others: "Other browsers"
+  };
+  var target = null;      // store URL for this browser, or null for the GitHub zip
+  var note = T.otherNote;
+  if (browser === "edge" && stores0.edge) { target = stores0.edge; note = T.edgeNote; }
+  else if (browser === "edge" || NAMES[browser]) {
+    if (browser !== "edge" && chromeStore) { target = chromeStore; note = T.storeNote; }
+    else note = T.zipNote;
   }
+  document.documentElement.setAttribute("data-browser", browser);
+  if (browser === "edge") {
+    var eb = document.querySelector("[data-get-eyebrow]");
+    if (eb) eb.innerHTML = ja ? "Edge用 <span class=\"nobr\">無料の広告ブロッカー</span>・<span class=\"nobr\">ポップアップブロッカー</span>" : "Free ad blocker and pop-up blocker <span class=\"nobr\">for Edge</span>";
+  }
+  document.querySelectorAll("[data-cta]").forEach(function (cta) {
+    var btn = cta.querySelector("[data-get]");
+    if (!btn) return;
+    var label = btn.querySelector("[data-get-label]");
+    var alt = cta.querySelector("[data-get-alt]");
+    var noteEl = cta.querySelector("[data-get-note]");
+    if (NAMES[browser] && label) label.innerHTML = T.label(NAMES[browser]);
+    if (noteEl) noteEl.innerHTML = note;  /* static strings above, never user input */
+    if (target) {
+      /* a store page, not a file: no zip href override, no jump to the manual steps */
+      btn.removeAttribute("data-href");
+      btn.removeAttribute("data-dl");
+      btn.setAttribute("href", target);
+      if (alt) alt.textContent = T.others;
+    } else if (browser === "mobile") {
+      /* a zip is no use on a phone: show the steps instead of downloading */
+      btn.removeAttribute("data-href");
+      btn.removeAttribute("data-dl");
+      btn.setAttribute("href", "#install");
+      if (alt) alt.hidden = true;
+    }
+  });
+
+  /* "Works in" logo row: the Chrome family links to the Chrome Web Store once it is listed,
+     and the visitor's own browser gets a ring */
+  document.querySelectorAll("[data-browsers] [data-br]").forEach(function (a) {
+    var k = a.getAttribute("data-br");
+    if (stores0.chrome && (k === "chrome" || k === "brave" || k === "vivaldi")) a.setAttribute("href", stores0.chrome);
+    if (stores0.edge && k === "edge") a.setAttribute("href", stores0.edge);
+    if (k === browser) a.classList.add("is-you");
+  });
 
   /* hrefs from config (static ones in the HTML already work without JS) */
   document.querySelectorAll("[data-href]").forEach(function (a) {

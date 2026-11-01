@@ -147,29 +147,28 @@
 <section id="top" class="hero-section" aria-labelledby="hero-h1">
   <div class="wrap hero-grid">
     <div class="hero-text">
-      <p class="eyebrow">Free ad blocker and pop-up blocker for Chrome</p>
+      <p class="eyebrow" data-get-eyebrow>Free ad blocker and pop-up blocker <span class="nobr">for Chrome</span></p>
       <h1 id="hero-h1">One sip. Ads vanish.</h1>
       <p class="lead">PhilterAds blocks ads, pop-ups, trackers and malware sites, removes YouTube ads before they play, and never breaks your logins. We never let ads through for money. Nothing about you is collected.</p>
       <div class="cta" data-cta>
         <div data-cta-state="soon">
-          <a class="btn btn-primary" data-href="download" data-dl href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>Download for Chrome &amp; Edge</a>
-          <a class="btn btn-ghost" href="#install">How to install</a>
-          <p class="note">Free and open source. Now on Edge Add-ons. The Chrome Web Store listing is in review.</p>
-        </div>
-        <div data-cta-state="live" hidden>
-          <a class="btn btn-primary" data-href="install">Add to Chrome — it's free</a>
-          <a class="btn btn-ghost" data-href="github" href="https://github.com/PhilterAds/philterads" data-needs="repo" hidden>View on GitHub</a>
-          <p class="note">Free. Open source. No account.</p>
+          <a class="btn btn-primary" data-href="download" data-dl data-get href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg><span data-get-label>Download for Chrome &amp; Edge</span></a>
+          <a class="btn btn-ghost" href="#install" data-get-alt>How to install</a>
+          <p class="note" data-get-note>Free and open source. Now on Edge <span class="nobr">Add-ons</span>. The Chrome Web Store listing is in review.</p>
         </div>
       </div>
-      <div class="stores" data-stores hidden>
-        <ul class="store-badges" aria-label="Get PhilterAds">
-          <li data-store="chrome" hidden><a><img src="/assets/img/badges/chrome-web-store.png" width="159" height="48" alt="Available in the Chrome Web Store"></a></li>
-          <li data-store="edge" hidden><a><img src="/assets/img/badges/edge-en.png" width="181" height="48" alt="Get it from Microsoft Edge"></a></li>
-          <li data-store="firefox" hidden><a><img src="/assets/img/badges/firefox-get-the-addon.svg" width="138" height="48" alt="Get the add-on for Firefox"></a></li>
-          <li data-store="opera" hidden><a class="btn btn-ghost">Get it for Opera</a></li>
-        </ul>
-        <p class="stores-also" data-also hidden>Also works in Brave, Vivaldi and Arc.</p>
+      <div class="browsers" data-browsers>
+        <div class="br-group"><p class="br-label" id="br-now-hero">Works in</p><ul class="br-list" aria-labelledby="br-now-hero">
+          <li><a class="br" data-br="edge" href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab"><img src="/assets/img/browsers/edge.svg" width="32" height="32" alt=""><svg class="br-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8.5 7 11.5 12 5"/></svg><span class="br-name">Edge<span class="sr-only"> (works now)</span></span></a></li>
+          <li><a class="br" data-br="chrome" href="#install"><img src="/assets/img/browsers/chrome.svg" width="32" height="32" alt=""><svg class="br-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8.5 7 11.5 12 5"/></svg><span class="br-name">Chrome<span class="sr-only"> (works now)</span></span></a></li>
+          <li><a class="br" data-br="brave" href="#install"><img src="/assets/img/browsers/brave.svg" width="32" height="32" alt=""><svg class="br-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8.5 7 11.5 12 5"/></svg><span class="br-name">Brave<span class="sr-only"> (works now)</span></span></a></li>
+          <li><a class="br" data-br="vivaldi" href="#install"><img src="/assets/img/browsers/vivaldi.svg" width="32" height="32" alt=""><svg class="br-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8.5 7 11.5 12 5"/></svg><span class="br-name">Vivaldi<span class="sr-only"> (works now)</span></span></a></li>
+        </ul></div>
+        <div class="br-group br-later"><p class="br-label" id="br-soon-hero">Coming</p><ul class="br-list" aria-labelledby="br-soon-hero">
+          <li><a class="br" data-br="firefox" href="#roadmap"><img src="/assets/img/browsers/firefox.svg" width="32" height="32" alt=""><span class="br-name">Firefox<span class="sr-only"> (coming)</span></span></a></li>
+          <li><a class="br" data-br="opera" href="#roadmap"><img src="/assets/img/browsers/opera.svg" width="32" height="32" alt=""><span class="br-name">Opera<span class="sr-only"> (coming)</span></span></a></li>
+          <li><a class="br" data-br="safari" href="#roadmap"><img src="/assets/img/browsers/safari.svg" width="32" height="32" alt=""><span class="br-name">Safari<span class="sr-only"> (coming)</span></span></a></li>
+        </ul></div>
       </div>
       <ul class="chips">
         <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5 6.5 12 13 4.5"/></svg>Free forever</li>
@@ -291,7 +290,14 @@
     <div class="sec-head reveal">
       <p class="eyebrow">Install</p>
       <h2 id="install-h2">Install from GitHub in about a minute</h2>
-      <p class="sec-sub">On Edge? <a href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab">Get PhilterAds from Edge Add-ons</a>. The Chrome Web Store listing is in review. Until it goes live, Chrome users can install the same build straight from our GitHub releases.</p>
+      <p class="sec-sub">On Edge, PhilterAds installs from Edge <span class="nobr">Add-ons</span> in one click. The Chrome Web Store listing is in review. Until it goes live, Chrome users can install the same build straight from our GitHub releases.</p>
+      <div class="stores" data-stores hidden>
+        <ul class="store-badges" aria-label="Get PhilterAds">
+          <li data-store="chrome" hidden><a><img src="/assets/img/badges/chrome-web-store.png" width="159" height="48" alt="Available in the Chrome Web Store"></a></li>
+          <li data-store="edge" hidden><a><img src="/assets/img/badges/edge-en.png" width="181" height="48" alt="Get it from Microsoft Edge"></a></li>
+        </ul>
+        <p class="stores-also" data-also hidden>Also works in Brave, Vivaldi and Arc.</p>
+      </div>
     </div>
     <ol class="steps">
       <li class="step reveal"><span class="step-n" aria-hidden="true">1</span><div><h3>Download</h3><p>Get <a data-no-jump href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip" data-href="download" data-dl>philterads.zip</a>, the latest release.</p><a class="btn btn-primary" data-href="download" data-dl data-no-jump href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>Download for Chrome &amp; Edge</a></div></li>
@@ -326,6 +332,7 @@
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Stats for today and all time, with a list of everything you zapped</span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Light and dark themes, English and 日本語</span></li>
           <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Open source on <a href="https://github.com/PhilterAds/philterads">GitHub</a> (GPLv3)</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>On <a href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab">Microsoft Edge Add-ons</a>: one-click install, automatic updates</span></li>
           <li data-needs="install" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>On the Chrome Web Store: one-click install, automatic updates</span></li>
         </ul>
       </article>
@@ -335,8 +342,7 @@
         <ul>
           <li><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span><strong>AI control over MCP.</strong> Connect Claude, Cursor or any MCP app and just ask: “This site is broken. Fix it.” or “What got blocked here?” Runs on your computer; nothing leaves it.</span></li>
           <li><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>Early access to AI control for <a href="#support">$15+ supporters</a></span></li>
-          <li data-unless="install"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>Chrome Web Store and Microsoft Edge listings: one-click install, automatic updates</span></li>
-          <li data-needs="install" hidden><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>Microsoft Edge Add-ons listing</span></li>
+          <li data-unless="install"><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>Chrome Web Store listing: one-click install, automatic updates</span></li>
           <li><svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3q1 7.5 9 9-8 1.5-9 9-1-7.5-9-9 8-1.5 9-9Z"/></svg><span>A friendly welcome page on first install</span></li>
         </ul>
       </article>
@@ -509,25 +515,24 @@
       <p class="sub">Free. Open source. On your side.</p>
       <div class="cta" data-cta>
         <div data-cta-state="soon">
-          <a class="btn btn-primary" data-href="download" data-dl href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>Download for Chrome &amp; Edge</a>
-          <a class="btn btn-ghost" href="#install">How to install</a>
+          <a class="btn btn-primary" data-href="download" data-dl data-get href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg><span data-get-label>Download for Chrome &amp; Edge</span></a>
+          <a class="btn btn-ghost" href="#install" data-get-alt>How to install</a>
           <a class="btn btn-ghost" href="#support" data-needs="pay" hidden>Support Sip</a>
-          <p class="note">Free and open source. Now on Edge Add-ons. The Chrome Web Store listing is in review.</p>
-        </div>
-        <div data-cta-state="live" hidden>
-          <a class="btn btn-primary" data-href="install">Add to Chrome — it's free</a>
-          <a class="btn btn-ghost" data-href="github" href="https://github.com/PhilterAds/philterads" data-needs="repo" hidden>View on GitHub</a>
-          <p class="note">Free. Open source. No account.</p>
+          <p class="note" data-get-note>Free and open source. Now on Edge <span class="nobr">Add-ons</span>. The Chrome Web Store listing is in review.</p>
         </div>
       </div>
-      <div class="stores" data-stores hidden>
-        <ul class="store-badges" aria-label="Get PhilterAds">
-          <li data-store="chrome" hidden><a><img src="/assets/img/badges/chrome-web-store.png" width="159" height="48" alt="Available in the Chrome Web Store"></a></li>
-          <li data-store="edge" hidden><a><img src="/assets/img/badges/edge-en.png" width="181" height="48" alt="Get it from Microsoft Edge"></a></li>
-          <li data-store="firefox" hidden><a><img src="/assets/img/badges/firefox-get-the-addon.svg" width="138" height="48" alt="Get the add-on for Firefox"></a></li>
-          <li data-store="opera" hidden><a class="btn btn-ghost">Get it for Opera</a></li>
-        </ul>
-        <p class="stores-also" data-also hidden>Also works in Brave, Vivaldi and Arc.</p>
+      <div class="browsers" data-browsers>
+        <div class="br-group"><p class="br-label" id="br-now-get">Works in</p><ul class="br-list" aria-labelledby="br-now-get">
+          <li><a class="br" data-br="edge" href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab"><img src="/assets/img/browsers/edge.svg" width="32" height="32" alt=""><svg class="br-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8.5 7 11.5 12 5"/></svg><span class="br-name">Edge<span class="sr-only"> (works now)</span></span></a></li>
+          <li><a class="br" data-br="chrome" href="#install"><img src="/assets/img/browsers/chrome.svg" width="32" height="32" alt=""><svg class="br-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8.5 7 11.5 12 5"/></svg><span class="br-name">Chrome<span class="sr-only"> (works now)</span></span></a></li>
+          <li><a class="br" data-br="brave" href="#install"><img src="/assets/img/browsers/brave.svg" width="32" height="32" alt=""><svg class="br-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8.5 7 11.5 12 5"/></svg><span class="br-name">Brave<span class="sr-only"> (works now)</span></span></a></li>
+          <li><a class="br" data-br="vivaldi" href="#install"><img src="/assets/img/browsers/vivaldi.svg" width="32" height="32" alt=""><svg class="br-mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 8.5 7 11.5 12 5"/></svg><span class="br-name">Vivaldi<span class="sr-only"> (works now)</span></span></a></li>
+        </ul></div>
+        <div class="br-group br-later"><p class="br-label" id="br-soon-get">Coming</p><ul class="br-list" aria-labelledby="br-soon-get">
+          <li><a class="br" data-br="firefox" href="#roadmap"><img src="/assets/img/browsers/firefox.svg" width="32" height="32" alt=""><span class="br-name">Firefox<span class="sr-only"> (coming)</span></span></a></li>
+          <li><a class="br" data-br="opera" href="#roadmap"><img src="/assets/img/browsers/opera.svg" width="32" height="32" alt=""><span class="br-name">Opera<span class="sr-only"> (coming)</span></span></a></li>
+          <li><a class="br" data-br="safari" href="#roadmap"><img src="/assets/img/browsers/safari.svg" width="32" height="32" alt=""><span class="br-name">Safari<span class="sr-only"> (coming)</span></span></a></li>
+        </ul></div>
       </div>
     </div>
   </div>

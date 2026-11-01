@@ -12,7 +12,7 @@
 <p align="center">
   <b>A free ad blocker for Chrome and Edge.</b><br>
   Blocks ads, trackers and malware sites, and closes pop-up ad tabs, without breaking the sites you use.<br>
-  <a href="https://philterads.com">philterads.com</a> · <a href="#install">Install</a> · <a href="#roadmap">Roadmap</a> · <a href="docs/TECHNICAL.md">How it works</a>
+  <a href="https://philterads.com">philterads.com</a> · <a href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab">Get it for Edge</a> · <a href="#install">Install</a> · <a href="#roadmap">Roadmap</a> · <a href="docs/TECHNICAL.md">How it works</a>
 </p>
 
 ---
@@ -43,9 +43,15 @@
 
 ## Install
 
-### Chrome Web Store and Edge Add-ons
+### Microsoft Edge Add-ons
 
-Both listings are in review. Once they're approved, you'll get a one-click install with automatic updates. Links will appear here and on [philterads.com](https://philterads.com).
+**[Get PhilterAds for Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab)**: one-click install with automatic updates.
+
+<a href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab"><img src="site/assets/img/badges/edge-en.png" alt="Get it from Microsoft Edge" height="48"></a>
+
+### Chrome Web Store
+
+The Chrome listing is in review. Until it's approved, install from GitHub below. The link will appear here and on [philterads.com](https://philterads.com).
 
 ### From GitHub (works today, about a minute)
 
@@ -91,7 +97,7 @@ This list is also on the site: [philterads.com/#roadmap](https://philterads.com/
 - Open source under GPLv3, with versioned [releases](https://github.com/PhilterAds/philterads/releases)
 
 **Up next**
-- Chrome Web Store and Microsoft Edge Add-ons listings (in review)
+- Chrome Web Store listing (in review). The [Edge Add-ons listing](https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab) is live.
 - **AI control over MCP**: a small local `philterads-mcp` server, so Claude, Cursor or any MCP app can run PhilterAds for you, for example *"This site is broken. Fix it."* It runs on your own computer, and no browsing history goes to the AI. Design: [docs/MCP.md](docs/MCP.md)
 - A welcome page on first install
 

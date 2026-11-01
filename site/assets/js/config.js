@@ -1,7 +1,8 @@
 window.PHILTER = {
-  // Launch day: put the Chrome Web Store listing URL in installUrl AND stores.chrome. That swaps every
-  // "Coming soon" pill for "Add to Chrome", shows the store badge, and moves the store item on the
-  // roadmap to "Out now". Also add "downloadUrl" to the SoftwareApplication JSON-LD in both index pages.
+  // The install buttons detect the browser (site.js): Edge goes to stores.edge, the Chrome family to
+  // stores.chrome, and anything not listed yet to the GitHub zip. Chrome launch day: put the Chrome Web
+  // Store URL in installUrl AND stores.chrome (installUrl also flips the roadmap's store items), and add
+  // it to "downloadUrl" in the SoftwareApplication JSON-LD in both index pages.
   installUrl: "",                                   // "" = "coming soon" state everywhere
   downloadUrl: "https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip", // latest GitHub release zip (load unpacked)
   githubUrl: "https://github.com/PhilterAds/philterads",
