@@ -52,6 +52,9 @@ export const LISTS = [
     license: 'CC0 / MIT (curbengh, urlhaus-filter)',
     defaultOn: true,
     blockMainFrame: true,
+    // 'online' list: only hosts serving malware right now, so it swings day to day;
+    // the refresh guard (tools/check-shrink.mjs) allows a bigger drop here.
+    maxShrink: 0.6,
     cosmetic: false,
     description: 'Malware distribution sites (URLhaus online domains).',
     plainDomains: true, // host-style list: one domain per line, '#' comments

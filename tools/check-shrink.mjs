@@ -3,7 +3,8 @@
 // committed ones (git show HEAD:...), so a broken download or a parser
 // regression can never silently replace a good ruleset. Fails when a
 // default-on list loses more than 30% of its rules, or any list ends up
-// with 0 rules. Run from the repo root (the workflow does, after
+// with 0 rules. A list may set maxShrink (fraction, e.g. 0.6) when its upstream
+// is volatile by nature, like the URLhaus online malware list. Run from the repo root (the workflow does, after
 // `npm run build:rules`).
 
 import { execFile } from 'node:child_process';
@@ -29,6 +30,8 @@ const defaultOn = new Set([
   ...LISTS.filter((l) => l.defaultOn).map((l) => l.id),
 ]);
 
+const maxShrink = Object.fromEntries(LISTS.map((l) => [l.id, l.maxShrink ?? 0.3]));
+
 let failed = false;
 const summary = [];
 for (const [id, entry] of Object.entries(current)) {
@@ -40,8 +43,9 @@ for (const [id, entry] of Object.entries(current)) {
     failed = true;
   }
   if (prev === undefined || prev === 0) continue;
-  if (defaultOn.has(id) && fresh < prev * 0.7) {
-    console.error(`check-shrink: FAIL default-on list ${id} dropped ${prev} -> ${fresh} (more than 30% lost)`);
+  const limit = maxShrink[id] ?? 0.3;
+  if (defaultOn.has(id) && fresh < prev * (1 - limit)) {
+    console.error(`check-shrink: FAIL default-on list ${id} dropped ${prev} -> ${fresh} (more than ${Math.round(limit * 100)}% lost)`);
     failed = true;
   }
 }
