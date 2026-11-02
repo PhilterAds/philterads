@@ -17,7 +17,11 @@ export function htmlFiles(dir = site) {
 }
 
 export function hashOf(asset) {
-  return createHash("sha256").update(readFileSync(join(site, asset))).digest("hex").slice(0, 10);
+  // line endings normalised so Windows (CRLF) and Linux (LF) checkouts agree on the stamp
+  const text = readFileSync(join(site, asset), "utf8").replace(/
+/g, "
+");
+  return createHash("sha256").update(text).digest("hex").slice(0, 10);
 }
 
 export function stamp(html) {
