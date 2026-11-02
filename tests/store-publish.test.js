@@ -24,3 +24,11 @@ test('store-publish dry run with no secrets exits cleanly', () => {
   });
   assert.match(out, /secrets are not set/);
 });
+
+test('store-publish --edge-only with no Edge secrets exits cleanly', () => {
+  const out = execFileSync(process.execPath, ['tools/store-publish.mjs', '--edge-only'], {
+    encoding: 'utf8',
+    env: { PATH: process.env.PATH },
+  });
+  assert.match(out, /Edge secrets are not set/);
+});

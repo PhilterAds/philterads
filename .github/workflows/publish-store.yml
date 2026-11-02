@@ -21,9 +21,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: 'auto = normal rules; force = publish the newest version now; dry-run = decide only'
+        description: 'auto = normal rules; force = publish the newest version now; edge-only = send the newest version to Edge only; dry-run = decide only'
         type: choice
-        options: [auto, force, dry-run]
+        options: [auto, force, edge-only, dry-run]
         default: auto
 
 permissions: {}
@@ -84,5 +84,6 @@ jobs:
           flags=""
           [ "$EVENT" = "schedule" ] && flags="--weekly"
           [ "$MODE" = "force" ] && flags="--force"
+          [ "$MODE" = "edge-only" ] && flags="--edge-only"
           [ "$MODE" = "dry-run" ] && flags="--dry-run"
           node "$RUNNER_TEMP/store-publish.mjs" $flags

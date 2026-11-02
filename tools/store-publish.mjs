@@ -16,6 +16,9 @@
 // CWS_PUBLISHER_ID, CWS_ITEM_ID; EDGE_CLIENT_ID, EDGE_API_KEY, EDGE_PRODUCT_ID.
 // Edge is skipped (with a notice) while its secrets are missing.
 // --dry-run: decide and print, upload nothing.
+// --edge-only: send the newest version to Edge Add-ons only (manual run). The
+// normal path reaches Edge only after a Chrome submission; use this when Chrome
+// already has the version (or is reviewing it) and Edge does not.
 
 import { createSign } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
@@ -26,6 +29,7 @@ const args = new Set(process.argv.slice(2));
 const DRY = args.has('--dry-run');
 const WEEKLY = args.has('--weekly');
 const FORCE = args.has('--force');
+const EDGE_ONLY = args.has('--edge-only');
 
 const version = JSON.parse(readFileSync('manifest.json', 'utf8')).version;
 const zip = `dist/philterads-${version}.zip`;
@@ -92,6 +96,14 @@ async function call(url, opts, what) {
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function main() {
+  if (EDGE_ONLY) {
+    const { EDGE_CLIENT_ID, EDGE_API_KEY, EDGE_PRODUCT_ID } = process.env;
+    if (!EDGE_CLIENT_ID || !EDGE_API_KEY || !EDGE_PRODUCT_ID) { log('Edge secrets are not set; nothing to do.'); return; }
+    if (!existsSync(zip)) throw new Error(`${zip} not found (run npm run build:store first)`);
+    if (DRY) { log(`dry run: would send ${version} to Edge only.`); return; }
+    await publishEdge(readFileSync(zip));
+    return;
+  }
   const { CWS_SERVICE_ACCOUNT_KEY, CWS_PUBLISHER_ID, CWS_ITEM_ID } = process.env;
   if (!CWS_SERVICE_ACCOUNT_KEY || !CWS_PUBLISHER_ID || !CWS_ITEM_ID) {
     log('Chrome Web Store secrets are not set; nothing to do.');
