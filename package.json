@@ -12,7 +12,8 @@
     "install-updater": "node native/install.mjs",
     "test": "node --test",
     "smoke": "node tools/smoke.mjs",
-    "site:preview": "node tools/site/serve.mjs"
+    "site:preview": "node tools/site/serve.mjs",
+    "site:stamp": "node tools/site/stamp-assets.mjs"
   },
   "devDependencies": {
     "@eyeo/abp2dnr": "^1.3.3",

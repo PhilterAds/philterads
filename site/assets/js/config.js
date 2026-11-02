@@ -1,4 +1,5 @@
 window.PHILTER = {
+// After editing this file (or any site JS/CSS), run `npm run site:stamp` so browsers fetch the new version.
   // The install buttons detect the browser (site.js): Edge goes to stores.edge, the Chrome family to
   // stores.chrome, and anything not listed yet to the GitHub zip. Chrome launch day: put the Chrome Web
   // Store URL in installUrl AND stores.chrome (installUrl also flips the roadmap's store items), and add
