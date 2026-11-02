@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "PhilterAds",
-  "version": "1.6.3",
+  "version": "1.6.4",
   "description": "One sip. Ads vanish. Blocks ads, trackers and malware sites without breaking the sites you use.",
   "permissions": [
     "declarativeNetRequest",

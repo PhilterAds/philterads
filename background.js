@@ -99,6 +99,13 @@ async function apply() {
   lastApply = Date.now();
 }
 
+// Uninstall page: Chrome opens it after the extension is removed. A plain URL,
+// nothing attached (no id, no settings, no stats); the page only asks why.
+function setGoodbyeUrl(lang) {
+  chrome.runtime.setUninstallURL(lang === 'ja' ? 'https://philterads.com/ja/goodbye/' : 'https://philterads.com/goodbye/');
+}
+chrome.storage.local.get('lang').then(({ lang }) => setGoodbyeUrl(lang));
+
 chrome.runtime.onInstalled.addListener(({ reason }) => {
   // new users start on the current release: the popup's "what's new" line is for upgraders
   if (reason === 'install') chrome.storage.local.set({ newsSeen: '1.6' });
@@ -120,6 +127,7 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 });
 chrome.storage.onChanged.addListener((changes, area) => {
   if (area === 'local' && (changes.enabled || changes.lists || changes.paused)) apply();
+  if (area === 'local' && changes.lang) setGoodbyeUrl(changes.lang.newValue);
 });
 
 chrome.runtime.onMessage.addListener((msg, _sender, reply) => {

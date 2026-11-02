@@ -55,7 +55,7 @@ test('indexable pages have unique, sized head tags and one H1', () => {
 });
 
 test('noindex pages stay out of the sitemap', () => {
-  for (const p of ['thanks', '404']) {
+  for (const p of ['thanks', '404', 'goodbye', 'ja/goodbye']) {
     const f = existsSync(path.join(SITE, p, 'index.html')) ? path.join(SITE, p, 'index.html') : path.join(SITE, `${p}.html`);
     if (!existsSync(f)) continue;
     assert.match(readFileSync(f, 'utf8'), /<meta name="robots" content="noindex/);
