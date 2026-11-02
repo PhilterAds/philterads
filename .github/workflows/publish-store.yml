@@ -1,0 +1,88 @@
+# Publishes the newest release to the Chrome Web Store and Edge Add-ons.
+#
+# Runs after every release, weekly (Monday), and by hand. tools/store-publish.mjs
+# decides what to do: a version with code changes goes out right after its
+# release; versions that only refresh the filter lists wait for the weekly run,
+# so the stores see at most one list-only review a week. Both stores still
+# review every submission before users get it.
+#
+# Secrets live in the `store` environment (deployments from main only):
+# CWS_SERVICE_ACCOUNT_KEY, CWS_PUBLISHER_ID, CWS_ITEM_ID,
+# EDGE_CLIENT_ID, EDGE_API_KEY, EDGE_PRODUCT_ID. Missing Edge secrets = Edge skipped.
+
+name: publish-store
+
+on:
+  workflow_run:
+    workflows: [release]
+    types: [completed]
+  schedule:
+    - cron: '17 15 * * 1' # Mondays 15:17 UTC
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'auto = normal rules; force = publish the newest version now; dry-run = decide only'
+        type: choice
+        options: [auto, force, dry-run]
+        default: auto
+
+permissions: {}
+
+concurrency:
+  group: publish-store
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: >-
+      github.repository == 'PhilterAds/philterads' &&
+      (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment: store
+    permissions:
+      contents: read
+    env:
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 0 # tags, to compare against the version the store has
+
+      - name: Check out the newest release tag
+        id: tag
+        run: |
+          # The publisher script comes from main (older tags predate it); the
+          # zip is built from the tag, so the store gets exactly the release.
+          cp tools/store-publish.mjs "$RUNNER_TEMP/store-publish.mjs"
+          tag=$(git tag --list 'v*' --sort=-v:refname | head -n 1)
+          echo "Newest release: ${tag}"
+          git checkout -q "${tag}"
+          echo "tag=${tag}" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+
+      - name: Build the store package
+        run: |
+          npm ci
+          npm run build:store
+
+      - name: Publish
+        env:
+          CWS_SERVICE_ACCOUNT_KEY: ${{ secrets.CWS_SERVICE_ACCOUNT_KEY }}
+          CWS_PUBLISHER_ID: ${{ secrets.CWS_PUBLISHER_ID }}
+          CWS_ITEM_ID: ${{ secrets.CWS_ITEM_ID }}
+          EDGE_CLIENT_ID: ${{ secrets.EDGE_CLIENT_ID }}
+          EDGE_API_KEY: ${{ secrets.EDGE_API_KEY }}
+          EDGE_PRODUCT_ID: ${{ secrets.EDGE_PRODUCT_ID }}
+          EVENT: ${{ github.event_name }}
+          MODE: ${{ inputs.mode || 'auto' }}
+        run: |
+          flags=""
+          [ "$EVENT" = "schedule" ] && flags="--weekly"
+          [ "$MODE" = "force" ] && flags="--force"
+          [ "$MODE" = "dry-run" ] && flags="--dry-run"
+          node "$RUNNER_TEMP/store-publish.mjs" $flags
