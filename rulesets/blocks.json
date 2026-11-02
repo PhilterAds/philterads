@@ -3,46 +3,46 @@
   "ranges": [
    [
     1,
-    3384
+    3387
    ]
   ],
-  "total": 3899
+  "total": 3902
  },
  "easyprivacy": {
   "ranges": [
    [
     1,
-    8341
+    8343
    ]
   ],
-  "total": 9181
+  "total": 9183
  },
  "malware": {
   "ranges": [
    [
     1,
-    1310
+    905
    ]
   ],
-  "total": 1310
+  "total": 905
  },
  "cookies": {
   "ranges": [
    [
     1,
-    1365
+    1366
    ]
   ],
-  "total": 1788
+  "total": 1789
  },
  "annoyances": {
   "ranges": [
    [
     1,
-    2656
+    2657
    ]
   ],
-  "total": 3194
+  "total": 3195
  },
  "core": {
   "ranges": [
