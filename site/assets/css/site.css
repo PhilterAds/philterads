@@ -862,3 +862,4 @@ html[lang="ja"] body { line-break: strict; }
 html[lang="ja"] .cta .note { word-break: auto-phrase; }
 :root[data-theme="dark"] .legal-body code { background: var(--accent-soft); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .legal-body code { background: var(--accent-soft); } }
+html[lang="ja"] .notfound-text p { word-break: auto-phrase; }
