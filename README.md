@@ -12,22 +12,22 @@
 <p align="center">
   <b>A free ad blocker for Chrome and Edge.</b><br>
   Blocks ads, trackers and malware sites, and closes pop-up ad tabs, without breaking the sites you use.<br>
-  <a href="https://philterads.com">philterads.com</a> · <a href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab">Get it for Edge</a> · <a href="#install">Install</a> · <a href="#roadmap">Roadmap</a> · <a href="docs/TECHNICAL.md">How it works</a>
+  <a href="https://philterads.com">philterads.com</a> · <a href="https://chromewebstore.google.com/detail/philterads/bmhjanlipooahalipmajbghgfnleejng">Get it for Chrome</a> · <a href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab">Get it for Edge</a> · <a href="#install">Install</a> · <a href="#roadmap">Roadmap</a> · <a href="docs/TECHNICAL.md">How it works</a>
 </p>
 
 <table align="center">
   <tr>
     <td align="center" width="96"><a href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab"><img src="site/assets/img/browsers/edge.svg" alt="" width="40" height="40"><br><b>Edge</b></a><br><sub>✅ <a href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab">Get it</a></sub></td>
-    <td align="center" width="96"><a href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><img src="site/assets/img/browsers/chrome.svg" alt="" width="40" height="40"><br><b>Chrome</b></a><br><sub>✅ <a href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip">Download</a></sub></td>
-    <td align="center" width="96"><a href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><img src="site/assets/img/browsers/brave.svg" alt="" width="40" height="40"><br><b>Brave</b></a><br><sub>✅ <a href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip">Download</a></sub></td>
-    <td align="center" width="96"><a href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip"><img src="site/assets/img/browsers/vivaldi.svg" alt="" width="40" height="40"><br><b>Vivaldi</b></a><br><sub>✅ <a href="https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip">Download</a></sub></td>
+    <td align="center" width="96"><a href="https://chromewebstore.google.com/detail/philterads/bmhjanlipooahalipmajbghgfnleejng"><img src="site/assets/img/browsers/chrome.svg" alt="" width="40" height="40"><br><b>Chrome</b></a><br><sub>✅ <a href="https://chromewebstore.google.com/detail/philterads/bmhjanlipooahalipmajbghgfnleejng">Get it</a></sub></td>
+    <td align="center" width="96"><a href="https://chromewebstore.google.com/detail/philterads/bmhjanlipooahalipmajbghgfnleejng"><img src="site/assets/img/browsers/brave.svg" alt="" width="40" height="40"><br><b>Brave</b></a><br><sub>✅ <a href="https://chromewebstore.google.com/detail/philterads/bmhjanlipooahalipmajbghgfnleejng">Get it</a></sub></td>
+    <td align="center" width="96"><a href="https://chromewebstore.google.com/detail/philterads/bmhjanlipooahalipmajbghgfnleejng"><img src="site/assets/img/browsers/vivaldi.svg" alt="" width="40" height="40"><br><b>Vivaldi</b></a><br><sub>✅ <a href="https://chromewebstore.google.com/detail/philterads/bmhjanlipooahalipmajbghgfnleejng">Get it</a></sub></td>
     <td align="center" width="96"><a href="#roadmap"><img src="site/assets/img/browsers/firefox.svg" alt="" width="40" height="40"><br><b>Firefox</b></a><br><sub>🕒 Coming</sub></td>
     <td align="center" width="96"><a href="#roadmap"><img src="site/assets/img/browsers/opera.svg" alt="" width="40" height="40"><br><b>Opera</b></a><br><sub>🕒 Coming</sub></td>
     <td align="center" width="96"><a href="#roadmap"><img src="site/assets/img/browsers/safari.svg" alt="" width="40" height="40"><br><b>Safari</b></a><br><sub>🕒 Coming</sub></td>
   </tr>
 </table>
 
-<p align="center"><sub>Edge installs in one click. Chrome, Brave and Vivaldi: download the zip and follow the <a href="#from-github-works-today-about-a-minute">one-minute steps</a>; the Chrome Web Store listing is in review.</sub></p>
+<p align="center"><sub>One-click install from the <a href="https://chromewebstore.google.com/detail/philterads/bmhjanlipooahalipmajbghgfnleejng">Chrome Web Store</a> (Chrome, Brave, Vivaldi, Arc) or <a href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab">Edge Add-ons</a>. Prefer to install by hand? <a href="#from-github-about-a-minute">Use the GitHub zip</a>.</sub></p>
 
 ---
 
@@ -57,17 +57,21 @@
 
 ## Install
 
+### Chrome Web Store
+
+**[Get PhilterAds for Chrome](https://chromewebstore.google.com/detail/philterads/bmhjanlipooahalipmajbghgfnleejng)**: one-click install with automatic updates. Brave, Vivaldi and Arc install it from the Chrome Web Store too.
+
+<a href="https://chromewebstore.google.com/detail/philterads/bmhjanlipooahalipmajbghgfnleejng"><img src="site/assets/img/badges/chrome-web-store.png" alt="Available in the Chrome Web Store" height="48"></a>
+
 ### Microsoft Edge Add-ons
 
 **[Get PhilterAds for Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab)**: one-click install with automatic updates.
 
 <a href="https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab"><img src="site/assets/img/badges/edge-en.png" alt="Get it from Microsoft Edge" height="48"></a>
 
-### Chrome Web Store
+### From GitHub (about a minute)
 
-The Chrome listing is in review. Until it's approved, install from GitHub below. The link will appear here and on [philterads.com](https://philterads.com).
-
-### From GitHub (works today, about a minute)
+The same build, installed by hand. Handy for testing a release before it reaches the stores.
 
 1. **Download** [`philterads.zip`](https://github.com/PhilterAds/philterads/releases/latest/download/philterads.zip) from the latest release.
 2. **Unzip it** into a folder you'll keep, for example `Documents\PhilterAds`. Don't delete the folder afterwards: the browser runs the extension from it.
@@ -104,6 +108,7 @@ Then load the cloned folder unpacked, as in steps 3 to 5 above. Details are in [
 This list is also on the site: [philterads.com/#roadmap](https://philterads.com/#roadmap).
 
 **Out now, v1.6**
+- On the [Chrome Web Store](https://chromewebstore.google.com/detail/philterads/bmhjanlipooahalipmajbghgfnleejng) and [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab): one-click install, automatic updates
 - Ads, trackers, malware sites and pop-up ad tabs blocked
 - **Zap**: pick any ad the lists missed and it stays hidden on that site; undo one, a whole site, or everything
 - Stats for today and all time, plus a **Zapped** tab listing everything you zapped
@@ -111,7 +116,6 @@ This list is also on the site: [philterads.com/#roadmap](https://philterads.com/
 - Open source under GPLv3, with versioned [releases](https://github.com/PhilterAds/philterads/releases)
 
 **Up next**
-- Chrome Web Store listing (in review). The [Edge Add-ons listing](https://microsoftedge.microsoft.com/addons/detail/philterads/epaelpoafnbapdflkoflbpdmbflojoab) is live.
 - **AI control over MCP**: a small local `philterads-mcp` server, so Claude, Cursor or any MCP app can run PhilterAds for you, for example *"This site is broken. Fix it."* It runs on your own computer, and no browsing history goes to the AI. Design: [docs/MCP.md](docs/MCP.md)
 - A welcome page on first install
 
