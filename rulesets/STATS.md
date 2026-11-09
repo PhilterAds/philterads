@@ -1,16 +1,16 @@
 # Ruleset build stats
 
-Built 2026-11-02T17:53:31.262Z
+Built 2026-11-09T14:51:01.262Z
 
 | list | source version | filters read | DNR rules written | $popup hosts (global/scoped) | skipped by DNR converter | dropped: main_frame policy | dropped: safety domains | dropped: regex overflow | cosmetic generic/specific/exceptions | cosmetic skipped (extended) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| easylist | Version: 202611021741 | 77153 | 3902 | 2718/20 | 5193 | 0 | 9 | 0 | 13635/8889/243 | 504 |
-| easyprivacy | Version: 202611021741 | 56459 | 9183 | 0/0 | 50 | 0 | 30 | 0 | 2/0/0 | 22 |
-| malware | Updated: 2026-11-02T12:10:10Z | 1449 | 905 | 0/0 | 0 | 0 | 0 | 0 | 0/0/0 | 0 |
-| cookies | Last modified: 2026-11-02 15:00 UTC | 25366 | 1789 | 0/0 | 1426 | 0 | 0 | 0 | 15272/6252/239 | 71 |
-| annoyances | Version: 202611021500 | 54141 | 3195 | 0/0 | 3669 | 0 | 7 | 0 | 27306/15487/340 | 3197 |
+| easylist | Version: 202611091447 | 76081 | 3913 | 2719/20 | 5191 | 0 | 9 | 0 | 13635/8908/243 | 510 |
+| easyprivacy | Version: 202611091447 | 56593 | 9262 | 0/0 | 50 | 0 | 30 | 0 | 2/0/0 | 22 |
+| malware | Updated: 2026-11-09T12:09:01Z | 1840 | 1281 | 0/0 | 0 | 0 | 0 | 0 | 0/0/0 | 0 |
+| cookies | Last modified: 2026-11-08 07:00 UTC | 25378 | 1790 | 0/0 | 1426 | 0 | 0 | 0 | 15272/6263/239 | 71 |
+| annoyances | Version: 202611080700 | 54170 | 3197 | 0/0 | 3673 | 0 | 7 | 0 | 27306/15505/340 | 3202 |
 
-Enabled-by-default static rules (core + safety + easylist + easyprivacy + malware): **14048**. Chrome guarantees 30k per extension plus a shared pool; this build's policy cap is 150000.
+Enabled-by-default static rules (core + safety + easylist + easyprivacy + malware): **14514**. Chrome guarantees 30k per extension plus a shared pool; this build's policy cap is 150000.
 
 Notes:
 
