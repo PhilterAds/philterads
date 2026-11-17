@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04 # pinned: ubuntu-latest is 26.04, whose compiler cannot build @eyeo/abp2dnr (2026-11-17)
     timeout-minutes: 15
     env:
       PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1' # smoke never runs in CI; skip its browsers
