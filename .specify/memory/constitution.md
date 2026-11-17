@@ -1,50 +1,36 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# PhilterAds Constitution
+
+Distilled from CONTRIBUTING.md, SECURITY.md and README.md. Where they differ, those files win; update this one to match.
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Never break a site (NON-NEGOTIABLE)
+"Doesn't break functionality" always outranks "blocks one more ad". A change that hides one more ad but breaks a login, a checkout or a video player is rejected. No rule may block sign-in, payment or captcha hosts; `npm test` enforces this safety guarantee and it must stay green.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Collects nothing
+The extension makes no network request of its own: no analytics, telemetry or call home. Specs that need data from users must find another way or be dropped.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Plain web platform, no remote code
+Plain HTML, CSS and JavaScript only: no frameworks, no remote code, no new runtime dependencies. Manifest V3 and declarativeNetRequest rules; permissions stay minimal and each one must be justifiable in the store review form.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Small, tested changes
+Every change keeps `npm test` passing and runs `npm run smoke` before a release. Pull requests stay small and focused and say why. Popup changes are checked in light and dark mode and fit the 340 × 392 window without page scrolling.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Upstream lists first
+Filter rules come from the credited upstream lists, rebuilt by `npm run build:rules` and committed. Fix rules upstream where possible; hand rules go only in `rulesets/core.json` (blocking) or `rulesets/safety.json` (allow rules that protect sites). The weekly refresh keeps its shrink guard.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Releases and stores
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+- The version lives only in `manifest.json` (MAJOR.MINOR.PATCH). Pull requests never bump it; the weekly list refresh bumps PATCH, feature releases bump MINOR.
+- Every version on `main` gets a protected `vX.Y.Z` tag and a GitHub Release. The store package contains runtime files only (no tools, tests, site, docs, native helper or spec-kit files).
+- The publish-store workflow sends releases to the Chrome Web Store and Edge Add-ons; each store reviews every submission.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+## Security
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+Vulnerabilities are reported privately (GitHub private reporting or contact@philterads.com). Anything that lets a page change PhilterAds settings, turns protection off, sends data anywhere, or weakens the native update helper or list workflow is a security issue.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution guides every spec, plan and task in this repo. Specs that conflict with a principle are revised before planning. Amendments go through a normal pull request and bump the version below.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2026-11-17 | **Last Amended**: 2026-11-17
