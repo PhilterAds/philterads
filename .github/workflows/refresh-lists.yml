@@ -21,7 +21,7 @@ concurrency:
 jobs:
   refresh:
     if: github.repository == 'PhilterAds/philterads' # forks never run the scheduled push
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04 # pinned: ubuntu-latest is 26.04, whose compiler cannot build @eyeo/abp2dnr (2026-11-17)
     timeout-minutes: 20
     permissions:
       contents: write # push the refreshed lists to main
